@@ -8,34 +8,29 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+
+
+class LoginViewController: LoginPresent {
     
-    let colorGreen = UIColor.init(hexString: "#6ED313")
-    let facebookColor = UIColor.init(hexString: "#3B5898")
-    let colorTint = UIColor.init(hexString: "#C7C7C7")
-    let unLoginColor = UIColor.init(hexString: "#B7E989")
     
-    let loginFacebook = UIButton()
-    let orLabelCenter = UILabel()
-    let line1 = UIView()
-    let line2 = UIView()
-    let phoneCode = UILabel()
-    let phoneNumber = UITextField()
-    let password = UITextField()
-    let loginButton = UIButton()
-    let forgotPasswordLabel = UILabel()
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
         self.navigationItem.title = "Đăng Nhập"
+        self.setNotificationKeyboard(keyboardNotification : self)
+        navigationHeight = (navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.height
         initLayout()
         
     }
 
     func initLayout(){
-        let navigationHeight = (navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.height
-        
+//        let navigationHeight = (navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.height
+       
+        scrollView.frame = view.bounds
+        scrollView.showsVerticalScrollIndicator = false
+        scrollViewHolder.frame = scrollView.frame
+        scrollView.contentSize.height = view.frame.height - navigationHeight
         orLabelCenter.text = "hoặc"
         orLabelCenter.textColor = colorTint
         orLabelCenter.translatesAutoresizingMaskIntoConstraints = false
@@ -56,6 +51,7 @@ class LoginViewController: UIViewController {
         phoneCode.text = "+84"
         
         phoneNumber.translatesAutoresizingMaskIntoConstraints = false
+        phoneNumber.keyboardType = .numberPad
         phoneNumber.placeholder = "Số điện thoại"
         phoneNumber.setBottomBorder()
         
@@ -73,28 +69,30 @@ class LoginViewController: UIViewController {
         forgotPasswordLabel.text = "Quên mật khẩu ?"
         forgotPasswordLabel.textColor = UIColor.init(hexString: "#8FDD49")
         
-        view.addSubview(loginFacebook)
-        view.addSubview(orLabelCenter)
-        view.addSubview(line2)
-        view.addSubview(line1)
-        view.addSubview(phoneCode)
-        view.addSubview(phoneNumber)
-        view.addSubview(password)
-        view.addSubview(loginButton)
-        view.addSubview(forgotPasswordLabel)
+        view.addSubview(scrollView)
+        scrollView.addSubview(scrollViewHolder)
+        scrollViewHolder.addSubview(loginFacebook)
+        scrollViewHolder.addSubview(orLabelCenter)
+        scrollViewHolder.addSubview(line2)
+        scrollViewHolder.addSubview(line1)
+        scrollViewHolder.addSubview(phoneCode)
+        scrollViewHolder.addSubview(phoneNumber)
+        scrollViewHolder.addSubview(password)
+        scrollViewHolder.addSubview(loginButton)
+        scrollViewHolder.addSubview(forgotPasswordLabel)
         let fb_seprate_space = 30
         let views : [String : Any] = ["loginFacebook" : loginFacebook,"orLabelCenter" :orLabelCenter,"line1" :line1,"line2" : line2,"phoneCode" :phoneCode,"phoneNumber":phoneNumber,"password" :password,"loginButton" :loginButton,"forgotPasswordLabel" :forgotPasswordLabel]
-        let metrics = ["loginFacebookSpaceTop" : navigationHeight + 40,"littleSpace" : 10,"normalSpace" : fb_seprate_space, "doubleSpace" :fb_seprate_space+10,"buttonHeigh" : 50] as [String : Any]
+        let metrics = ["loginFacebookSpaceTop" :  40,"littleSpace" : 10,"normalSpace" : fb_seprate_space, "doubleSpace" :fb_seprate_space+10,"buttonHeigh" : 50,"textFieldHeight" : 40] as [String : Any]
         
         let container = UILayoutGuide()
         var contraints = [NSLayoutConstraint]()
-        view.addLayoutGuide(container)
-        container.topAnchor.constraint(equalTo: view.topAnchor, constant: navigationHeight + 40).isActive = true
-        loginFacebook.topAnchor.constraint(equalTo: container.topAnchor).isActive = true
+        scrollViewHolder.addLayoutGuide(container)
+        container.topAnchor.constraint(equalTo: scrollViewHolder.topAnchor, constant: 0).isActive = true
+        loginFacebook.topAnchor.constraint(equalTo: container.topAnchor, constant : 40).isActive = true
         contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "H:|-normalSpace-[loginFacebook]-normalSpace-|", options: [], metrics: metrics, views: views))
         
         contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[loginFacebook(==buttonHeigh)]", options: [], metrics: metrics, views: views))
-        contraints.append(orLabelCenter.centerXAnchor.constraint(equalTo: view.centerXAnchor))
+        contraints.append(orLabelCenter.centerXAnchor.constraint(equalTo: scrollViewHolder.centerXAnchor))
         contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[loginFacebook]-normalSpace-[orLabelCenter]", options: [], metrics: metrics, views: views))
         line1.topAnchor.constraint(equalTo: orLabelCenter.topAnchor,constant : 10).isActive = true
         contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "H:|-normalSpace-[line1]-littleSpace-[orLabelCenter]", options: [], metrics: metrics, views: views))
@@ -103,31 +101,43 @@ class LoginViewController: UIViewController {
         contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "H:[orLabelCenter]-littleSpace-[line2]-normalSpace-|", options: [], metrics: metrics, views: views))
         contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[line2(==1)]", options: [], metrics: metrics, views: views))
         contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[orLabelCenter]-normalSpace-[phoneCode]", options: [], metrics: metrics, views: views))
-        contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "H:|-normalSpace-[phoneCode]-littleSpace-[phoneNumber]-normalSpace-|", options: [.alignAllFirstBaseline], metrics: metrics, views: views))
         
-        contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[phoneCode]-normalSpace-[password]", options: [], metrics: metrics, views: views))
+        contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "H:|-normalSpace-[phoneCode]-littleSpace-[phoneNumber]-normalSpace-|", options: [.alignAllLastBaseline], metrics: metrics, views: views))
+        
+        contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[phoneNumber(==textFieldHeight)]", options: [], metrics: metrics, views: views))
+        
+        contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[phoneCode]-normalSpace-[password(==textFieldHeight)]", options: [], metrics: metrics, views: views))
+        
         contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "H:|-normalSpace-[password]-normalSpace-|", options: [], metrics: metrics, views: views))
         contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[password]-normalSpace-[loginButton(==buttonHeigh)]", options: [.alignAllLeading,.alignAllTrailing], metrics: metrics, views: views))
-        forgotPasswordLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        forgotPasswordLabel.centerXAnchor.constraint(equalTo: scrollViewHolder.centerXAnchor).isActive = true
         contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[loginButton]-littleSpace-[forgotPasswordLabel]", options: [], metrics: metrics, views: views))
         
         NSLayoutConstraint.activate(contraints)
         
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+extension LoginPresent : KeyboardNotifaction {
+    func keyboardChange(isShow : Bool,adjustHeight : CGFloat){
+        if isShow && scrollView.contentSize.height <= view.frame.height{
+            scrollView.contentSize.height = scrollView.contentSize.height + adjustHeight/2
+        }
+        if(!isShow){
+            scrollView.contentSize.height = view.frame.height - navigationHeight
+        }
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

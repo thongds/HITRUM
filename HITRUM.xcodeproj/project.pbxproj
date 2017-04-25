@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5C7328D31EAF1D4500EABDB9 /* UITextFieldHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7328D21EAF1D4500EABDB9 /* UITextFieldHelper.swift */; };
+		5C7328D61EAF4CD300EABDB9 /* LoginPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7328D51EAF4CD300EABDB9 /* LoginPresent.swift */; };
 		5C9CCC5D1EAC7D6D00B70366 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9CCC5C1EAC7D6D00B70366 /* AppDelegate.swift */; };
 		5C9CCC5F1EAC7D6D00B70366 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9CCC5E1EAC7D6D00B70366 /* ViewController.swift */; };
 		5C9CCC641EAC7D6D00B70366 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C9CCC631EAC7D6D00B70366 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		5C7328D21EAF1D4500EABDB9 /* UITextFieldHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldHelper.swift; sourceTree = "<group>"; };
+		5C7328D51EAF4CD300EABDB9 /* LoginPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresent.swift; sourceTree = "<group>"; };
 		5C9CCC591EAC7D6D00B70366 /* HITRUM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HITRUM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C9CCC5C1EAC7D6D00B70366 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C9CCC5E1EAC7D6D00B70366 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C7328D41EAF4C9800EABDB9 /* LoginModule */ = {
+			isa = PBXGroup;
+			children = (
+				5C7328D71EAF4CE400EABDB9 /* Present */,
+				5C7328D81EAF4CF100EABDB9 /* View */,
+			);
+			name = LoginModule;
+			sourceTree = "<group>";
+		};
+		5C7328D71EAF4CE400EABDB9 /* Present */ = {
+			isa = PBXGroup;
+			children = (
+				5C7328D51EAF4CD300EABDB9 /* LoginPresent.swift */,
+			);
+			name = Present;
+			sourceTree = "<group>";
+		};
+		5C7328D81EAF4CF100EABDB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5CF7685C1EACBD2B003CE4F5 /* LoginViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		5C9CCC501EAC7D6D00B70366 = {
 			isa = PBXGroup;
 			children = (
@@ -111,7 +138,7 @@
 				5CCDC6821EAC875600D996DE /* HomeUnuserViewController.swift */,
 				5CF7685A1EACBB83003CE4F5 /* ColorHelper.swift */,
 				5C7328D21EAF1D4500EABDB9 /* UITextFieldHelper.swift */,
-				5CF7685C1EACBD2B003CE4F5 /* LoginViewController.swift */,
+				5C7328D41EAF4C9800EABDB9 /* LoginModule */,
 				5CF15B381EACEF4100D1195E /* assist */,
 			);
 			path = HITRUM;
@@ -288,6 +315,7 @@
 				5C9CCC8D1EAC7DFD00B70366 /* SplashController.swift in Sources */,
 				5CCDC6831EAC875600D996DE /* HomeUnuserViewController.swift in Sources */,
 				5C7328D31EAF1D4500EABDB9 /* UITextFieldHelper.swift in Sources */,
+				5C7328D61EAF4CD300EABDB9 /* LoginPresent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
