@@ -12,13 +12,7 @@ import UIKit
 protocol KeyboardNotifaction {
     func keyboardChange(isShow : Bool,adjustHeight : CGFloat)
 }
-class LoginPresent : UIViewController {
-    var navigationHeight : CGFloat = 0
-
-    let colorGreen = UIColor.init(hexString: "#6ED313")
-    let facebookColor = UIColor.init(hexString: "#3B5898")
-    let colorTint = UIColor.init(hexString: "#C7C7C7")
-    let unLoginColor = UIColor.init(hexString: "#B7E989")
+class LoginPresent : BaseViewController {
     
     let scrollView = UIScrollView()
     let scrollViewHolder = UIView()
@@ -30,15 +24,17 @@ class LoginPresent : UIViewController {
     let phoneCode = UILabel()
     let phoneNumber = UITextField()
     let password = UITextField()
-    let loginButton = UIButton()
+    let loginButton = UIButton.disableButton()
     let forgotPasswordLabel = UILabel()
     
     
     var keyboardNotification : KeyboardNotifaction? = nil
     
     override func viewDidLoad() {
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: .UIKeyboardWillHide, object: nil)
+        loginFacebook.addTarget(self, action: #selector(self.loginFacebookProcess), for: .touchUpInside)
     }
     
     public func setNotificationKeyboard(keyboardNotification : KeyboardNotifaction){
@@ -60,8 +56,19 @@ class LoginPresent : UIViewController {
         if let keyboardNotification = keyboardNotification {
             keyboardNotification.keyboardChange(isShow : show,adjustHeight: adjustmentHeight)
         }
-//        fgScrollView.contentInset.bottom += adjustmentHeight
-//        fgScrollView.scrollIndicatorInsets.bottom += adjustmentHeight
-        
+    }
+    
+    func loginFacebookProcess(){
+        navigationController?.pushViewController(FacebookLoginView(), animated: true)
     }
 }
+
+
+
+
+
+
+
+
+
+

@@ -19,37 +19,39 @@ class LoginViewController: LoginPresent {
         view.backgroundColor = UIColor.white
         self.navigationItem.title = "Đăng Nhập"
         self.setNotificationKeyboard(keyboardNotification : self)
-        navigationHeight = (navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.height
         initLayout()
         
     }
-
     func initLayout(){
-//        let navigationHeight = (navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.height
-       
+        initViewElementData()
+        addLayoutConstraint()
+    }
+    func initViewElementData(){
+        
         scrollView.frame = view.bounds
         scrollView.showsVerticalScrollIndicator = false
         scrollViewHolder.frame = scrollView.frame
         scrollView.contentSize.height = view.frame.height - navigationHeight
+        
         orLabelCenter.text = "hoặc"
-        orLabelCenter.textColor = colorTint
+        orLabelCenter.textColor = UIColor.tintColor()
         orLabelCenter.translatesAutoresizingMaskIntoConstraints = false
         
         loginFacebook.translatesAutoresizingMaskIntoConstraints = false
         loginFacebook.setTitle("Đăng nhập qua Facebook", for: .normal)
-        loginFacebook.layer.backgroundColor = facebookColor.cgColor
+        loginFacebook.layer.backgroundColor = UIColor.facebookColor().cgColor
         loginFacebook.layer.cornerRadius = 5
         loginFacebook.setImage(#imageLiteral(resourceName: "facebook_ico"), for: .normal)
         loginFacebook.imageEdgeInsets.right = 20
         
         line1.translatesAutoresizingMaskIntoConstraints = false
-        line1.backgroundColor = colorTint
+        line1.backgroundColor = UIColor.tintColor()
         line2.translatesAutoresizingMaskIntoConstraints = false
-        line2.backgroundColor = colorTint
+        line2.backgroundColor = UIColor.tintColor()
         
         phoneCode.translatesAutoresizingMaskIntoConstraints = false
         phoneCode.text = "+84"
-        
+        //phoneCode.setBottomBorder()
         phoneNumber.translatesAutoresizingMaskIntoConstraints = false
         phoneNumber.keyboardType = .numberPad
         phoneNumber.placeholder = "Số điện thoại"
@@ -61,9 +63,8 @@ class LoginViewController: LoginPresent {
         password.setBottomBorder()
         
         loginButton.translatesAutoresizingMaskIntoConstraints = false
-        loginButton.layer.cornerRadius = 5
         loginButton.setTitle("Đăng Nhập", for: .normal)
-        loginButton.backgroundColor = unLoginColor
+        
         
         forgotPasswordLabel.translatesAutoresizingMaskIntoConstraints = false
         forgotPasswordLabel.text = "Quên mật khẩu ?"
@@ -71,6 +72,7 @@ class LoginViewController: LoginPresent {
         
         view.addSubview(scrollView)
         scrollView.addSubview(scrollViewHolder)
+        
         scrollViewHolder.addSubview(loginFacebook)
         scrollViewHolder.addSubview(orLabelCenter)
         scrollViewHolder.addSubview(line2)
@@ -80,6 +82,8 @@ class LoginViewController: LoginPresent {
         scrollViewHolder.addSubview(password)
         scrollViewHolder.addSubview(loginButton)
         scrollViewHolder.addSubview(forgotPasswordLabel)
+    }
+    func addLayoutConstraint(){
         let fb_seprate_space = 30
         let views : [String : Any] = ["loginFacebook" : loginFacebook,"orLabelCenter" :orLabelCenter,"line1" :line1,"line2" : line2,"phoneCode" :phoneCode,"phoneNumber":phoneNumber,"password" :password,"loginButton" :loginButton,"forgotPasswordLabel" :forgotPasswordLabel]
         let metrics = ["loginFacebookSpaceTop" :  40,"littleSpace" : 10,"normalSpace" : fb_seprate_space, "doubleSpace" :fb_seprate_space+10,"buttonHeigh" : 50,"textFieldHeight" : 40] as [String : Any]
@@ -88,6 +92,7 @@ class LoginViewController: LoginPresent {
         var contraints = [NSLayoutConstraint]()
         scrollViewHolder.addLayoutGuide(container)
         container.topAnchor.constraint(equalTo: scrollViewHolder.topAnchor, constant: 0).isActive = true
+        
         loginFacebook.topAnchor.constraint(equalTo: container.topAnchor, constant : 40).isActive = true
         contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "H:|-normalSpace-[loginFacebook]-normalSpace-|", options: [], metrics: metrics, views: views))
         
@@ -104,6 +109,7 @@ class LoginViewController: LoginPresent {
         
         contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "H:|-normalSpace-[phoneCode]-littleSpace-[phoneNumber]-normalSpace-|", options: [.alignAllLastBaseline], metrics: metrics, views: views))
         
+        
         contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[phoneNumber(==textFieldHeight)]", options: [], metrics: metrics, views: views))
         
         contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[phoneCode]-normalSpace-[password(==textFieldHeight)]", options: [], metrics: metrics, views: views))
@@ -114,13 +120,15 @@ class LoginViewController: LoginPresent {
         contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[loginButton]-littleSpace-[forgotPasswordLabel]", options: [], metrics: metrics, views: views))
         
         NSLayoutConstraint.activate(contraints)
-        
     }
+    
+    
+    
 }
 extension LoginPresent : KeyboardNotifaction {
     func keyboardChange(isShow : Bool,adjustHeight : CGFloat){
         if isShow && scrollView.contentSize.height <= view.frame.height{
-            scrollView.contentSize.height = scrollView.contentSize.height + adjustHeight/2
+           scrollView.contentSize.height = scrollView.contentSize.height + adjustHeight/2
         }
         if(!isShow){
             scrollView.contentSize.height = view.frame.height - navigationHeight

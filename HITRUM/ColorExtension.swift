@@ -26,4 +26,20 @@ extension UIColor {
         }
         self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
     }
+    
+    class func facebookColor() -> UIColor {
+        return UIColor.init(hexString: "#3B5898")
+    }
+    
+    class func appBaseColor() -> UIColor{
+        return UIColor.init(hexString: "#6ED313")
+    }
+    
+    class func tintColor() -> UIColor{
+        return  UIColor.init(hexString: "#C7C7C7")
+    }
+    
+    class func disableButtonColor() -> UIColor{
+        return UIColor.init(hexString: "#B7E989")
+    }
 }

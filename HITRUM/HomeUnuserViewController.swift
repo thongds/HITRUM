@@ -11,7 +11,7 @@ import UIKit
 class HomeUnuserViewController: UIViewController {
 
     let splashImage = UIImageView(image: #imageLiteral(resourceName: "Splash"))
-    let loginButtom = UIButton()
+    let loginButtom = UIButton.activeButton()
     let registerButtom = UIButton()
     let colorGreen = UIColor.init(hexString: "#6ED313")
     
@@ -39,9 +39,7 @@ class HomeUnuserViewController: UIViewController {
         registerButtom.translatesAutoresizingMaskIntoConstraints = false;
         
         loginButtom.setTitle("Đăng Nhập", for: .normal)
-        loginButtom.backgroundColor = colorGreen
         
-        loginButtom.layer.cornerRadius = 5
         registerButtom.setTitle("Đăng Kí", for: .normal)
         registerButtom.setTitleColor(colorGreen, for: .normal)
         registerButtom.backgroundColor = UIColor.white
