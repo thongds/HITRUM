@@ -10,9 +10,36 @@ import UIKit
 
 class OTPVerifyPresent : BaseViewController {
     
+    var otpWidth : CGFloat = 0
+    let padding : CGFloat = 10
+    let margin : CGFloat = 30
+    var phoneNumber = ""
     
+    let alertLabel = UILabel()
+    
+    let otp1 = UITextField.underlineTextField()
+    let otp2 = UITextField.underlineTextField()
+    let otp3 = UITextField.underlineTextField()
+    let otp4 = UITextField.underlineTextField()
+    let otp5 = UITextField.underlineTextField()
+    let otp6 = UITextField.underlineTextField()
+    
+    let nextButton = UIButton.activeButton()
+    
+    let requestOTPLabel = UILabel()
+    let requestOTP = UILabel()
+    let scrollView = UIScrollView()
+    let scrollViewHolder = UIView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        nextButton.addTarget(self, action: #selector(self.validate), for: .touchUpInside)
     }
+    
+    func validate(){
+        let successFullPage = SuccessFullPageViewController()
+        successFullPage.setData(successMessage: "Đăng kí thành công", nextViewController: LoginViewController())
+        navigationController?.setViewControllers([successFullPage], animated: false)
+    }
+
 }

@@ -125,8 +125,8 @@ class LoginViewController: LoginPresent {
     
     override func viewWillAppear(_ animated: Bool) {
         self.title = "Đăng Nhập"
+        self.navigationController?.navigationBar.isHidden = false
     }
-    
     
 }
 extension LoginPresent : KeyboardNotifaction {

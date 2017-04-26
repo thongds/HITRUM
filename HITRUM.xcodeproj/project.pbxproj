@@ -11,6 +11,7 @@
 		5C2365F41EB030DD00C44C9C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2365F31EB030DD00C44C9C /* BaseViewController.swift */; };
 		5C2366021EB049DD00C44C9C /* OTPVerifyPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2366011EB049DD00C44C9C /* OTPVerifyPresent.swift */; };
 		5C2366041EB049F800C44C9C /* OTPVerifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2366031EB049F800C44C9C /* OTPVerifyView.swift */; };
+		5C2366061EB06FC900C44C9C /* SuccessFullPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2366051EB06FC900C44C9C /* SuccessFullPageViewController.swift */; };
 		5C7328D31EAF1D4500EABDB9 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7328D21EAF1D4500EABDB9 /* UITextFieldExtension.swift */; };
 		5C7328D61EAF4CD300EABDB9 /* LoginPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7328D51EAF4CD300EABDB9 /* LoginPresent.swift */; };
 		5C7328DA1EAF6A1400EABDB9 /* FacebookLoginVerifyPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7328D91EAF6A1400EABDB9 /* FacebookLoginVerifyPresent.swift */; };
@@ -49,6 +50,7 @@
 		5C2365F31EB030DD00C44C9C /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5C2366011EB049DD00C44C9C /* OTPVerifyPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPVerifyPresent.swift; sourceTree = "<group>"; };
 		5C2366031EB049F800C44C9C /* OTPVerifyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPVerifyView.swift; sourceTree = "<group>"; };
+		5C2366051EB06FC900C44C9C /* SuccessFullPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessFullPageViewController.swift; sourceTree = "<group>"; };
 		5C7328D21EAF1D4500EABDB9 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		5C7328D51EAF4CD300EABDB9 /* LoginPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresent.swift; sourceTree = "<group>"; };
 		5C7328D91EAF6A1400EABDB9 /* FacebookLoginVerifyPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginVerifyPresent.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 			children = (
 				5C9CCC8C1EAC7DFD00B70366 /* SplashController.swift */,
 				5CCDC6821EAC875600D996DE /* HomeUnuserViewController.swift */,
+				5C2366051EB06FC900C44C9C /* SuccessFullPageViewController.swift */,
 			);
 			name = homeModule;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				5CF7685B1EACBB84003CE4F5 /* ColorExtension.swift in Sources */,
 				5C9CCC5D1EAC7D6D00B70366 /* AppDelegate.swift in Sources */,
 				5C2365F41EB030DD00C44C9C /* BaseViewController.swift in Sources */,
+				5C2366061EB06FC900C44C9C /* SuccessFullPageViewController.swift in Sources */,
 				5C9CCC8D1EAC7DFD00B70366 /* SplashController.swift in Sources */,
 				5CCDC6831EAC875600D996DE /* HomeUnuserViewController.swift in Sources */,
 				5C7328DA1EAF6A1400EABDB9 /* FacebookLoginVerifyPresent.swift in Sources */,
