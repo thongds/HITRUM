@@ -18,7 +18,9 @@ class BaseViewController : UIViewController {
     
     override func viewDidLoad() {
         self.navigationController?.navigationBar.topItem?.title = " "
-        navigationHeight = (navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.height
+        if let navigationController = navigationController{
+            navigationHeight = navigationController.navigationBar.frame.height + UIApplication.shared.statusBarFrame.height
+        }
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: .UIKeyboardWillHide, object: nil)
     }

@@ -38,7 +38,7 @@ class OTPVerifyPresent : BaseViewController {
     
     func validate(){
         let successFullPage = SuccessFullPageViewController()
-        successFullPage.setData(successMessage: "Đăng kí thành công", nextViewController: LoginViewController())
+        successFullPage.setData(successMessage: "Đăng kí thành công", nextViewController: UserHomeViewController())
         navigationController?.setViewControllers([successFullPage], animated: false)
     }
 

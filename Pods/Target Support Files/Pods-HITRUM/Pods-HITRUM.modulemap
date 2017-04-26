@@ -1,0 +1,6 @@
+framework module Pods_HITRUM {
+  umbrella header "Pods-HITRUM-umbrella.h"
+
+  export *
+  module * { export * }
+}

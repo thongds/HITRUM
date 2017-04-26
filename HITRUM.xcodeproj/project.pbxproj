@@ -12,6 +12,9 @@
 		5C2366021EB049DD00C44C9C /* OTPVerifyPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2366011EB049DD00C44C9C /* OTPVerifyPresent.swift */; };
 		5C2366041EB049F800C44C9C /* OTPVerifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2366031EB049F800C44C9C /* OTPVerifyView.swift */; };
 		5C2366061EB06FC900C44C9C /* SuccessFullPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2366051EB06FC900C44C9C /* SuccessFullPageViewController.swift */; };
+		5C23660A1EB0854300C44C9C /* UserHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2366091EB0854300C44C9C /* UserHomeViewController.swift */; };
+		5C23660C1EB085D700C44C9C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23660B1EB085D700C44C9C /* MenuViewController.swift */; };
+		5C23660E1EB09ADC00C44C9C /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23660D1EB09ADC00C44C9C /* UIImageView.swift */; };
 		5C7328D31EAF1D4500EABDB9 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7328D21EAF1D4500EABDB9 /* UITextFieldExtension.swift */; };
 		5C7328D61EAF4CD300EABDB9 /* LoginPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7328D51EAF4CD300EABDB9 /* LoginPresent.swift */; };
 		5C7328DA1EAF6A1400EABDB9 /* FacebookLoginVerifyPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7328D91EAF6A1400EABDB9 /* FacebookLoginVerifyPresent.swift */; };
@@ -26,6 +29,7 @@
 		5CCDC6831EAC875600D996DE /* HomeUnuserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCDC6821EAC875600D996DE /* HomeUnuserViewController.swift */; };
 		5CF7685B1EACBB84003CE4F5 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7685A1EACBB83003CE4F5 /* ColorExtension.swift */; };
 		5CF7685D1EACBD2B003CE4F5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7685C1EACBD2B003CE4F5 /* LoginViewController.swift */; };
+		96061F5704AC6E129766EBDC /* Pods_HITRUM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A31BEFD3EF680901659381 /* Pods_HITRUM.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,9 @@
 		5C2366011EB049DD00C44C9C /* OTPVerifyPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPVerifyPresent.swift; sourceTree = "<group>"; };
 		5C2366031EB049F800C44C9C /* OTPVerifyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPVerifyView.swift; sourceTree = "<group>"; };
 		5C2366051EB06FC900C44C9C /* SuccessFullPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessFullPageViewController.swift; sourceTree = "<group>"; };
+		5C2366091EB0854300C44C9C /* UserHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHomeViewController.swift; sourceTree = "<group>"; };
+		5C23660B1EB085D700C44C9C /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		5C23660D1EB09ADC00C44C9C /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		5C7328D21EAF1D4500EABDB9 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		5C7328D51EAF4CD300EABDB9 /* LoginPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresent.swift; sourceTree = "<group>"; };
 		5C7328D91EAF6A1400EABDB9 /* FacebookLoginVerifyPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginVerifyPresent.swift; sourceTree = "<group>"; };
@@ -71,6 +78,9 @@
 		5CCDC6821EAC875600D996DE /* HomeUnuserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeUnuserViewController.swift; sourceTree = "<group>"; };
 		5CF7685A1EACBB83003CE4F5 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		5CF7685C1EACBD2B003CE4F5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		70FEFFD983C8336533BD0523 /* Pods-HITRUM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HITRUM.release.xcconfig"; path = "Pods/Target Support Files/Pods-HITRUM/Pods-HITRUM.release.xcconfig"; sourceTree = "<group>"; };
+		A9EB706AC2055F7DAB2696CD /* Pods-HITRUM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HITRUM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HITRUM/Pods-HITRUM.debug.xcconfig"; sourceTree = "<group>"; };
+		D4A31BEFD3EF680901659381 /* Pods_HITRUM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HITRUM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96061F5704AC6E129766EBDC /* Pods_HITRUM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +109,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54DAE2A2A591BC13C1E12306 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4A31BEFD3EF680901659381 /* Pods_HITRUM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5C2365F51EB030E300C44C9C /* baseController */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +217,15 @@
 			name = model;
 			sourceTree = "<group>";
 		};
+		5C2366071EB084D400C44C9C /* homeUser */ = {
+			isa = PBXGroup;
+			children = (
+				5C2366091EB0854300C44C9C /* UserHomeViewController.swift */,
+				5C23660B1EB085D700C44C9C /* MenuViewController.swift */,
+			);
+			name = homeUser;
+			sourceTree = "<group>";
+		};
 		5C7328D41EAF4C9800EABDB9 /* loginModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,18 +257,19 @@
 				5C7328D21EAF1D4500EABDB9 /* UITextFieldExtension.swift */,
 				5C7328E11EAF71D000EABDB9 /* UILabelExtension.swift */,
 				5C2365F11EB02D9F00C44C9C /* ButtonExtension.swift */,
+				5C23660D1EB09ADC00C44C9C /* UIImageView.swift */,
 			);
 			name = viewExtendsion;
 			sourceTree = "<group>";
 		};
-		5C7328DE1EAF6FAD00EABDB9 /* homeModule */ = {
+		5C7328DE1EAF6FAD00EABDB9 /* singleHomePageModule */ = {
 			isa = PBXGroup;
 			children = (
 				5C9CCC8C1EAC7DFD00B70366 /* SplashController.swift */,
 				5CCDC6821EAC875600D996DE /* HomeUnuserViewController.swift */,
 				5C2366051EB06FC900C44C9C /* SuccessFullPageViewController.swift */,
 			);
-			name = homeModule;
+			name = singleHomePageModule;
 			sourceTree = "<group>";
 		};
 		5C7328DF1EAF6FCA00EABDB9 /* appDelegate */ = {
@@ -254,8 +283,9 @@
 		5C7328E01EAF6FE500EABDB9 /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				5C2366071EB084D400C44C9C /* homeUser */,
 				5C2365F51EB030E300C44C9C /* baseController */,
-				5C7328DE1EAF6FAD00EABDB9 /* homeModule */,
+				5C7328DE1EAF6FAD00EABDB9 /* singleHomePageModule */,
 				5C2365F61EB0476D00C44C9C /* registerModule */,
 				5C7328D41EAF4C9800EABDB9 /* loginModule */,
 			);
@@ -269,6 +299,8 @@
 				5C9CCC701EAC7D6D00B70366 /* HITRUMTests */,
 				5C9CCC7B1EAC7D6D00B70366 /* HITRUMUITests */,
 				5C9CCC5A1EAC7D6D00B70366 /* Products */,
+				A131F20BB803D99300F97A9A /* Pods */,
+				54DAE2A2A591BC13C1E12306 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -321,6 +353,15 @@
 			name = assist;
 			sourceTree = "<group>";
 		};
+		A131F20BB803D99300F97A9A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A9EB706AC2055F7DAB2696CD /* Pods-HITRUM.debug.xcconfig */,
+				70FEFFD983C8336533BD0523 /* Pods-HITRUM.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -328,9 +369,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C9CCC811EAC7D6D00B70366 /* Build configuration list for PBXNativeTarget "HITRUM" */;
 			buildPhases = (
+				14B20CE81688AB731A06BDCD /* [CP] Check Pods Manifest.lock */,
 				5C9CCC551EAC7D6D00B70366 /* Sources */,
 				5C9CCC561EAC7D6D00B70366 /* Frameworks */,
 				5C9CCC571EAC7D6D00B70366 /* Resources */,
+				0B391FE15B1B8279FD896D6A /* [CP] Embed Pods Frameworks */,
+				A603E2B624A4D9173E2EB9AF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -452,6 +496,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0B391FE15B1B8279FD896D6A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HITRUM/Pods-HITRUM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		14B20CE81688AB731A06BDCD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A603E2B624A4D9173E2EB9AF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HITRUM/Pods-HITRUM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5C9CCC551EAC7D6D00B70366 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -467,10 +559,13 @@
 				5C9CCC8D1EAC7DFD00B70366 /* SplashController.swift in Sources */,
 				5CCDC6831EAC875600D996DE /* HomeUnuserViewController.swift in Sources */,
 				5C7328DA1EAF6A1400EABDB9 /* FacebookLoginVerifyPresent.swift in Sources */,
+				5C23660E1EB09ADC00C44C9C /* UIImageView.swift in Sources */,
 				5C7328D31EAF1D4500EABDB9 /* UITextFieldExtension.swift in Sources */,
+				5C23660C1EB085D700C44C9C /* MenuViewController.swift in Sources */,
 				5C2366021EB049DD00C44C9C /* OTPVerifyPresent.swift in Sources */,
 				5C7328DC1EAF6A4F00EABDB9 /* FacebookLoginView.swift in Sources */,
 				5C7328D61EAF4CD300EABDB9 /* LoginPresent.swift in Sources */,
+				5C23660A1EB0854300C44C9C /* UserHomeViewController.swift in Sources */,
 				5C2366041EB049F800C44C9C /* OTPVerifyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,6 +708,7 @@
 		};
 		5C9CCC821EAC7D6D00B70366 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9EB706AC2055F7DAB2696CD /* Pods-HITRUM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 89TP3C25P2;
@@ -627,6 +723,7 @@
 		};
 		5C9CCC831EAC7D6D00B70366 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70FEFFD983C8336533BD0523 /* Pods-HITRUM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 89TP3C25P2;
