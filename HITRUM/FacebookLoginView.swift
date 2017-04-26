@@ -14,7 +14,7 @@ class FacebookLoginView: FacebookLoginVerifyPresent {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Xác nhận thông tin"
+        setNotificationKeyboard(keyboardNotification: self)
         initView()
     }
     
@@ -54,6 +54,7 @@ class FacebookLoginView: FacebookLoginVerifyPresent {
         phoneCode.text = "+84"
         phoneCode.translatesAutoresizingMaskIntoConstraints = false
         phoneNumber.setBottomBorder()
+        phoneNumber.keyboardType = .numberPad
         phoneNumber.translatesAutoresizingMaskIntoConstraints = false
         nextButton.setTitle("Tiếp theo", for: .normal)
         nextButton.translatesAutoresizingMaskIntoConstraints = false
@@ -86,13 +87,13 @@ class FacebookLoginView: FacebookLoginVerifyPresent {
         
         contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "H:[lastNameLabel]-doubleSpace-[firstNameLabel]-normalSpace-|", options: [.alignAllLastBaseline], metrics: metrics, views: views))
         
-        contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[lastNameLabel]-littleSpace-[lastNameTextField(==textFieldHeight)]", options: [.alignAllLeading,.alignAllTrailing], metrics: metrics, views: views))
+        contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[lastNameLabel][lastNameTextField(==textFieldHeight)]", options: [.alignAllLeading,.alignAllTrailing], metrics: metrics, views: views))
 
-        contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[firstNameLabel]-littleSpace-[firstNameTextField(==textFieldHeight)]", options: [.alignAllTrailing,.alignAllLeading], metrics: metrics, views: views))
+        contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[firstNameLabel][firstNameTextField(==textFieldHeight)]", options: [.alignAllTrailing,.alignAllLeading], metrics: metrics, views: views))
         
         contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[lastNameTextField]-doubleSpace-[emailLabel]", options: [.alignAllLeading,.alignAllTrailing], metrics: metrics, views: views))
         
-        contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[emailLabel]-littleSpace-[emailTextField(==textFieldHeight)]", options: [], metrics: metrics, views: views))
+        contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[emailLabel][emailTextField(==textFieldHeight)]", options: [], metrics: metrics, views: views))
         contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "H:|-normalSpace-[emailTextField]-normalSpace-|", options: [], metrics: metrics, views: views))
         
         contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[emailTextField]-normalSpace-[phoneNumberLabel]", options: [.alignAllLeading], metrics: metrics, views: views))
@@ -107,8 +108,22 @@ class FacebookLoginView: FacebookLoginVerifyPresent {
     
     
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.title = "Xác nhận thông tin"
+    }
     
    
+}
+extension FacebookLoginVerifyPresent : KeyboardNotifaction {
+    func keyboardChange(isShow : Bool,adjustHeight : CGFloat){
+        if isShow && scrollView.contentSize.height <= view.frame.height{
+            scrollView.contentSize.height = scrollView.contentSize.height + adjustHeight/2
+        }
+        if(!isShow){
+            scrollView.contentSize.height = view.frame.height - navigationHeight
+        }
+        
+    }
 }
 
 

@@ -17,11 +17,12 @@ class LoginViewController: LoginPresent {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
-        self.navigationItem.title = "Đăng Nhập"
         self.setNotificationKeyboard(keyboardNotification : self)
         initLayout()
         
     }
+    
+    
     func initLayout(){
         initViewElementData()
         addLayoutConstraint()
@@ -122,6 +123,9 @@ class LoginViewController: LoginPresent {
         NSLayoutConstraint.activate(contraints)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.title = "Đăng Nhập"
+    }
     
     
 }

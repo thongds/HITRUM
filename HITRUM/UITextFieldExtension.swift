@@ -19,4 +19,18 @@ extension UITextField {
         self.layer.shadowOpacity = 1.0
         self.layer.shadowRadius = 0.0
     }
+    class func underlineTextField() -> UITextField {
+        
+        let textField = UITextField()
+        textField.borderStyle = .none
+        textField.layer.backgroundColor = UIColor.white.cgColor
+        textField.layer.masksToBounds = false
+        textField.layer.shadowColor = UIColor.tintColor().cgColor
+        textField.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        textField.layer.shadowOpacity = 1.0
+        textField.layer.shadowRadius = 0.0
+        
+        return textField
+        
+    }
 }

@@ -9,9 +9,7 @@
 import Foundation
 import UIKit
 
-protocol KeyboardNotifaction {
-    func keyboardChange(isShow : Bool,adjustHeight : CGFloat)
-}
+
 class LoginPresent : BaseViewController {
     
     let scrollView = UIScrollView()
@@ -27,35 +25,8 @@ class LoginPresent : BaseViewController {
     let loginButton = UIButton.disableButton()
     let forgotPasswordLabel = UILabel()
     
-    
-    var keyboardNotification : KeyboardNotifaction? = nil
-    
     override func viewDidLoad() {
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: .UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: .UIKeyboardWillHide, object: nil)
         loginFacebook.addTarget(self, action: #selector(self.loginFacebookProcess), for: .touchUpInside)
-    }
-    
-    public func setNotificationKeyboard(keyboardNotification : KeyboardNotifaction){
-        self.keyboardNotification = keyboardNotification
-    }
-    
-    func keyboardWillShow(notification: NSNotification) {
-        adjustInsetForKeyboardShow(show: true, notification: notification)
-    }
-    
-    func keyboardWillHide(notification: NSNotification) {
-        adjustInsetForKeyboardShow(show: false, notification: notification)
-    }
-    func adjustInsetForKeyboardShow(show: Bool, notification: NSNotification) {
-        let userInfo = notification.userInfo ?? [:]
-        let keyboardFrame = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
-        let adjustmentHeight = (keyboardFrame.height * (show ? 1 : -1)) + 20
-        
-        if let keyboardNotification = keyboardNotification {
-            keyboardNotification.keyboardChange(isShow : show,adjustHeight: adjustmentHeight)
-        }
     }
     
     func loginFacebookProcess(){

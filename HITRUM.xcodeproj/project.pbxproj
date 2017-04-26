@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5C2365F21EB02D9F00C44C9C /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2365F11EB02D9F00C44C9C /* ButtonExtension.swift */; };
 		5C2365F41EB030DD00C44C9C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2365F31EB030DD00C44C9C /* BaseViewController.swift */; };
+		5C2366021EB049DD00C44C9C /* OTPVerifyPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2366011EB049DD00C44C9C /* OTPVerifyPresent.swift */; };
+		5C2366041EB049F800C44C9C /* OTPVerifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2366031EB049F800C44C9C /* OTPVerifyView.swift */; };
 		5C7328D31EAF1D4500EABDB9 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7328D21EAF1D4500EABDB9 /* UITextFieldExtension.swift */; };
 		5C7328D61EAF4CD300EABDB9 /* LoginPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7328D51EAF4CD300EABDB9 /* LoginPresent.swift */; };
 		5C7328DA1EAF6A1400EABDB9 /* FacebookLoginVerifyPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7328D91EAF6A1400EABDB9 /* FacebookLoginVerifyPresent.swift */; };
@@ -45,6 +47,8 @@
 /* Begin PBXFileReference section */
 		5C2365F11EB02D9F00C44C9C /* ButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
 		5C2365F31EB030DD00C44C9C /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		5C2366011EB049DD00C44C9C /* OTPVerifyPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPVerifyPresent.swift; sourceTree = "<group>"; };
+		5C2366031EB049F800C44C9C /* OTPVerifyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPVerifyView.swift; sourceTree = "<group>"; };
 		5C7328D21EAF1D4500EABDB9 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		5C7328D51EAF4CD300EABDB9 /* LoginPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresent.swift; sourceTree = "<group>"; };
 		5C7328D91EAF6A1400EABDB9 /* FacebookLoginVerifyPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginVerifyPresent.swift; sourceTree = "<group>"; };
@@ -92,40 +96,128 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5C2365F51EB030E300C44C9C /* BaseController */ = {
+		5C2365F51EB030E300C44C9C /* baseController */ = {
 			isa = PBXGroup;
 			children = (
 				5C2365F31EB030DD00C44C9C /* BaseViewController.swift */,
 			);
-			name = BaseController;
+			name = baseController;
 			sourceTree = "<group>";
 		};
-		5C7328D41EAF4C9800EABDB9 /* LoginModule */ = {
+		5C2365F61EB0476D00C44C9C /* registerModule */ = {
 			isa = PBXGroup;
 			children = (
-				5C7328D71EAF4CE400EABDB9 /* Present */,
-				5C7328D81EAF4CF100EABDB9 /* View */,
-				5C2365F51EB030E300C44C9C /* BaseController */,
+				5C2365FB1EB048BC00C44C9C /* server */,
+				5C2365F71EB0479200C44C9C /* facebook */,
 			);
-			name = LoginModule;
+			name = registerModule;
 			sourceTree = "<group>";
 		};
-		5C7328D71EAF4CE400EABDB9 /* Present */ = {
+		5C2365F71EB0479200C44C9C /* facebook */ = {
+			isa = PBXGroup;
+			children = (
+				5C2365F81EB047A500C44C9C /* present */,
+				5C2365F91EB047AC00C44C9C /* view */,
+				5C2365FF1EB0490E00C44C9C /* model */,
+			);
+			name = facebook;
+			sourceTree = "<group>";
+		};
+		5C2365F81EB047A500C44C9C /* present */ = {
+			isa = PBXGroup;
+			children = (
+				5C7328D91EAF6A1400EABDB9 /* FacebookLoginVerifyPresent.swift */,
+			);
+			name = present;
+			sourceTree = "<group>";
+		};
+		5C2365F91EB047AC00C44C9C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				5C7328DB1EAF6A4F00EABDB9 /* FacebookLoginView.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		5C2365FA1EB047E800C44C9C /* server */ = {
+			isa = PBXGroup;
+			children = (
+				5C7328D71EAF4CE400EABDB9 /* present */,
+				5C7328D81EAF4CF100EABDB9 /* view */,
+				5C2366001EB0494C00C44C9C /* model */,
+			);
+			name = server;
+			sourceTree = "<group>";
+		};
+		5C2365FB1EB048BC00C44C9C /* server */ = {
+			isa = PBXGroup;
+			children = (
+				5C2365FC1EB048C500C44C9C /* present */,
+				5C2365FD1EB048D000C44C9C /* view */,
+				5C2365FE1EB048FE00C44C9C /* model */,
+			);
+			name = server;
+			sourceTree = "<group>";
+		};
+		5C2365FC1EB048C500C44C9C /* present */ = {
+			isa = PBXGroup;
+			children = (
+				5C2366011EB049DD00C44C9C /* OTPVerifyPresent.swift */,
+			);
+			name = present;
+			sourceTree = "<group>";
+		};
+		5C2365FD1EB048D000C44C9C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				5C2366031EB049F800C44C9C /* OTPVerifyView.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		5C2365FE1EB048FE00C44C9C /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		5C2365FF1EB0490E00C44C9C /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		5C2366001EB0494C00C44C9C /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		5C7328D41EAF4C9800EABDB9 /* loginModule */ = {
+			isa = PBXGroup;
+			children = (
+				5C2365FA1EB047E800C44C9C /* server */,
+			);
+			name = loginModule;
+			sourceTree = "<group>";
+		};
+		5C7328D71EAF4CE400EABDB9 /* present */ = {
 			isa = PBXGroup;
 			children = (
 				5C7328D51EAF4CD300EABDB9 /* LoginPresent.swift */,
-				5C7328D91EAF6A1400EABDB9 /* FacebookLoginVerifyPresent.swift */,
 			);
-			name = Present;
+			name = present;
 			sourceTree = "<group>";
 		};
-		5C7328D81EAF4CF100EABDB9 /* View */ = {
+		5C7328D81EAF4CF100EABDB9 /* view */ = {
 			isa = PBXGroup;
 			children = (
 				5CF7685C1EACBD2B003CE4F5 /* LoginViewController.swift */,
-				5C7328DB1EAF6A4F00EABDB9 /* FacebookLoginView.swift */,
 			);
-			name = View;
+			name = view;
 			sourceTree = "<group>";
 		};
 		5C7328DD1EAF6F8700EABDB9 /* viewExtendsion */ = {
@@ -159,8 +251,10 @@
 		5C7328E01EAF6FE500EABDB9 /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				5C2365F51EB030E300C44C9C /* baseController */,
 				5C7328DE1EAF6FAD00EABDB9 /* homeModule */,
-				5C7328D41EAF4C9800EABDB9 /* LoginModule */,
+				5C2365F61EB0476D00C44C9C /* registerModule */,
+				5C7328D41EAF4C9800EABDB9 /* loginModule */,
 			);
 			name = modules;
 			sourceTree = "<group>";
@@ -370,8 +464,10 @@
 				5CCDC6831EAC875600D996DE /* HomeUnuserViewController.swift in Sources */,
 				5C7328DA1EAF6A1400EABDB9 /* FacebookLoginVerifyPresent.swift in Sources */,
 				5C7328D31EAF1D4500EABDB9 /* UITextFieldExtension.swift in Sources */,
+				5C2366021EB049DD00C44C9C /* OTPVerifyPresent.swift in Sources */,
 				5C7328DC1EAF6A4F00EABDB9 /* FacebookLoginView.swift in Sources */,
 				5C7328D61EAF4CD300EABDB9 /* LoginPresent.swift in Sources */,
+				5C2366041EB049F800C44C9C /* OTPVerifyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

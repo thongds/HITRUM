@@ -32,10 +32,11 @@ class FacebookLoginVerifyPresent: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
-        self.navigationController?.navigationBar.topItem?.title = " "
-        // Do any additional setup after loading the view.
+        nextButton.addTarget(self, action: #selector(self.showVerifyOTP), for: .touchUpInside)
     }
-
     
+    func showVerifyOTP(){
+        navigationController?.pushViewController(OTPVerifyView(), animated: true)
+    }
 
 }
