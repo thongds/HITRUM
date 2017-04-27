@@ -16,6 +16,11 @@ extension UIButton {
          button.layer.cornerRadius = 5
          return button
     }
+    class func activeButtonWithOutRadius() -> UIButton {
+        let button = UIButton()
+        button.backgroundColor = UIColor.appBaseColor()
+        return button
+    }
     class func disableButton() -> UIButton {
         let button = UIButton()
         button.backgroundColor = UIColor.disableButtonColor()
@@ -26,6 +31,12 @@ extension UIButton {
         let button = UIButton()
         button.backgroundColor = UIColor.dangerColor()
         button.layer.cornerRadius = 5
+        return button
+    }
+    class func dangerButtonWithOutRadius() -> UIButton {
+        let button = UIButton()
+        button.backgroundColor = UIColor.dangerColor()
+        
         return button
     }
 }

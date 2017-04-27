@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HITRUM/SettingViewController.swift"
-            timestampString = "514977902.858582"
+            timestampString = "514980228.533397"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "initViewContentData()"
             landmarkType = "7">
          </BreakpointContent>

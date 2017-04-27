@@ -11,44 +11,7 @@ import UIKit
 class SettingViewController: SettingPresent {
 
 
-    let avatarWidth = 90
-    let viewHeaderHeigh = 60
     
-    let avatar : CustomImage = {
-        let imageView = CustomImage()
-        imageView.image = #imageLiteral(resourceName: "default_image")
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.layer.borderWidth = 1.0
-        imageView.layer.borderColor = UIColor.white.cgColor
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = CGFloat(90/2)
-        imageView.layer.masksToBounds = true
-        return imageView
-    }()
-    
-    let viewHeader = UIView()
-    
-    let scrollView = UIScrollView()
-    let scrollViewHolder = UIView()
-    
-    let lastNameLabel = UILabel()
-    let lastNameTextField = UITextField()
-    
-    let firstNameLabel = UILabel()
-    let firstNameTextField = UITextField()
-    
-    let emailLabel = UILabel()
-    let emailTextField = UITextField()
-    
-    let phoneNumberLabel = UILabel()
-    let phoneCode = UILabel()
-    let phoneNumber = UITextField()
-    
-    let inviteLabel = UILabel()
-    let inviteCode = UITextField()
-    
-    let nextButton = UIButton.dangerButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,18 +48,21 @@ class SettingViewController: SettingPresent {
         lastNameLabel.text = "Họ"
         lastNameLabel.textColor = UIColor.tintColor()
         lastNameLabel.translatesAutoresizingMaskIntoConstraints = false
+        lastNameTextField.isUserInteractionEnabled = false
         lastNameTextField.setBottomBorder()
         lastNameTextField.translatesAutoresizingMaskIntoConstraints = false
         
         firstNameLabel.text = "Tên"
         firstNameLabel.translatesAutoresizingMaskIntoConstraints = false
         firstNameLabel.textColor = UIColor.tintColor()
+        firstNameTextField.isUserInteractionEnabled = false
         firstNameTextField.setBottomBorder()
         firstNameTextField.translatesAutoresizingMaskIntoConstraints = false
         
         emailLabel.text = "email"
         emailLabel.textColor = UIColor.tintColor()
         emailLabel.translatesAutoresizingMaskIntoConstraints = false
+        emailTextField.isUserInteractionEnabled = false
         emailTextField.setBottomBorder()
         emailTextField.translatesAutoresizingMaskIntoConstraints = false
         
@@ -105,6 +71,7 @@ class SettingViewController: SettingPresent {
         phoneNumberLabel.translatesAutoresizingMaskIntoConstraints = false
         phoneCode.text = "+84"
         phoneCode.translatesAutoresizingMaskIntoConstraints = false
+        phoneNumber.isUserInteractionEnabled = false
         phoneNumber.setBottomBorder()
         phoneNumber.keyboardType = .numberPad
         phoneNumber.translatesAutoresizingMaskIntoConstraints = false
@@ -113,6 +80,7 @@ class SettingViewController: SettingPresent {
         inviteLabel.textColor = UIColor.tintColor()
         inviteLabel.translatesAutoresizingMaskIntoConstraints = false
         inviteCode.translatesAutoresizingMaskIntoConstraints = false
+        inviteCode.isUserInteractionEnabled = false
         inviteCode.setBottomBorder()
         inviteCode.isUserInteractionEnabled = false
         
