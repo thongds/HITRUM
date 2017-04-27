@@ -2,6 +2,6 @@
 # platform :ios, '9.0'
 
 target 'HITRUM' do
-  pod 'SideMenu', '~> 2.3'
-  use_frameworks!  
+    pod 'SideMenu', '~> 2.3'
+    use_frameworks!
 end

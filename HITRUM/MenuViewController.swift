@@ -74,7 +74,7 @@ class MenuViewController: BaseViewController,UITableViewDelegate,UITableViewData
         avatar.centerYAnchor.constraint(equalTo: viewHeader.centerYAnchor).isActive = true
         namelabel.centerYAnchor.constraint(equalTo: viewHeader.centerYAnchor).isActive = true
         NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "V:[viewHeader]-20-[tableMenu]-|", options: [], metrics: nil, views: views))
-        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[tableMenu]-|", options: [], metrics: nil, views: views))
+        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|-30-[tableMenu]-|", options: [], metrics: nil, views: views))
         
     }
     
@@ -94,6 +94,27 @@ class MenuViewController: BaseViewController,UITableViewDelegate,UITableViewData
         return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.item)
+        switch indexPath.item {
+        case 0:
+            
+            break
+        case 1 :
+            
+            break
+        case 2 :
+            break
+        case 3 :
+            break
+        case 4 :
+            navigationController?.pushViewController(SettingViewController(), animated: true)
+            break
+        default: break
+            
+        }
+   
+    }
     
     
 }

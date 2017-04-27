@@ -486,6 +486,7 @@ extension SideMenuTransition: UIViewControllerAnimatedTransitioning {
                 
                 return
             }
+            
             SideMenuTransition.hideMenuComplete()
             transitionContext.completeTransition(true)
             menuView.removeFromSuperview()

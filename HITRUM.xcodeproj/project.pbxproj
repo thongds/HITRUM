@@ -17,6 +17,8 @@
 		5C23660E1EB09ADC00C44C9C /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23660D1EB09ADC00C44C9C /* UIImageView.swift */; };
 		5C4C8C581EB18A4100106215 /* CellMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C8C571EB18A4100106215 /* CellMenu.swift */; };
 		5C4C8C5A1EB19A2900106215 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C8C591EB19A2900106215 /* MenuModel.swift */; };
+		5C4C8C5F1EB1A0DC00106215 /* SettingPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C8C5E1EB1A0DC00106215 /* SettingPresent.swift */; };
+		5C4C8C611EB1A0F800106215 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C8C601EB1A0F800106215 /* SettingViewController.swift */; };
 		5C7328D31EAF1D4500EABDB9 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7328D21EAF1D4500EABDB9 /* UITextFieldExtension.swift */; };
 		5C7328D61EAF4CD300EABDB9 /* LoginPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7328D51EAF4CD300EABDB9 /* LoginPresent.swift */; };
 		5C7328DA1EAF6A1400EABDB9 /* FacebookLoginVerifyPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7328D91EAF6A1400EABDB9 /* FacebookLoginVerifyPresent.swift */; };
@@ -31,7 +33,7 @@
 		5CCDC6831EAC875600D996DE /* HomeUnuserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCDC6821EAC875600D996DE /* HomeUnuserViewController.swift */; };
 		5CF7685B1EACBB84003CE4F5 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7685A1EACBB83003CE4F5 /* ColorExtension.swift */; };
 		5CF7685D1EACBD2B003CE4F5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7685C1EACBD2B003CE4F5 /* LoginViewController.swift */; };
-		96061F5704AC6E129766EBDC /* Pods_HITRUM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A31BEFD3EF680901659381 /* Pods_HITRUM.framework */; };
+		B872A1B78B7770B2D7CCBA53 /* Pods_HITRUM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FFF0F9201142A9DEEAC80E1 /* Pods_HITRUM.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		5C23660D1EB09ADC00C44C9C /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		5C4C8C571EB18A4100106215 /* CellMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellMenu.swift; sourceTree = "<group>"; };
 		5C4C8C591EB19A2900106215 /* MenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
+		5C4C8C5E1EB1A0DC00106215 /* SettingPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingPresent.swift; sourceTree = "<group>"; };
+		5C4C8C601EB1A0F800106215 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		5C7328D21EAF1D4500EABDB9 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		5C7328D51EAF4CD300EABDB9 /* LoginPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresent.swift; sourceTree = "<group>"; };
 		5C7328D91EAF6A1400EABDB9 /* FacebookLoginVerifyPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginVerifyPresent.swift; sourceTree = "<group>"; };
@@ -82,9 +86,9 @@
 		5CCDC6821EAC875600D996DE /* HomeUnuserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeUnuserViewController.swift; sourceTree = "<group>"; };
 		5CF7685A1EACBB83003CE4F5 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		5CF7685C1EACBD2B003CE4F5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6FFF0F9201142A9DEEAC80E1 /* Pods_HITRUM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HITRUM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70FEFFD983C8336533BD0523 /* Pods-HITRUM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HITRUM.release.xcconfig"; path = "Pods/Target Support Files/Pods-HITRUM/Pods-HITRUM.release.xcconfig"; sourceTree = "<group>"; };
 		A9EB706AC2055F7DAB2696CD /* Pods-HITRUM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HITRUM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HITRUM/Pods-HITRUM.debug.xcconfig"; sourceTree = "<group>"; };
-		D4A31BEFD3EF680901659381 /* Pods_HITRUM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HITRUM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96061F5704AC6E129766EBDC /* Pods_HITRUM.framework in Frameworks */,
+				B872A1B78B7770B2D7CCBA53 /* Pods_HITRUM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,7 +120,7 @@
 		54DAE2A2A591BC13C1E12306 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D4A31BEFD3EF680901659381 /* Pods_HITRUM.framework */,
+				6FFF0F9201142A9DEEAC80E1 /* Pods_HITRUM.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -232,6 +236,39 @@
 			name = homeUser;
 			sourceTree = "<group>";
 		};
+		5C4C8C5C1EB1A01B00106215 /* menuPages */ = {
+			isa = PBXGroup;
+			children = (
+				5C4C8C5D1EB1A03000106215 /* setting */,
+			);
+			name = menuPages;
+			sourceTree = "<group>";
+		};
+		5C4C8C5D1EB1A03000106215 /* setting */ = {
+			isa = PBXGroup;
+			children = (
+				5C4C8C621EB1A0FE00106215 /* present */,
+				5C4C8C631EB1A10600106215 /* view */,
+			);
+			name = setting;
+			sourceTree = "<group>";
+		};
+		5C4C8C621EB1A0FE00106215 /* present */ = {
+			isa = PBXGroup;
+			children = (
+				5C4C8C5E1EB1A0DC00106215 /* SettingPresent.swift */,
+			);
+			name = present;
+			sourceTree = "<group>";
+		};
+		5C4C8C631EB1A10600106215 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				5C4C8C601EB1A0F800106215 /* SettingViewController.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 		5C7328D41EAF4C9800EABDB9 /* loginModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,11 +326,12 @@
 		5C7328E01EAF6FE500EABDB9 /* modules */ = {
 			isa = PBXGroup;
 			children = (
-				5C2366071EB084D400C44C9C /* homeUser */,
 				5C2365F51EB030E300C44C9C /* baseController */,
 				5C7328DE1EAF6FAD00EABDB9 /* singleHomePageModule */,
+				5C2366071EB084D400C44C9C /* homeUser */,
 				5C2365F61EB0476D00C44C9C /* registerModule */,
 				5C7328D41EAF4C9800EABDB9 /* loginModule */,
+				5C4C8C5C1EB1A01B00106215 /* menuPages */,
 			);
 			name = modules;
 			sourceTree = "<group>";
@@ -572,8 +610,10 @@
 				5C23660C1EB085D700C44C9C /* MenuViewController.swift in Sources */,
 				5C2366021EB049DD00C44C9C /* OTPVerifyPresent.swift in Sources */,
 				5C7328DC1EAF6A4F00EABDB9 /* FacebookLoginView.swift in Sources */,
+				5C4C8C611EB1A0F800106215 /* SettingViewController.swift in Sources */,
 				5C7328D61EAF4CD300EABDB9 /* LoginPresent.swift in Sources */,
 				5C23660A1EB0854300C44C9C /* UserHomeViewController.swift in Sources */,
+				5C4C8C5F1EB1A0DC00106215 /* SettingPresent.swift in Sources */,
 				5C2366041EB049F800C44C9C /* OTPVerifyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
