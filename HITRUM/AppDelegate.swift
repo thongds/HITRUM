@@ -13,7 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    let colorGreen = UIColor.init(hexString: "#6ED313")
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let rootViewController = SplashController();
         let navigation = UINavigationController(rootViewController: rootViewController)
@@ -23,8 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationBarAppearace = UINavigationBar.appearance()
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
         navigationBarAppearace.tintColor = UIColor.white
-        navigationBarAppearace.barTintColor = colorGreen
+        navigationBarAppearace.barTintColor = UIColor.appBaseColor()
         navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+        navigationBarAppearace.isTranslucent = false
         // Override point for customization after application launch.
         return true
     }

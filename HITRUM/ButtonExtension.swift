@@ -22,4 +22,10 @@ extension UIButton {
         button.layer.cornerRadius = 5
         return button
     }
+    class func dangerButton() -> UIButton {
+        let button = UIButton()
+        button.backgroundColor = UIColor.dangerColor()
+        button.layer.cornerRadius = 5
+        return button
+    }
 }

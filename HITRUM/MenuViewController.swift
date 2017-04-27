@@ -11,7 +11,19 @@ import UIKit
 class MenuViewController: BaseViewController,UITableViewDelegate,UITableViewDataSource {
 
     let viewHeader = UIView()
-    let avatar = UIImageView.circleImageView()
+    let avatarWidth = 60
+    let avatar : CustomImage = {
+        let imageView = CustomImage()
+        imageView.image = #imageLiteral(resourceName: "default_image")
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.layer.borderWidth = 1.0
+        imageView.layer.borderColor = UIColor.white.cgColor
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = CGFloat(60/2)
+        imageView.layer.masksToBounds = true
+        return imageView
+    }()
     let namelabel = UILabel()
     let tableMenu = UITableView()
     
@@ -47,7 +59,6 @@ class MenuViewController: BaseViewController,UITableViewDelegate,UITableViewData
         
         viewHeader.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 120)
         
-        avatar.image = #imageLiteral(resourceName: "avatart")
         avatar.translatesAutoresizingMaskIntoConstraints = false
         
         namelabel.text = "Duong Son Thong thonglao thonglao thonglao"
@@ -68,8 +79,9 @@ class MenuViewController: BaseViewController,UITableViewDelegate,UITableViewData
     func addViewContraint(){
        
         let views = ["viewHeader": viewHeader,"nameLabel" : namelabel,"avatar": avatar,"tableMenu" : tableMenu]
-        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[avatar(60)]", options: [], metrics: nil, views: views))
-        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "V:[avatar(60)]", options: [], metrics: nil, views: views))
+        let metrics = ["avatarWidth" :avatarWidth]
+        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[avatar(avatarWidth)]", options: [], metrics: metrics, views: views))
+        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "V:[avatar(avatarWidth)]", options: [], metrics: metrics, views: views))
         NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:[avatar]-10-[nameLabel(==150)]", options: [], metrics: nil, views: views))
         avatar.centerYAnchor.constraint(equalTo: viewHeader.centerYAnchor).isActive = true
         namelabel.centerYAnchor.constraint(equalTo: viewHeader.centerYAnchor).isActive = true
@@ -95,7 +107,7 @@ class MenuViewController: BaseViewController,UITableViewDelegate,UITableViewData
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.item)
+        
         switch indexPath.item {
         case 0:
             

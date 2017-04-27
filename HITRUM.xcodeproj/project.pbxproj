@@ -19,6 +19,8 @@
 		5C4C8C5A1EB19A2900106215 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C8C591EB19A2900106215 /* MenuModel.swift */; };
 		5C4C8C5F1EB1A0DC00106215 /* SettingPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C8C5E1EB1A0DC00106215 /* SettingPresent.swift */; };
 		5C4C8C611EB1A0F800106215 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C8C601EB1A0F800106215 /* SettingViewController.swift */; };
+		5C4C8C651EB1B0D800106215 /* CustomImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C8C641EB1B0D800106215 /* CustomImage.swift */; };
+		5C4C8C671EB1C4F200106215 /* UIBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C8C661EB1C4F200106215 /* UIBarExtension.swift */; };
 		5C7328D31EAF1D4500EABDB9 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7328D21EAF1D4500EABDB9 /* UITextFieldExtension.swift */; };
 		5C7328D61EAF4CD300EABDB9 /* LoginPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7328D51EAF4CD300EABDB9 /* LoginPresent.swift */; };
 		5C7328DA1EAF6A1400EABDB9 /* FacebookLoginVerifyPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7328D91EAF6A1400EABDB9 /* FacebookLoginVerifyPresent.swift */; };
@@ -30,6 +32,8 @@
 		5C9CCC721EAC7D6D00B70366 /* HITRUMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9CCC711EAC7D6D00B70366 /* HITRUMTests.swift */; };
 		5C9CCC7D1EAC7D6D00B70366 /* HITRUMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9CCC7C1EAC7D6D00B70366 /* HITRUMUITests.swift */; };
 		5C9CCC8D1EAC7DFD00B70366 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9CCC8C1EAC7DFD00B70366 /* SplashController.swift */; };
+		5CBC51061EB1EF740069E49C /* EditPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC51051EB1EF740069E49C /* EditPresent.swift */; };
+		5CBC51081EB1EF820069E49C /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC51071EB1EF820069E49C /* EditViewController.swift */; };
 		5CCDC6831EAC875600D996DE /* HomeUnuserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCDC6821EAC875600D996DE /* HomeUnuserViewController.swift */; };
 		5CF7685B1EACBB84003CE4F5 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7685A1EACBB83003CE4F5 /* ColorExtension.swift */; };
 		5CF7685D1EACBD2B003CE4F5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7685C1EACBD2B003CE4F5 /* LoginViewController.swift */; };
@@ -66,6 +70,8 @@
 		5C4C8C591EB19A2900106215 /* MenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		5C4C8C5E1EB1A0DC00106215 /* SettingPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingPresent.swift; sourceTree = "<group>"; };
 		5C4C8C601EB1A0F800106215 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		5C4C8C641EB1B0D800106215 /* CustomImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImage.swift; sourceTree = "<group>"; };
+		5C4C8C661EB1C4F200106215 /* UIBarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarExtension.swift; sourceTree = "<group>"; };
 		5C7328D21EAF1D4500EABDB9 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		5C7328D51EAF4CD300EABDB9 /* LoginPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresent.swift; sourceTree = "<group>"; };
 		5C7328D91EAF6A1400EABDB9 /* FacebookLoginVerifyPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginVerifyPresent.swift; sourceTree = "<group>"; };
@@ -83,6 +89,8 @@
 		5C9CCC7C1EAC7D6D00B70366 /* HITRUMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HITRUMUITests.swift; sourceTree = "<group>"; };
 		5C9CCC7E1EAC7D6D00B70366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C9CCC8C1EAC7DFD00B70366 /* SplashController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
+		5CBC51051EB1EF740069E49C /* EditPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPresent.swift; sourceTree = "<group>"; };
+		5CBC51071EB1EF820069E49C /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		5CCDC6821EAC875600D996DE /* HomeUnuserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeUnuserViewController.swift; sourceTree = "<group>"; };
 		5CF7685A1EACBB83003CE4F5 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		5CF7685C1EACBD2B003CE4F5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -257,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				5C4C8C5E1EB1A0DC00106215 /* SettingPresent.swift */,
+				5CBC51051EB1EF740069E49C /* EditPresent.swift */,
 			);
 			name = present;
 			sourceTree = "<group>";
@@ -265,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				5C4C8C601EB1A0F800106215 /* SettingViewController.swift */,
+				5CBC51071EB1EF820069E49C /* EditViewController.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -301,6 +311,8 @@
 				5C7328E11EAF71D000EABDB9 /* UILabelExtension.swift */,
 				5C2365F11EB02D9F00C44C9C /* ButtonExtension.swift */,
 				5C23660D1EB09ADC00C44C9C /* UIImageView.swift */,
+				5C4C8C641EB1B0D800106215 /* CustomImage.swift */,
+				5C4C8C661EB1C4F200106215 /* UIBarExtension.swift */,
 			);
 			name = viewExtendsion;
 			sourceTree = "<group>";
@@ -593,6 +605,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CBC51081EB1EF820069E49C /* EditViewController.swift in Sources */,
 				5C2365F21EB02D9F00C44C9C /* ButtonExtension.swift in Sources */,
 				5C4C8C581EB18A4100106215 /* CellMenu.swift in Sources */,
 				5CF7685D1EACBD2B003CE4F5 /* LoginViewController.swift in Sources */,
@@ -600,8 +613,11 @@
 				5CF7685B1EACBB84003CE4F5 /* ColorExtension.swift in Sources */,
 				5C9CCC5D1EAC7D6D00B70366 /* AppDelegate.swift in Sources */,
 				5C2365F41EB030DD00C44C9C /* BaseViewController.swift in Sources */,
+				5C4C8C671EB1C4F200106215 /* UIBarExtension.swift in Sources */,
 				5C2366061EB06FC900C44C9C /* SuccessFullPageViewController.swift in Sources */,
 				5C9CCC8D1EAC7DFD00B70366 /* SplashController.swift in Sources */,
+				5CBC51061EB1EF740069E49C /* EditPresent.swift in Sources */,
+				5C4C8C651EB1B0D800106215 /* CustomImage.swift in Sources */,
 				5CCDC6831EAC875600D996DE /* HomeUnuserViewController.swift in Sources */,
 				5C7328DA1EAF6A1400EABDB9 /* FacebookLoginVerifyPresent.swift in Sources */,
 				5C23660E1EB09ADC00C44C9C /* UIImageView.swift in Sources */,
@@ -766,6 +782,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = sip.HITRUM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -781,6 +798,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = sip.HITRUM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

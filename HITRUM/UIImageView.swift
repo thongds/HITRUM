@@ -10,15 +10,13 @@ import UIKit
 
 extension UIImageView {
 
-    class func circleImageView()-> UIImageView{
+    func circleImageView(){
         
-        let image = UIImageView()
-        image.layer.borderWidth = 0
-        image.layer.masksToBounds = false
-        image.layer.borderColor = UIColor.white.cgColor
-        image.layer.cornerRadius = image.frame.height/2
-        image.clipsToBounds = true
-        return image
+        self.layer.borderWidth = 0
+        self.layer.masksToBounds = false
+        self.layer.borderColor = UIColor.white.cgColor
+        self.layer.cornerRadius = self.frame.height/2
+        self.clipsToBounds = true
     }
     
 }

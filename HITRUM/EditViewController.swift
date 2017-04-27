@@ -1,5 +1,5 @@
 //
-//  settingViewController.swift
+//  EditViewController.swift
 //  HITRUM
 //
 //  Created by SSd on 4/27/17.
@@ -8,9 +8,10 @@
 
 import UIKit
 
-class SettingViewController: SettingPresent {
+class EditViewController: EditPresent {
 
-
+    
+    
     let avatarWidth = 90
     let viewHeaderHeigh = 60
     
@@ -45,19 +46,15 @@ class SettingViewController: SettingPresent {
     let phoneCode = UILabel()
     let phoneNumber = UITextField()
     
-    let inviteLabel = UILabel()
-    let inviteCode = UITextField()
+    let nextButton = UIButton.activeButton()
     
-    let nextButton = UIButton.dangerButton()
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "edit_ico"), style: .plain, target: self, action: #selector(self.showEdit))
         navigationController?.navigationBar.hideBottomHairline()
         view.backgroundColor = UIColor.white
         initView()
     }
-   
+    
     func initView(){
         initViewData()
         addViewConstraint()
@@ -73,7 +70,7 @@ class SettingViewController: SettingPresent {
         view.addSubview(avatar)
         //content
         initViewContentData()
-    
+        
     }
     func initViewContentData(){
         //content
@@ -109,14 +106,9 @@ class SettingViewController: SettingPresent {
         phoneNumber.keyboardType = .numberPad
         phoneNumber.translatesAutoresizingMaskIntoConstraints = false
         
-        inviteLabel.text = "Mã giới thiệu"
-        inviteLabel.textColor = UIColor.tintColor()
-        inviteLabel.translatesAutoresizingMaskIntoConstraints = false
-        inviteCode.translatesAutoresizingMaskIntoConstraints = false
-        inviteCode.setBottomBorder()
-        inviteCode.isUserInteractionEnabled = false
+  
         
-        nextButton.setTitle("Đăng xuất", for: .normal)
+        nextButton.setTitle("Lưu", for: .normal)
         nextButton.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(scrollView)
@@ -130,8 +122,6 @@ class SettingViewController: SettingPresent {
         scrollViewHolder.addSubview(phoneNumberLabel)
         scrollViewHolder.addSubview(phoneCode)
         scrollViewHolder.addSubview(phoneNumber)
-        scrollViewHolder.addSubview(inviteLabel)
-        scrollViewHolder.addSubview(inviteCode)
         scrollViewHolder.addSubview(nextButton)
     }
     func addViewConstraint(){
@@ -148,7 +138,7 @@ class SettingViewController: SettingPresent {
     }
     
     func addContentConstraint(){
-        let views : [String : Any] = ["lastNameLabel" : lastNameLabel,"lastNameTextField" :lastNameTextField,"firstNameLabel" :firstNameLabel,"firstNameTextField" : firstNameTextField,"emailLabel" :emailLabel,"emailTextField":emailTextField,"phoneNumberLabel" :phoneNumberLabel,"phoneCode" :phoneCode,"phoneNumber" :phoneNumber,"inviteLabel" : inviteLabel,"inviteCode" : inviteCode,"nextButton":nextButton]
+        let views : [String : Any] = ["lastNameLabel" : lastNameLabel,"lastNameTextField" :lastNameTextField,"firstNameLabel" :firstNameLabel,"firstNameTextField" : firstNameTextField,"emailLabel" :emailLabel,"emailTextField":emailTextField,"phoneNumberLabel" :phoneNumberLabel,"phoneCode" :phoneCode,"phoneNumber" :phoneNumber,"nextButton":nextButton]
         let metrics = ["SpaceTop" :  40,"littleSpace" : 10,"normalSpace" : 30, "doubleSpace" :20,"lastNameLabelWidth" : 80,"buttonHeigh" : 50,"textFieldHeight" : 30] as [String : Any]
         
         let container = UILayoutGuide()
@@ -174,10 +164,7 @@ class SettingViewController: SettingPresent {
         
         contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[phoneNumberLabel]-littleSpace-[phoneCode]", options: [.alignAllLeading], metrics: metrics, views: views))
         contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "H:[phoneCode]-littleSpace-[phoneNumber]-normalSpace-|", options: [.alignAllLastBaseline], metrics: metrics, views: views))
-        //invite
-        contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[phoneCode]-normalSpace-[inviteLabel]", options: [.alignAllLeading], metrics: metrics, views: views))
-        contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[inviteLabel]-littleSpace-[inviteCode]", options: [], metrics: metrics, views: views))
-        contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "H:|-normalSpace-[inviteCode]-normalSpace-|", options: [], metrics: metrics, views: views))
+        
         //button
         contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[nextButton(==buttonHeigh)]-littleSpace-|", options: [], metrics: metrics, views: views))
         contraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "H:|-normalSpace-[nextButton]-normalSpace-|", options: [], metrics: metrics, views: views))

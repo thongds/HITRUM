@@ -30,7 +30,9 @@ extension UIColor {
     class func facebookColor() -> UIColor {
         return UIColor.init(hexString: "#3B5898")
     }
-    
+    class func dangerColor() -> UIColor {
+        return UIColor.init(hexString: "#FF4A22")
+    }
     class func appBaseColor() -> UIColor{
         return UIColor.init(hexString: "#6ED313")
     }

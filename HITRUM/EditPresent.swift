@@ -1,5 +1,5 @@
 //
-//  settingPresent.swift
+//  EditPresent.swift
 //  HITRUM
 //
 //  Created by SSd on 4/27/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingPresent: BaseViewController {
+class EditPresent: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,12 +20,6 @@ class SettingPresent: BaseViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func showEdit(){
-        let edit = EditViewController()
-        navigationController?.pushViewController(edit, animated: true)
-    }
-    
     
 
     /*
