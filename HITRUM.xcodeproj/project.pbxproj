@@ -15,6 +15,8 @@
 		5C23660A1EB0854300C44C9C /* UserHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2366091EB0854300C44C9C /* UserHomeViewController.swift */; };
 		5C23660C1EB085D700C44C9C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23660B1EB085D700C44C9C /* MenuViewController.swift */; };
 		5C23660E1EB09ADC00C44C9C /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23660D1EB09ADC00C44C9C /* UIImageView.swift */; };
+		5C4C8C581EB18A4100106215 /* CellMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C8C571EB18A4100106215 /* CellMenu.swift */; };
+		5C4C8C5A1EB19A2900106215 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C8C591EB19A2900106215 /* MenuModel.swift */; };
 		5C7328D31EAF1D4500EABDB9 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7328D21EAF1D4500EABDB9 /* UITextFieldExtension.swift */; };
 		5C7328D61EAF4CD300EABDB9 /* LoginPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7328D51EAF4CD300EABDB9 /* LoginPresent.swift */; };
 		5C7328DA1EAF6A1400EABDB9 /* FacebookLoginVerifyPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7328D91EAF6A1400EABDB9 /* FacebookLoginVerifyPresent.swift */; };
@@ -58,6 +60,8 @@
 		5C2366091EB0854300C44C9C /* UserHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHomeViewController.swift; sourceTree = "<group>"; };
 		5C23660B1EB085D700C44C9C /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		5C23660D1EB09ADC00C44C9C /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		5C4C8C571EB18A4100106215 /* CellMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellMenu.swift; sourceTree = "<group>"; };
+		5C4C8C591EB19A2900106215 /* MenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		5C7328D21EAF1D4500EABDB9 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		5C7328D51EAF4CD300EABDB9 /* LoginPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresent.swift; sourceTree = "<group>"; };
 		5C7328D91EAF6A1400EABDB9 /* FacebookLoginVerifyPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginVerifyPresent.swift; sourceTree = "<group>"; };
@@ -222,6 +226,8 @@
 			children = (
 				5C2366091EB0854300C44C9C /* UserHomeViewController.swift */,
 				5C23660B1EB085D700C44C9C /* MenuViewController.swift */,
+				5C4C8C571EB18A4100106215 /* CellMenu.swift */,
+				5C4C8C591EB19A2900106215 /* MenuModel.swift */,
 			);
 			name = homeUser;
 			sourceTree = "<group>";
@@ -550,6 +556,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C2365F21EB02D9F00C44C9C /* ButtonExtension.swift in Sources */,
+				5C4C8C581EB18A4100106215 /* CellMenu.swift in Sources */,
 				5CF7685D1EACBD2B003CE4F5 /* LoginViewController.swift in Sources */,
 				5C7328E21EAF71D000EABDB9 /* UILabelExtension.swift in Sources */,
 				5CF7685B1EACBB84003CE4F5 /* ColorExtension.swift in Sources */,
@@ -560,6 +567,7 @@
 				5CCDC6831EAC875600D996DE /* HomeUnuserViewController.swift in Sources */,
 				5C7328DA1EAF6A1400EABDB9 /* FacebookLoginVerifyPresent.swift in Sources */,
 				5C23660E1EB09ADC00C44C9C /* UIImageView.swift in Sources */,
+				5C4C8C5A1EB19A2900106215 /* MenuModel.swift in Sources */,
 				5C7328D31EAF1D4500EABDB9 /* UITextFieldExtension.swift in Sources */,
 				5C23660C1EB085D700C44C9C /* MenuViewController.swift in Sources */,
 				5C2366021EB049DD00C44C9C /* OTPVerifyPresent.swift in Sources */,
