@@ -19,7 +19,7 @@ class EditViewController: EditPresent {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: nil)
         navigationController?.navigationBar.hideBottomHairline()
         view.backgroundColor = UIColor.white
-        
+        self.setNotificationKeyboard(keyboardNotification: self)
         initView()
     }
     
@@ -44,7 +44,8 @@ class EditViewController: EditPresent {
         //content
         scrollView.frame = CGRect(x: 0, y: CGFloat(viewHeaderHeigh+(avatarWidth/2)), width: view.frame.width, height: view.frame.height-CGFloat(viewHeaderHeigh+(avatarWidth/2))-CGFloat(navigationHeight))
         scrollView.showsVerticalScrollIndicator = false
-        
+        scrollViewContentHeigh = view.frame.height-CGFloat(viewHeaderHeigh+(avatarWidth/2))-CGFloat(navigationHeight)
+        scrollView.contentSize.height = scrollViewContentHeigh
         scrollViewHolder.frame = scrollView.bounds
         
         lastNameLabel.text = "Họ"
@@ -145,5 +146,15 @@ class EditViewController: EditPresent {
         UINavigationBar.appearance().shadowImage = UIImage()
         self.title = "Cài đặt"
     }
-
+}
+extension EditViewController : KeyboardNotifaction {
+    func keyboardChange(isShow : Bool,adjustHeight : CGFloat){
+        if isShow && scrollView.contentSize.height <= scrollViewContentHeigh{
+            scrollView.contentSize.height = scrollView.contentSize.height + adjustHeight
+        }
+        if(!isShow){
+            scrollView.contentSize.height = scrollViewContentHeigh
+        }
+        
+    }
 }

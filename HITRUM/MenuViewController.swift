@@ -113,7 +113,7 @@ class MenuViewController: BaseViewController,UITableViewDelegate,UITableViewData
             
             break
         case 1 :
-            
+            navigationController?.pushViewController(NewsCollectionView(collectionViewLayout: UICollectionViewFlowLayout()), animated: true)
             break
         case 2 :
             break

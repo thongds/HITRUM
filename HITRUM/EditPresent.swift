@@ -11,7 +11,7 @@ import UIKit
 class EditPresent: BaseViewController {
     let avatarWidth = 90
     let viewHeaderHeigh = 60
-    
+    var scrollViewContentHeigh : CGFloat = 0
     let avatar : CustomImage = {
         let imageView = CustomImage()
         imageView.image = #imageLiteral(resourceName: "default_image")
@@ -47,6 +47,7 @@ class EditPresent: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         nextButton.addTarget(self, action: #selector(self.backHome), for: .touchUpInside)
     }
     
