@@ -66,6 +66,9 @@ class HistoryCollectionView: HistoryPresent {
         
         return cell
     }
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        navigationController?.pushViewController(HistoryDetailViewController(), animated: false)
+    }
 
 }
 extension NewsCollectionView : UICollectionViewDelegateFlowLayout{

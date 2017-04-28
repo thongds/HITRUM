@@ -40,7 +40,9 @@ extension UIColor {
     class func tintColor() -> UIColor{
         return  UIColor.init(hexString: "#C7C7C7")
     }
-    
+    class func tintBackgroundColor() -> UIColor {
+        return UIColor.init(hexString: "#F5F5F5")
+    }
     class func disableButtonColor() -> UIColor{
         return UIColor.init(hexString: "#B7E989")
     }

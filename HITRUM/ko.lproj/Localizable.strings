@@ -12,3 +12,5 @@
 "history_address" = "Địa chỉ";
 "history_time" = "Thời gian";
 "history_time_total" = "Số giờ thuê";
+
+"price_total" = "Tổng tiền";

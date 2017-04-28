@@ -11,6 +11,8 @@
 		5C06CE271EB3000400A27574 /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C06CE261EB3000400A27574 /* HistoryDetailViewController.swift */; };
 		5C06CE2A1EB3003B00A27574 /* HistoryDetailPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C06CE291EB3003B00A27574 /* HistoryDetailPresent.swift */; };
 		5C06CE2D1EB300AF00A27574 /* HistoryDetailCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C06CE2C1EB300AF00A27574 /* HistoryDetailCollectionView.swift */; };
+		5C06CE2F1EB3033200A27574 /* HistoryDetailCollectionPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C06CE2E1EB3033200A27574 /* HistoryDetailCollectionPresent.swift */; };
+		5C06CE311EB3037200A27574 /* HistoryDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C06CE301EB3037200A27574 /* HistoryDetailCell.swift */; };
 		5C2365F21EB02D9F00C44C9C /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2365F11EB02D9F00C44C9C /* ButtonExtension.swift */; };
 		5C2365F41EB030DD00C44C9C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2365F31EB030DD00C44C9C /* BaseViewController.swift */; };
 		5C2366021EB049DD00C44C9C /* OTPVerifyPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2366011EB049DD00C44C9C /* OTPVerifyPresent.swift */; };
@@ -81,6 +83,8 @@
 		5C06CE261EB3000400A27574 /* HistoryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDetailViewController.swift; sourceTree = "<group>"; };
 		5C06CE291EB3003B00A27574 /* HistoryDetailPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDetailPresent.swift; sourceTree = "<group>"; };
 		5C06CE2C1EB300AF00A27574 /* HistoryDetailCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDetailCollectionView.swift; sourceTree = "<group>"; };
+		5C06CE2E1EB3033200A27574 /* HistoryDetailCollectionPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDetailCollectionPresent.swift; sourceTree = "<group>"; };
+		5C06CE301EB3037200A27574 /* HistoryDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDetailCell.swift; sourceTree = "<group>"; };
 		5C2365F11EB02D9F00C44C9C /* ButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
 		5C2365F31EB030DD00C44C9C /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5C2366011EB049DD00C44C9C /* OTPVerifyPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPVerifyPresent.swift; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 			children = (
 				5C06CE261EB3000400A27574 /* HistoryDetailViewController.swift */,
 				5C06CE2C1EB300AF00A27574 /* HistoryDetailCollectionView.swift */,
+				5C06CE301EB3037200A27574 /* HistoryDetailCell.swift */,
 			);
 			name = historyDetail;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				5C06CE291EB3003B00A27574 /* HistoryDetailPresent.swift */,
+				5C06CE2E1EB3033200A27574 /* HistoryDetailCollectionPresent.swift */,
 			);
 			name = historyDetail;
 			sourceTree = "<group>";
@@ -753,11 +759,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CBC51081EB1EF820069E49C /* EditViewController.swift in Sources */,
+				5C06CE2F1EB3033200A27574 /* HistoryDetailCollectionPresent.swift in Sources */,
 				5C2365F21EB02D9F00C44C9C /* ButtonExtension.swift in Sources */,
 				5C4C8C581EB18A4100106215 /* CellMenu.swift in Sources */,
 				5CBC511F1EB232480069E49C /* NewsDetailPresent.swift in Sources */,
 				5CBC512A1EB249030069E49C /* HistoryCollectionView.swift in Sources */,
 				5CF7685D1EACBD2B003CE4F5 /* LoginViewController.swift in Sources */,
+				5C06CE311EB3037200A27574 /* HistoryDetailCell.swift in Sources */,
 				5C7328E21EAF71D000EABDB9 /* UILabelExtension.swift in Sources */,
 				5CBC51211EB232780069E49C /* NewsDetailViewController.swift in Sources */,
 				5CF7685B1EACBB84003CE4F5 /* ColorExtension.swift in Sources */,

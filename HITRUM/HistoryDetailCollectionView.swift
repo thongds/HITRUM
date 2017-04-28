@@ -8,9 +8,9 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "HistoryDetailCollectionView_Cell"
 
-class HistoryDetailCollectionView: UICollectionViewController {
+class HistoryDetailCollectionView: HistoryDetailCollectionPresent {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,9 @@ class HistoryDetailCollectionView: UICollectionViewController {
 
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
+        let layout = self.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.minimumLineSpacing = 10
+        layout.itemSize = CGSize(width: view.frame.width, height: 120)
         // Do any additional setup after loading the view.
     }
 
@@ -43,18 +45,19 @@ class HistoryDetailCollectionView: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return 10
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
+        cell.backgroundColor = UIColor.gray
         // Configure the cell
     
         return cell
