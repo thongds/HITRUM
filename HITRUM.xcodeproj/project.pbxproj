@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5C06CE1C1EB2CE8E00A27574 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C06CE1E1EB2CE8E00A27574 /* Localizable.strings */; };
+		5C06CE271EB3000400A27574 /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C06CE261EB3000400A27574 /* HistoryDetailViewController.swift */; };
+		5C06CE2A1EB3003B00A27574 /* HistoryDetailPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C06CE291EB3003B00A27574 /* HistoryDetailPresent.swift */; };
+		5C06CE2D1EB300AF00A27574 /* HistoryDetailCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C06CE2C1EB300AF00A27574 /* HistoryDetailCollectionView.swift */; };
 		5C2365F21EB02D9F00C44C9C /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2365F11EB02D9F00C44C9C /* ButtonExtension.swift */; };
 		5C2365F41EB030DD00C44C9C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2365F31EB030DD00C44C9C /* BaseViewController.swift */; };
 		5C2366021EB049DD00C44C9C /* OTPVerifyPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2366011EB049DD00C44C9C /* OTPVerifyPresent.swift */; };
@@ -75,6 +78,9 @@
 		5C06CE1F1EB2CE9800A27574 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5C06CE201EB2D08000A27574 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		5C06CE211EB2D08000A27574 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5C06CE261EB3000400A27574 /* HistoryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDetailViewController.swift; sourceTree = "<group>"; };
+		5C06CE291EB3003B00A27574 /* HistoryDetailPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDetailPresent.swift; sourceTree = "<group>"; };
+		5C06CE2C1EB300AF00A27574 /* HistoryDetailCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDetailCollectionView.swift; sourceTree = "<group>"; };
 		5C2365F11EB02D9F00C44C9C /* ButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
 		5C2365F31EB030DD00C44C9C /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5C2366011EB049DD00C44C9C /* OTPVerifyPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPVerifyPresent.swift; sourceTree = "<group>"; };
@@ -159,6 +165,40 @@
 				6FFF0F9201142A9DEEAC80E1 /* Pods_HITRUM.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C06CE221EB2FF8000A27574 /* history */ = {
+			isa = PBXGroup;
+			children = (
+				5CBC51271EB245FF0069E49C /* HistoryPresent.swift */,
+			);
+			name = history;
+			sourceTree = "<group>";
+		};
+		5C06CE231EB2FF9100A27574 /* history */ = {
+			isa = PBXGroup;
+			children = (
+				5CBC51291EB249030069E49C /* HistoryCollectionView.swift */,
+				5CBC512D1EB24BB30069E49C /* HistoryCellCollectionViewCell.swift */,
+			);
+			name = history;
+			sourceTree = "<group>";
+		};
+		5C06CE281EB3001800A27574 /* historyDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5C06CE261EB3000400A27574 /* HistoryDetailViewController.swift */,
+				5C06CE2C1EB300AF00A27574 /* HistoryDetailCollectionView.swift */,
+			);
+			name = historyDetail;
+			sourceTree = "<group>";
+		};
+		5C06CE2B1EB3004400A27574 /* historyDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5C06CE291EB3003B00A27574 /* HistoryDetailPresent.swift */,
+			);
+			name = historyDetail;
 			sourceTree = "<group>";
 		};
 		5C2365F51EB030E300C44C9C /* baseController */ = {
@@ -480,7 +520,8 @@
 		5CBC51231EB23F340069E49C /* present */ = {
 			isa = PBXGroup;
 			children = (
-				5CBC51271EB245FF0069E49C /* HistoryPresent.swift */,
+				5C06CE221EB2FF8000A27574 /* history */,
+				5C06CE2B1EB3004400A27574 /* historyDetail */,
 			);
 			name = present;
 			sourceTree = "<group>";
@@ -488,8 +529,8 @@
 		5CBC51251EB23F560069E49C /* view */ = {
 			isa = PBXGroup;
 			children = (
-				5CBC51291EB249030069E49C /* HistoryCollectionView.swift */,
-				5CBC512D1EB24BB30069E49C /* HistoryCellCollectionViewCell.swift */,
+				5C06CE231EB2FF9100A27574 /* history */,
+				5C06CE281EB3001800A27574 /* historyDetail */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -727,6 +768,7 @@
 				5C2366061EB06FC900C44C9C /* SuccessFullPageViewController.swift in Sources */,
 				5C9CCC8D1EAC7DFD00B70366 /* SplashController.swift in Sources */,
 				5CBC51061EB1EF740069E49C /* EditPresent.swift in Sources */,
+				5C06CE2D1EB300AF00A27574 /* HistoryDetailCollectionView.swift in Sources */,
 				5CBC51281EB245FF0069E49C /* HistoryPresent.swift in Sources */,
 				5C4C8C651EB1B0D800106215 /* CustomImage.swift in Sources */,
 				5CCDC6831EAC875600D996DE /* HomeUnuserViewController.swift in Sources */,
@@ -734,6 +776,7 @@
 				5CBC512C1EB249250069E49C /* HistoryModel.swift in Sources */,
 				5CBC51171EB21C500069E49C /* NewsCollectionViewPresent.swift in Sources */,
 				5C23660E1EB09ADC00C44C9C /* UIImageView.swift in Sources */,
+				5C06CE2A1EB3003B00A27574 /* HistoryDetailPresent.swift in Sources */,
 				5C4C8C5A1EB19A2900106215 /* MenuModel.swift in Sources */,
 				5C7328D31EAF1D4500EABDB9 /* UITextFieldExtension.swift in Sources */,
 				5C23660C1EB085D700C44C9C /* MenuViewController.swift in Sources */,
@@ -746,6 +789,7 @@
 				5CBC511B1EB21C950069E49C /* NewsCollectionCell.swift in Sources */,
 				5C7328D61EAF4CD300EABDB9 /* LoginPresent.swift in Sources */,
 				5C23660A1EB0854300C44C9C /* UserHomeViewController.swift in Sources */,
+				5C06CE271EB3000400A27574 /* HistoryDetailViewController.swift in Sources */,
 				5C4C8C5F1EB1A0DC00106215 /* SettingPresent.swift in Sources */,
 				5C2366041EB049F800C44C9C /* OTPVerifyView.swift in Sources */,
 			);

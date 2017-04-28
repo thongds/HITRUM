@@ -110,7 +110,7 @@ class MenuViewController: BaseViewController,UITableViewDelegate,UITableViewData
         
         switch indexPath.item {
         case 0:
-            
+            navigationController?.pushViewController(HistoryCollectionView(collectionViewLayout: UICollectionViewFlowLayout()), animated: true)
             break
         case 1 :
             navigationController?.pushViewController(NewsCollectionView(collectionViewLayout: UICollectionViewFlowLayout()), animated: true)

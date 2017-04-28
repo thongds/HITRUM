@@ -6,3 +6,9 @@
   Copyright © 2017 SSd. All rights reserved.
 */
 "keyLabel" = "English";
+
+//user history page
+
+"history_address" = "Địa chỉ";
+"history_time" = "Thời gian";
+"history_time_total" = "Số giờ thuê";

@@ -1,19 +1,17 @@
 //
-//  NewsCollectionView.swift
+//  HistoryDetailCollectionView.swift
 //  HITRUM
 //
-//  Created by SSd on 4/27/17.
+//  Created by SSd on 4/28/17.
 //  Copyright © 2017 SSd. All rights reserved.
 //
 
 import UIKit
 
-private let reuseIdentifier = "News_Cell2"
+private let reuseIdentifier = "Cell"
 
-class NewsCollectionView: UICollectionViewController {
-    
-    var newsData = [NewsModel]()
-    
+class HistoryDetailCollectionView: UICollectionViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,22 +19,11 @@ class NewsCollectionView: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        collectionView?.backgroundColor = UIColor.init(hexString: "#F8F8F8")
-        self.collectionView!.register(NewsCollectionCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        
-        collectionView?.contentOffset = CGPoint(x: 0, y: -20)
-        collectionView?.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
-        let layout = collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = CGSize(width: 200, height: 200)
-        layout.minimumLineSpacing = 10
-        initNewsData()
-       
+        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+
+        // Do any additional setup after loading the view.
     }
-    func initNewsData(){
-        for _ in 0...10 {
-            newsData.append(NewsModel(title: "Khuyến mãi hôm nay ", content:"Tham gia đặt người giúp việc ngay hôm nay để được" , date:"13/04/2017" ))
-        }
-    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -56,27 +43,23 @@ class NewsCollectionView: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return newsData.count
+        return 0
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! NewsCollectionCell
-        cell.newsModel = newsData[indexPath.item]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+    
         // Configure the cell
-        cell.backgroundColor = UIColor.white
+    
         return cell
     }
 
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        navigationController?.pushViewController(NewsDetailViewController(), animated: false)
-    }
-    
     // MARK: UICollectionViewDelegate
 
     /*
@@ -109,26 +92,3 @@ class NewsCollectionView: UICollectionViewController {
     */
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
