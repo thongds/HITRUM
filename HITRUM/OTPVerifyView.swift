@@ -123,7 +123,8 @@ class OTPVerifyView : OTPVerifyPresent {
         NSLayoutConstraint.activate(contraints)
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.title = "Nhập mã xác nhận"
+        //self.title = "Nhập mã xác nhận"
+        self.title = NSLocalizedString("keyLabel", comment: "")
     }
     
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C06CE1C1EB2CE8E00A27574 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C06CE1E1EB2CE8E00A27574 /* Localizable.strings */; };
 		5C2365F21EB02D9F00C44C9C /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2365F11EB02D9F00C44C9C /* ButtonExtension.swift */; };
 		5C2365F41EB030DD00C44C9C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2365F31EB030DD00C44C9C /* BaseViewController.swift */; };
 		5C2366021EB049DD00C44C9C /* OTPVerifyPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2366011EB049DD00C44C9C /* OTPVerifyPresent.swift */; };
@@ -34,14 +35,17 @@
 		5C9CCC8D1EAC7DFD00B70366 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9CCC8C1EAC7DFD00B70366 /* SplashController.swift */; };
 		5CBC51061EB1EF740069E49C /* EditPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC51051EB1EF740069E49C /* EditPresent.swift */; };
 		5CBC51081EB1EF820069E49C /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC51071EB1EF820069E49C /* EditViewController.swift */; };
-		5CBC510B1EB2049D0069E49C /* NewsPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC510A1EB2049D0069E49C /* NewsPresent.swift */; };
-		5CBC510F1EB204C60069E49C /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC510E1EB204C60069E49C /* NewsViewController.swift */; };
-		5CBC51131EB206D50069E49C /* NewsCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC51121EB206D50069E49C /* NewsCellTableViewCell.swift */; };
 		5CBC51151EB207680069E49C /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC51141EB207680069E49C /* NewsModel.swift */; };
 		5CBC51171EB21C500069E49C /* NewsCollectionViewPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC51161EB21C500069E49C /* NewsCollectionViewPresent.swift */; };
 		5CBC51191EB21C710069E49C /* NewsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC51181EB21C710069E49C /* NewsCollectionView.swift */; };
 		5CBC511B1EB21C950069E49C /* NewsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC511A1EB21C950069E49C /* NewsCollectionCell.swift */; };
 		5CBC511D1EB21DDA0069E49C /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC511C1EB21DDA0069E49C /* BaseCollectionViewCell.swift */; };
+		5CBC511F1EB232480069E49C /* NewsDetailPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC511E1EB232480069E49C /* NewsDetailPresent.swift */; };
+		5CBC51211EB232780069E49C /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC51201EB232780069E49C /* NewsDetailViewController.swift */; };
+		5CBC51281EB245FF0069E49C /* HistoryPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC51271EB245FF0069E49C /* HistoryPresent.swift */; };
+		5CBC512A1EB249030069E49C /* HistoryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC51291EB249030069E49C /* HistoryCollectionView.swift */; };
+		5CBC512C1EB249250069E49C /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC512B1EB249250069E49C /* HistoryModel.swift */; };
+		5CBC512E1EB24BB30069E49C /* HistoryCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC512D1EB24BB30069E49C /* HistoryCellCollectionViewCell.swift */; };
 		5CCDC6831EAC875600D996DE /* HomeUnuserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCDC6821EAC875600D996DE /* HomeUnuserViewController.swift */; };
 		5CF7685B1EACBB84003CE4F5 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7685A1EACBB83003CE4F5 /* ColorExtension.swift */; };
 		5CF7685D1EACBD2B003CE4F5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7685C1EACBD2B003CE4F5 /* LoginViewController.swift */; };
@@ -66,6 +70,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C06CE1B1EB2CD8D00A27574 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		5C06CE1D1EB2CE8E00A27574 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5C06CE1F1EB2CE9800A27574 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5C06CE201EB2D08000A27574 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		5C06CE211EB2D08000A27574 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5C2365F11EB02D9F00C44C9C /* ButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
 		5C2365F31EB030DD00C44C9C /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5C2366011EB049DD00C44C9C /* OTPVerifyPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPVerifyPresent.swift; sourceTree = "<group>"; };
@@ -99,14 +108,17 @@
 		5C9CCC8C1EAC7DFD00B70366 /* SplashController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		5CBC51051EB1EF740069E49C /* EditPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPresent.swift; sourceTree = "<group>"; };
 		5CBC51071EB1EF820069E49C /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
-		5CBC510A1EB2049D0069E49C /* NewsPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsPresent.swift; sourceTree = "<group>"; };
-		5CBC510E1EB204C60069E49C /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
-		5CBC51121EB206D50069E49C /* NewsCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCellTableViewCell.swift; sourceTree = "<group>"; };
 		5CBC51141EB207680069E49C /* NewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		5CBC51161EB21C500069E49C /* NewsCollectionViewPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewPresent.swift; sourceTree = "<group>"; };
 		5CBC51181EB21C710069E49C /* NewsCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCollectionView.swift; sourceTree = "<group>"; };
 		5CBC511A1EB21C950069E49C /* NewsCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCollectionCell.swift; sourceTree = "<group>"; };
 		5CBC511C1EB21DDA0069E49C /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		5CBC511E1EB232480069E49C /* NewsDetailPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailPresent.swift; sourceTree = "<group>"; };
+		5CBC51201EB232780069E49C /* NewsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		5CBC51271EB245FF0069E49C /* HistoryPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryPresent.swift; sourceTree = "<group>"; };
+		5CBC51291EB249030069E49C /* HistoryCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCollectionView.swift; sourceTree = "<group>"; };
+		5CBC512B1EB249250069E49C /* HistoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
+		5CBC512D1EB24BB30069E49C /* HistoryCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		5CCDC6821EAC875600D996DE /* HomeUnuserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeUnuserViewController.swift; sourceTree = "<group>"; };
 		5CF7685A1EACBB83003CE4F5 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		5CF7685C1EACBD2B003CE4F5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -264,6 +276,7 @@
 		5C4C8C5C1EB1A01B00106215 /* menuPages */ = {
 			isa = PBXGroup;
 			children = (
+				5CBC51221EB23D730069E49C /* history */,
 				5C4C8C5D1EB1A03000106215 /* setting */,
 				5CBC510C1EB204A40069E49C /* news */,
 			);
@@ -430,8 +443,8 @@
 		5CBC510D1EB204B20069E49C /* present */ = {
 			isa = PBXGroup;
 			children = (
-				5CBC510A1EB2049D0069E49C /* NewsPresent.swift */,
 				5CBC51161EB21C500069E49C /* NewsCollectionViewPresent.swift */,
+				5CBC511E1EB232480069E49C /* NewsDetailPresent.swift */,
 			);
 			name = present;
 			sourceTree = "<group>";
@@ -439,10 +452,9 @@
 		5CBC51101EB204C90069E49C /* view */ = {
 			isa = PBXGroup;
 			children = (
-				5CBC510E1EB204C60069E49C /* NewsViewController.swift */,
-				5CBC51121EB206D50069E49C /* NewsCellTableViewCell.swift */,
 				5CBC51181EB21C710069E49C /* NewsCollectionView.swift */,
 				5CBC511A1EB21C950069E49C /* NewsCollectionCell.swift */,
+				5CBC51201EB232780069E49C /* NewsDetailViewController.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -455,12 +467,48 @@
 			name = model;
 			sourceTree = "<group>";
 		};
+		5CBC51221EB23D730069E49C /* history */ = {
+			isa = PBXGroup;
+			children = (
+				5CBC51231EB23F340069E49C /* present */,
+				5CBC51251EB23F560069E49C /* view */,
+				5CBC51261EB23F5F0069E49C /* model */,
+			);
+			name = history;
+			sourceTree = "<group>";
+		};
+		5CBC51231EB23F340069E49C /* present */ = {
+			isa = PBXGroup;
+			children = (
+				5CBC51271EB245FF0069E49C /* HistoryPresent.swift */,
+			);
+			name = present;
+			sourceTree = "<group>";
+		};
+		5CBC51251EB23F560069E49C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				5CBC51291EB249030069E49C /* HistoryCollectionView.swift */,
+				5CBC512D1EB24BB30069E49C /* HistoryCellCollectionViewCell.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		5CBC51261EB23F5F0069E49C /* model */ = {
+			isa = PBXGroup;
+			children = (
+				5CBC512B1EB249250069E49C /* HistoryModel.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		5CF15B381EACEF4100D1195E /* assist */ = {
 			isa = PBXGroup;
 			children = (
 				5C9CCC631EAC7D6D00B70366 /* Assets.xcassets */,
 				5C9CCC651EAC7D6D00B70366 /* LaunchScreen.storyboard */,
 				5C9CCC681EAC7D6D00B70366 /* Info.plist */,
+				5C06CE1E1EB2CE8E00A27574 /* Localizable.strings */,
 			);
 			name = assist;
 			sourceTree = "<group>";
@@ -569,6 +617,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 5C9CCC501EAC7D6D00B70366;
 			productRefGroup = 5C9CCC5A1EAC7D6D00B70366 /* Products */;
@@ -588,6 +637,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C9CCC671EAC7D6D00B70366 /* LaunchScreen.storyboard in Resources */,
+				5C06CE1C1EB2CE8E00A27574 /* Localizable.strings in Resources */,
 				5C9CCC641EAC7D6D00B70366 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -664,8 +714,11 @@
 				5CBC51081EB1EF820069E49C /* EditViewController.swift in Sources */,
 				5C2365F21EB02D9F00C44C9C /* ButtonExtension.swift in Sources */,
 				5C4C8C581EB18A4100106215 /* CellMenu.swift in Sources */,
+				5CBC511F1EB232480069E49C /* NewsDetailPresent.swift in Sources */,
+				5CBC512A1EB249030069E49C /* HistoryCollectionView.swift in Sources */,
 				5CF7685D1EACBD2B003CE4F5 /* LoginViewController.swift in Sources */,
 				5C7328E21EAF71D000EABDB9 /* UILabelExtension.swift in Sources */,
+				5CBC51211EB232780069E49C /* NewsDetailViewController.swift in Sources */,
 				5CF7685B1EACBB84003CE4F5 /* ColorExtension.swift in Sources */,
 				5C9CCC5D1EAC7D6D00B70366 /* AppDelegate.swift in Sources */,
 				5CBC511D1EB21DDA0069E49C /* BaseCollectionViewCell.swift in Sources */,
@@ -673,27 +726,27 @@
 				5C4C8C671EB1C4F200106215 /* UIBarExtension.swift in Sources */,
 				5C2366061EB06FC900C44C9C /* SuccessFullPageViewController.swift in Sources */,
 				5C9CCC8D1EAC7DFD00B70366 /* SplashController.swift in Sources */,
-				5CBC510F1EB204C60069E49C /* NewsViewController.swift in Sources */,
 				5CBC51061EB1EF740069E49C /* EditPresent.swift in Sources */,
+				5CBC51281EB245FF0069E49C /* HistoryPresent.swift in Sources */,
 				5C4C8C651EB1B0D800106215 /* CustomImage.swift in Sources */,
 				5CCDC6831EAC875600D996DE /* HomeUnuserViewController.swift in Sources */,
 				5C7328DA1EAF6A1400EABDB9 /* FacebookLoginVerifyPresent.swift in Sources */,
+				5CBC512C1EB249250069E49C /* HistoryModel.swift in Sources */,
 				5CBC51171EB21C500069E49C /* NewsCollectionViewPresent.swift in Sources */,
 				5C23660E1EB09ADC00C44C9C /* UIImageView.swift in Sources */,
 				5C4C8C5A1EB19A2900106215 /* MenuModel.swift in Sources */,
 				5C7328D31EAF1D4500EABDB9 /* UITextFieldExtension.swift in Sources */,
 				5C23660C1EB085D700C44C9C /* MenuViewController.swift in Sources */,
+				5CBC512E1EB24BB30069E49C /* HistoryCellCollectionViewCell.swift in Sources */,
 				5C2366021EB049DD00C44C9C /* OTPVerifyPresent.swift in Sources */,
 				5C7328DC1EAF6A4F00EABDB9 /* FacebookLoginView.swift in Sources */,
 				5CBC51191EB21C710069E49C /* NewsCollectionView.swift in Sources */,
-				5CBC51131EB206D50069E49C /* NewsCellTableViewCell.swift in Sources */,
 				5C4C8C611EB1A0F800106215 /* SettingViewController.swift in Sources */,
 				5CBC51151EB207680069E49C /* NewsModel.swift in Sources */,
 				5CBC511B1EB21C950069E49C /* NewsCollectionCell.swift in Sources */,
 				5C7328D61EAF4CD300EABDB9 /* LoginPresent.swift in Sources */,
 				5C23660A1EB0854300C44C9C /* UserHomeViewController.swift in Sources */,
 				5C4C8C5F1EB1A0DC00106215 /* SettingPresent.swift in Sources */,
-				5CBC510B1EB2049D0069E49C /* NewsPresent.swift in Sources */,
 				5C2366041EB049F800C44C9C /* OTPVerifyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -730,10 +783,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		5C06CE1E1EB2CE8E00A27574 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C06CE1D1EB2CE8E00A27574 /* vi */,
+				5C06CE1F1EB2CE9800A27574 /* en */,
+				5C06CE211EB2D08000A27574 /* ko */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		5C9CCC651EAC7D6D00B70366 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5C9CCC661EAC7D6D00B70366 /* Base */,
+				5C06CE1B1EB2CD8D00A27574 /* vi */,
+				5C06CE201EB2D08000A27574 /* ko */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -745,6 +810,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -795,6 +861,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";

@@ -1,5 +1,5 @@
 //
-//  NewsPresent.swift
+//  HistoryViewController.swift
 //  HITRUM
 //
 //  Created by SSd on 4/27/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewsPresent: BaseViewController {
+class HistoryPresent: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
