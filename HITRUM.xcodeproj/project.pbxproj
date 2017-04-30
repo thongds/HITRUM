@@ -39,6 +39,12 @@
 		5C7328E21EAF71D000EABDB9 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7328E11EAF71D000EABDB9 /* UILabelExtension.swift */; };
 		5C782BD11EB5816C0015B0FB /* NewPasswordPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C782BD01EB5816C0015B0FB /* NewPasswordPresent.swift */; };
 		5C782BD31EB581800015B0FB /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C782BD21EB581800015B0FB /* NewPasswordViewController.swift */; };
+		5C782BDF1EB5C08C0015B0FB /* ChooseLocationPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C782BDE1EB5C08C0015B0FB /* ChooseLocationPresent.swift */; };
+		5C782BE11EB5C09C0015B0FB /* ChooseLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C782BE01EB5C09C0015B0FB /* ChooseLocationViewController.swift */; };
+		5C782BE41EB5C5140015B0FB /* SearchResultCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C782BE31EB5C5140015B0FB /* SearchResultCollectionViewController.swift */; };
+		5C782BE61EB5C5380015B0FB /* SearchResultPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C782BE51EB5C5380015B0FB /* SearchResultPresent.swift */; };
+		5C782BE81EB5C5660015B0FB /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C782BE71EB5C5660015B0FB /* SearchResultCell.swift */; };
+		5C782BEA1EB5D43E0015B0FB /* ChooseLocationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C782BE91EB5D43E0015B0FB /* ChooseLocationResult.swift */; };
 		5C9CCC5D1EAC7D6D00B70366 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9CCC5C1EAC7D6D00B70366 /* AppDelegate.swift */; };
 		5C9CCC641EAC7D6D00B70366 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C9CCC631EAC7D6D00B70366 /* Assets.xcassets */; };
 		5C9CCC671EAC7D6D00B70366 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C9CCC651EAC7D6D00B70366 /* LaunchScreen.storyboard */; };
@@ -118,6 +124,12 @@
 		5C7328E11EAF71D000EABDB9 /* UILabelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		5C782BD01EB5816C0015B0FB /* NewPasswordPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPasswordPresent.swift; sourceTree = "<group>"; };
 		5C782BD21EB581800015B0FB /* NewPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
+		5C782BDE1EB5C08C0015B0FB /* ChooseLocationPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseLocationPresent.swift; sourceTree = "<group>"; };
+		5C782BE01EB5C09C0015B0FB /* ChooseLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseLocationViewController.swift; sourceTree = "<group>"; };
+		5C782BE31EB5C5140015B0FB /* SearchResultCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCollectionViewController.swift; sourceTree = "<group>"; };
+		5C782BE51EB5C5380015B0FB /* SearchResultPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultPresent.swift; sourceTree = "<group>"; };
+		5C782BE71EB5C5660015B0FB /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		5C782BE91EB5D43E0015B0FB /* ChooseLocationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseLocationResult.swift; sourceTree = "<group>"; };
 		5C9CCC591EAC7D6D00B70366 /* HITRUM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HITRUM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C9CCC5C1EAC7D6D00B70366 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C9CCC631EAC7D6D00B70366 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -483,8 +495,7 @@
 			children = (
 				5C2365F51EB030E300C44C9C /* baseController */,
 				5C7328DE1EAF6FAD00EABDB9 /* singleHomePageModule */,
-				5C782BD81EB5BE5B0015B0FB /* userAction */,
-				5C782BD71EB5BDFD0015B0FB /* userControl */,
+				5C782BE21EB5C4870015B0FB /* user */,
 			);
 			name = modules;
 			sourceTree = "<group>";
@@ -538,8 +549,9 @@
 		5C782BD91EB5BFCE0015B0FB /* chooseLocation */ = {
 			isa = PBXGroup;
 			children = (
-				5C782BDB1EB5BFE10015B0FB /* view */,
 				5C782BDA1EB5BFDB0015B0FB /* present */,
+				5C782BDB1EB5BFE10015B0FB /* view */,
+				5C782BDD1EB5C0590015B0FB /* model */,
 			);
 			name = chooseLocation;
 			sourceTree = "<group>";
@@ -547,6 +559,8 @@
 		5C782BDA1EB5BFDB0015B0FB /* present */ = {
 			isa = PBXGroup;
 			children = (
+				5C782BDE1EB5C08C0015B0FB /* ChooseLocationPresent.swift */,
+				5C782BE51EB5C5380015B0FB /* SearchResultPresent.swift */,
 			);
 			name = present;
 			sourceTree = "<group>";
@@ -554,8 +568,28 @@
 		5C782BDB1EB5BFE10015B0FB /* view */ = {
 			isa = PBXGroup;
 			children = (
+				5C782BE01EB5C09C0015B0FB /* ChooseLocationViewController.swift */,
+				5C782BE31EB5C5140015B0FB /* SearchResultCollectionViewController.swift */,
+				5C782BE71EB5C5660015B0FB /* SearchResultCell.swift */,
 			);
 			name = view;
+			sourceTree = "<group>";
+		};
+		5C782BDD1EB5C0590015B0FB /* model */ = {
+			isa = PBXGroup;
+			children = (
+				5C782BE91EB5D43E0015B0FB /* ChooseLocationResult.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		5C782BE21EB5C4870015B0FB /* user */ = {
+			isa = PBXGroup;
+			children = (
+				5C782BD71EB5BDFD0015B0FB /* userControl */,
+				5C782BD81EB5BE5B0015B0FB /* userAction */,
+			);
+			name = user;
 			sourceTree = "<group>";
 		};
 		5C9CCC501EAC7D6D00B70366 = {
@@ -911,6 +945,7 @@
 				5CF7685B1EACBB84003CE4F5 /* ColorExtension.swift in Sources */,
 				5C9CCC5D1EAC7D6D00B70366 /* AppDelegate.swift in Sources */,
 				5CBC511D1EB21DDA0069E49C /* BaseCollectionViewCell.swift in Sources */,
+				5C782BE61EB5C5380015B0FB /* SearchResultPresent.swift in Sources */,
 				5C2365F41EB030DD00C44C9C /* BaseViewController.swift in Sources */,
 				5C4C8C671EB1C4F200106215 /* UIBarExtension.swift in Sources */,
 				5C2366061EB06FC900C44C9C /* SuccessFullPageViewController.swift in Sources */,
@@ -924,6 +959,7 @@
 				5C3830391EB4AA4A006C2F02 /* ForgotPasswordViewController.swift in Sources */,
 				5C7328DA1EAF6A1400EABDB9 /* FacebookLoginVerifyPresent.swift in Sources */,
 				5CBC512C1EB249250069E49C /* HistoryModel.swift in Sources */,
+				5C782BDF1EB5C08C0015B0FB /* ChooseLocationPresent.swift in Sources */,
 				5CBC51171EB21C500069E49C /* NewsCollectionViewPresent.swift in Sources */,
 				5C23660E1EB09ADC00C44C9C /* UIImageView.swift in Sources */,
 				5C06CE2A1EB3003B00A27574 /* HistoryDetailPresent.swift in Sources */,
@@ -934,13 +970,17 @@
 				5CBC512E1EB24BB30069E49C /* HistoryCellCollectionViewCell.swift in Sources */,
 				5C2366021EB049DD00C44C9C /* OTPVerifyPresent.swift in Sources */,
 				5C7328DC1EAF6A4F00EABDB9 /* FacebookLoginView.swift in Sources */,
+				5C782BE11EB5C09C0015B0FB /* ChooseLocationViewController.swift in Sources */,
 				5CBC51191EB21C710069E49C /* NewsCollectionView.swift in Sources */,
 				5C782BD31EB581800015B0FB /* NewPasswordViewController.swift in Sources */,
+				5C782BE41EB5C5140015B0FB /* SearchResultCollectionViewController.swift in Sources */,
+				5C782BEA1EB5D43E0015B0FB /* ChooseLocationResult.swift in Sources */,
 				5C4C8C611EB1A0F800106215 /* SettingViewController.swift in Sources */,
 				5C3830371EB4AA34006C2F02 /* ForgotPasswordPresent.swift in Sources */,
 				5CBC51151EB207680069E49C /* NewsModel.swift in Sources */,
 				5CBC511B1EB21C950069E49C /* NewsCollectionCell.swift in Sources */,
 				5C7328D61EAF4CD300EABDB9 /* LoginPresent.swift in Sources */,
+				5C782BE81EB5C5660015B0FB /* SearchResultCell.swift in Sources */,
 				5C23660A1EB0854300C44C9C /* UserHomeViewController.swift in Sources */,
 				5C06CE271EB3000400A27574 /* HistoryDetailViewController.swift in Sources */,
 				5C4C8C5F1EB1A0DC00106215 /* SettingPresent.swift in Sources */,

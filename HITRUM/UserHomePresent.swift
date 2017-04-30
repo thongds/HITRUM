@@ -27,14 +27,14 @@ class UserHomePresent: BaseViewController {
     }
     
     func viewElementAction(){
-        let tap = UIGestureRecognizer(target: self, action: #selector(self.showChooseLocationPage))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.showChooseLocationPage))
         requestLocationView.isUserInteractionEnabled = true
         requestLabel.isUserInteractionEnabled = true
         requestLocationView.addGestureRecognizer(tap)
         requestLabel.addGestureRecognizer(tap)
     }
     func showChooseLocationPage(){
-        
+        navigationController?.pushViewController(ChooseLocationViewController(), animated: true)
     }
     
     func setupLocation(){

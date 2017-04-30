@@ -35,3 +35,7 @@
 //home page
 
 "request_location_text" = "Vị trí yêu cầu?";
+
+//choose location pag
+
+"choose_location_page_title" = "Chọn địa chỉ";
