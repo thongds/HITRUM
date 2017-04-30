@@ -10,7 +10,6 @@ import UIKit
 
 class OTPVerifyView : OTPVerifyPresent {
 
-       
     override func viewDidLoad() {
         super.viewDidLoad()
         setNotificationKeyboard(keyboardNotification: self)
@@ -18,6 +17,11 @@ class OTPVerifyView : OTPVerifyPresent {
         otpWidth = (view.frame.width - margin*2 - padding*5) / 6
         phoneNumber = "+84938772819"
         initView()
+    }
+    
+    func setNextScreen(nextScreen : UIViewController, isLastScreen : Bool){
+        self.nextScreen = nextScreen
+        self.isLastScreen = isLastScreen
     }
     
     func initView(){

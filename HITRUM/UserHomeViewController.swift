@@ -7,31 +7,41 @@
 //
 
 import UIKit
-import SideMenu
 
-class UserHomeViewController: UIViewController {
+import MapKit
 
-    
-    
+class UserHomeViewController: UserHomePresent {
+
     override func viewDidLoad() {
-    
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "menu"), style: .plain, target: self, action: #selector(addTapped))
-
         view.backgroundColor = UIColor.white
-        let lefMenuViewController = MenuViewController()
-        lefMenuViewController.view.backgroundColor = UIColor.white
+        initView()
+    }
+    
+    func initView(){
+        requestLocationView.translatesAutoresizingMaskIntoConstraints = false
+        requestLocationView.backgroundColor = UIColor.white
+        requestLocationView.layer.cornerRadius = 5
+        requestLabel.translatesAutoresizingMaskIntoConstraints = false
+        requestLocationDotImage.translatesAutoresizingMaskIntoConstraints = false
+        requestLabel.text = NSLocalizedString("request_location_text", comment: "")
+        view.addSubview(mapKit)
+        view.addSubview(requestLocationView)
+        requestLocationView.addSubview(requestLabel)
+        requestLocationView.addSubview(requestLocationDotImage)
         
-        let menuLeftNavigationController = UISideMenuNavigationController(rootViewController: lefMenuViewController)
-        menuLeftNavigationController.leftSide = true
+        let views = ["mapkit" : mapKit,"requestLocationView" : requestLocationView,"requestLabel" : requestLabel,"requestLocationDotImage" : requestLocationDotImage]
         
-        SideMenuManager.menuLeftNavigationController = menuLeftNavigationController
+        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "V:|[mapkit]|", options: [], metrics: nil, views: views))
+        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|[mapkit]|", options: [], metrics: nil, views: views))
         
-       // SideMenuManager.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
-        SideMenuManager.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view, forMenu : .left)
-        SideMenuManager.menuPresentMode = .menuSlideIn
-        SideMenuManager.menuFadeStatusBar = false
-        // Do any additional setup after loading the view.
+        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "V:|-20-[requestLocationView(60)]", options: [], metrics: nil, views: views))
+        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[requestLocationView]-|", options: [], metrics: nil, views: views))
+        requestLocationDotImage.centerYAnchor.constraint(equalTo: requestLocationView.centerYAnchor).isActive = true
+        requestLocationDotImage.leadingAnchor.constraint(equalTo: requestLocationView.leadingAnchor, constant: 10).isActive = true
+        requestLabel.centerYAnchor.constraint(equalTo: requestLocationView.centerYAnchor).isActive = true
+        requestLabel.leadingAnchor.constraint(equalTo: requestLocationDotImage.trailingAnchor, constant: 10).isActive = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,22 +49,20 @@ class UserHomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func addTapped(){
-        present(SideMenuManager.menuLeftNavigationController!, animated: true, completion: nil)
-    }
+   
 
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
         self.title = "HITRUM"
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+
+
+
+
+
+
+
+
+

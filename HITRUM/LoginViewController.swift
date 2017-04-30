@@ -68,6 +68,7 @@ class LoginViewController: LoginPresent {
         
         
         forgotPasswordLabel.translatesAutoresizingMaskIntoConstraints = false
+        forgotPasswordLabel.isUserInteractionEnabled = true
         forgotPasswordLabel.text = "Quên mật khẩu ?"
         forgotPasswordLabel.textColor = UIColor.init(hexString: "#8FDD49")
         

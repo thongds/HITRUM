@@ -10,6 +10,9 @@ import UIKit
 
 class OTPVerifyPresent : BaseViewController {
     
+    
+    var nextScreen : UIViewController?
+    var isLastScreen : Bool = true
     var otpWidth : CGFloat = 0
     let padding : CGFloat = 10
     let margin : CGFloat = 30
@@ -31,15 +34,20 @@ class OTPVerifyPresent : BaseViewController {
     let scrollView = UIScrollView()
     let scrollViewHolder = UIView()
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nextButton.addTarget(self, action: #selector(self.validate), for: .touchUpInside)
     }
     
     func validate(){
-        let successFullPage = SuccessFullPageViewController()
-        successFullPage.setData(successMessage: "Đăng kí thành công", nextViewController: UserHomeViewController())
-        navigationController?.setViewControllers([successFullPage], animated: false)
+        if let nextScreen = nextScreen {
+            if isLastScreen {
+                navigationController?.setViewControllers([nextScreen], animated: false)
+            }else{
+                navigationController?.pushViewController(nextScreen, animated: true)
+            }
+        }
     }
 
 }

@@ -7,12 +7,31 @@
 */
 "keyLabel" = "VietNam";
 
+//common screen
+"next_buttom_text" = "Tiếp theo";
+
 //user history page
 
 "history_address" = "Địa chỉ";
 "history_time" = "Thời gian";
 "history_time_total" = "Số giờ thuê";
-
 "price_total" = "Tổng tiền";
-
 "comment" = "Nhận xét";
+"time_start" = "Giờ bắt đầu:";
+"time_end" = "Giờ kết thúc";
+"forgot_password_title" = "Nhập vào số điện thoại của bạn để lấy lại mật khẩu";
+"phone_number_placeholder" = "Số điện thoại";
+
+
+//screen new password
+"new_password_title" = "Mật khẩu mới";
+"new_password_label" = "Nhập mật khẩu mới";
+"renew_password_label" = "Nhập lại mật khẩu mới";
+
+//resigter
+
+"register_success" = "Đăng ký thành công!";
+
+//home page
+
+"request_location_text" = "Vị trí yêu cầu?";

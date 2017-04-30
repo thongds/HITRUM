@@ -27,7 +27,15 @@ class LoginPresent : BaseViewController {
     
     override func viewDidLoad() {
         loginFacebook.addTarget(self, action: #selector(self.loginFacebookProcess), for: .touchUpInside)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.openForgotPassword))
+        forgotPasswordLabel.addGestureRecognizer(tap)
     }
+    
+    func openForgotPassword(){
+        navigationController?.pushViewController(ForgotPasswordViewController(), animated: true)
+    }
+        
+
     
     func loginFacebookProcess(){
         navigationController?.pushViewController(FacebookLoginView(), animated: true)

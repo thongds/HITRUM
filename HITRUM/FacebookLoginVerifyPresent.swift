@@ -36,7 +36,11 @@ class FacebookLoginVerifyPresent: BaseViewController {
     }
     
     func showVerifyOTP(){
-        navigationController?.pushViewController(OTPVerifyView(), animated: true)
+        let otp = OTPVerifyView()
+        let nextViewController = SuccessFullPageViewController()
+        nextViewController.setData(successMessage: NSLocalizedString("register_success", comment: ""), nextViewController: UserHomeViewController())
+        otp.setNextScreen(nextScreen: nextViewController, isLastScreen: true)
+        navigationController?.pushViewController(otp, animated: true)
     }
 
 }

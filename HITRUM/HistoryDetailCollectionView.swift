@@ -12,6 +12,7 @@ private let reuseIdentifier = "HistoryDetailCollectionView_Cell"
 
 class HistoryDetailCollectionView: HistoryDetailCollectionPresent {
 
+    var historyDetail = [HistoryDetailModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,11 +20,18 @@ class HistoryDetailCollectionView: HistoryDetailCollectionPresent {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.register(HistoryDetailCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         let layout = self.collectionViewLayout as! UICollectionViewFlowLayout
         layout.minimumLineSpacing = 10
-        layout.itemSize = CGSize(width: view.frame.width, height: 120)
-        // Do any additional setup after loading the view.
+        layout.itemSize = CGSize(width: view.frame.width - 20, height: 120)
+        collectionView?.contentOffset = CGPoint(x: 0, y: -20)
+        collectionView?.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
+        initData()
+    }
+    func initData(){
+        for _ in 0...10 {
+            historyDetail.append(HistoryDetailModel(userName: "Đỗ Ngọc Nam", price: "59,000đ", timeStart: "13:30:50", timeEnd: "14:30:50"))
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,15 +59,16 @@ class HistoryDetailCollectionView: HistoryDetailCollectionPresent {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 10
+        return historyDetail.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! HistoryDetailCell
     
-        cell.backgroundColor = UIColor.gray
-        // Configure the cell
-    
+        cell.backgroundColor = UIColor.white
+        cell.contentView.layer.borderWidth = 1
+        cell.contentView.layer.borderColor = UIColor.tintBackgroundColor().cgColor
+        cell.historyDetailModel = historyDetail[indexPath.item]
         return cell
     }
 
