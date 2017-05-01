@@ -11,13 +11,19 @@ import UIKit
 class RequestViewController: RequestPresent {
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        self.setNotificationKeyboard(keyboardNotification : self)
         view.backgroundColor = UIColor.white
         initView()
         initButtomView()
     }
     
     func initView(){
+        
+        scrollView.frame = view.bounds
+        scrollView.showsVerticalScrollIndicator = false
+        scrollViewHolder.frame = scrollView.frame
+        scrollView.contentSize.height = view.frame.height - navigationHeight
+        
         requestLocationView.translatesAutoresizingMaskIntoConstraints = false
         requestLocationView.backgroundColor = UIColor.white
         requestLocationView.layer.cornerRadius = 5
@@ -27,10 +33,14 @@ class RequestViewController: RequestPresent {
         
         requestButtomArea.frame = CGRect(x: 0, y: view.frame.height - navigationHeight - requestButtomAreaHeight, width: view.frame.width, height: requestButtomAreaHeight)
         requestButtomArea.backgroundColor = UIColor.white
-        view.addSubview(mapKit)
-        view.addSubview(requestLocationView)
-        view.addSubview(requestButtomArea)
-        view.addSubview(dropdownBigIco)
+        view.addSubview(scrollView)
+        scrollView.addSubview(scrollViewHolder)
+        
+        scrollViewHolder.addSubview(mapKit)
+        scrollViewHolder.addSubview(requestLocationView)
+        scrollViewHolder.addSubview(requestButtomArea)
+        scrollViewHolder.addSubview(dropdownBigIco)
+        
         requestLocationView.addSubview(requestLocationDotImage)
         requestLocationView.addSubview(requestLabel)
         
@@ -222,6 +232,19 @@ class RequestViewController: RequestPresent {
         self.title = NSLocalizedString("request_screen_title", comment: "")
     }
     
+}
+extension RequestViewController : KeyboardNotifaction {
+    func keyboardChange(isShow : Bool,adjustHeight : CGFloat){
+        if isShow && scrollView.contentSize.height <= view.frame.height{
+            scrollView.contentSize.height = scrollView.contentSize.height + adjustHeight + 50
+            scrollView.contentOffset = CGPoint(x: 0, y: adjustHeight)
+        }
+        if(!isShow){
+            scrollView.contentOffset = CGPoint(x: 0, y: 0)
+            scrollView.contentSize.height = view.frame.height - navigationHeight
+        }
+        
+    }
 }
 
 

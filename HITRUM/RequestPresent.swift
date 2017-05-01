@@ -11,6 +11,9 @@ import UIKit
 import MapKit
 class RequestPresent: BaseViewController {
 
+    let scrollView = UIScrollView()
+    let scrollViewHolder = UIView()
+    
     var locationManager : CLLocationManager?
     var startLocation : CLLocation?
     let mapKit = MKMapView()
