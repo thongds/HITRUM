@@ -65,6 +65,11 @@ class SearchResultCollectionViewController: SearchResultPresent {
         return cell
     }
 
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        navigationController?.pushViewController(RequestViewController(), animated: true)
+        
+    }
     // MARK: UICollectionViewDelegate
 
     /*

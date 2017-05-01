@@ -39,3 +39,10 @@
 //choose location pag
 
 "choose_location_page_title" = "Chọn địa chỉ";
+
+//request screen
+
+"request_screen_title" = "Xác nhận";
+"gift_placeholder" = "Mã khuyến mãi";
+"note_placeholder" = "Nhập ghi chú";
+"request_button_label" = "YÊU CẦU";

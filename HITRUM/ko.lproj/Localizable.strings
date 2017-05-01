@@ -1,16 +1,48 @@
-/* 
-  Localizable.strings
-  HITRUM
+/*
+ Localizable.strings
+ HITRUM
+ 
+ Created by SSd on 4/28/17.
+ Copyright © 2017 SSd. All rights reserved.
+ */
+"keyLabel" = "VietNam";
 
-  Created by SSd on 4/28/17.
-  Copyright © 2017 SSd. All rights reserved.
-*/
-"keyLabel" = "Korea";
+//common screen
+"next_buttom_text" = "Tiếp theo";
 
 //user history page
 
 "history_address" = "Địa chỉ";
 "history_time" = "Thời gian";
 "history_time_total" = "Số giờ thuê";
-
 "price_total" = "Tổng tiền";
+"comment" = "Nhận xét";
+"time_start" = "Giờ bắt đầu:";
+"time_end" = "Giờ kết thúc";
+"forgot_password_title" = "Nhập vào số điện thoại của bạn để lấy lại mật khẩu";
+"phone_number_placeholder" = "Số điện thoại";
+
+
+//screen new password
+"new_password_title" = "Mật khẩu mới";
+"new_password_label" = "Nhập mật khẩu mới";
+"renew_password_label" = "Nhập lại mật khẩu mới";
+
+//resigter
+
+"register_success" = "Đăng ký thành công!";
+
+//home page
+
+"request_location_text" = "Vị trí yêu cầu?";
+
+//choose location pag
+
+"choose_location_page_title" = "Chọn địa chỉ";
+
+//request screen
+
+"request_screen_title" = "Xác nhận";
+"gift_placeholder" = "Mã khuyến mãi";
+"note_placeholder" = "Nhập ghi chú";
+"request_button_label" = "YÊU CẦU";
