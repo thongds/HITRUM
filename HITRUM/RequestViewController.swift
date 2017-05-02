@@ -24,7 +24,8 @@ class RequestViewController: RequestPresent {
         scrollView.showsVerticalScrollIndicator = false
         scrollViewHolder.frame = scrollView.frame
         scrollView.contentSize.height = view.frame.height - navigationHeight
-        
+        scrollView.canCancelContentTouches = false
+        scrollView.delaysContentTouches = false
         requestLocationView.translatesAutoresizingMaskIntoConstraints = false
         requestLocationView.backgroundColor = UIColor.white
         requestLocationView.layer.cornerRadius = 5
@@ -73,13 +74,6 @@ class RequestViewController: RequestPresent {
     func initButtomView(){
         
         
-//        requestButtomArea.translatesAutoresizingMaskIntoConstraints = false
-//        requestButtomArea.backgroundColor = UIColor.white
-//        
-//        requestButtomArea.heightAnchor.constraint(equalToConstant: requestButtomAreaHeight).isActive = true
-//        requestButtomArea.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-//        requestButtomArea.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-//        requestButtomArea.lastBaselineAnchor.constraint(equalTo: view.lastBaselineAnchor).isActive = true
         // dropdown Big Ico
         dropdownBigIco.translatesAutoresizingMaskIntoConstraints = false
         dropdownBigIco.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -114,6 +108,7 @@ class RequestViewController: RequestPresent {
         requestButtomArea.addSubview(peopleSelectedLabel)
         requestButtomArea.addSubview(peopleDropDowSmallIco)
         requestButtomArea.addSubview(peopelUnderline)
+        
         //clock
         clockUnderLine.backgroundColor = UIColor.tintColor()
         clockSelectedLabel.text = "2 giờ"
@@ -235,7 +230,6 @@ class RequestViewController: RequestPresent {
         
         NSLayoutConstraint.activate(constraints)
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false

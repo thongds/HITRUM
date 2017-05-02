@@ -67,6 +67,7 @@ class RequestPresent: BaseViewController {
     
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         leftWidth = (view.frame.width - 30 )/2
@@ -87,6 +88,13 @@ class RequestPresent: BaseViewController {
         let tapAnimation = UITapGestureRecognizer(target: self, action: #selector(self.showBigButtomArea))
         dropdownBigIco.isUserInteractionEnabled = true
         dropdownBigIco.addGestureRecognizer(tapAnimation)
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        swipeUp.direction = .up
+        self.view.addGestureRecognizer(swipeUp)
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        swipeDown.direction = .down
+        self.view.addGestureRecognizer(swipeDown)
+
     }
     func showChooseLocationPage(){
         //navigationController?.pushViewController(ChooseLocationViewController(), animated: true)
@@ -135,6 +143,22 @@ class RequestPresent: BaseViewController {
         locationManager?.delegate = self
         
         locationManager?.requestWhenInUseAuthorization()
+    }
+    
+    func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
+        
+        if gesture.direction == UISwipeGestureRecognizerDirection.up {
+            if(!self.isExpand){
+                showBigButtomArea()
+            }
+            
+        }
+        else if gesture.direction == UISwipeGestureRecognizerDirection.down {
+            if(self.isExpand){
+                showBigButtomArea()
+            }
+            
+        }
     }
     
 }
