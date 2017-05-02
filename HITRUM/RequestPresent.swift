@@ -11,8 +11,11 @@ import UIKit
 import MapKit
 class RequestPresent: BaseViewController {
 
+    var isExpand = false
+    
     let scrollView = UIScrollView()
     let scrollViewHolder = UIView()
+    let maskView = UIView()
     
     var locationManager : CLLocationManager?
     var startLocation : CLLocation?
@@ -23,8 +26,8 @@ class RequestPresent: BaseViewController {
     
     let requestButtomArea = UIView()
     var requestButtomAreaHeight : CGFloat = 0
-    
-    let dropdownBigIco = UIImageView(image: #imageLiteral(resourceName: "dropdown_big_ico"))
+    let requestButtomAreaCloseHeight :CGFloat = 160
+    let dropdownBigIco = UIImageView(image: #imageLiteral(resourceName: "up_big_ico"))
     
     //request eara element
     
@@ -67,7 +70,10 @@ class RequestPresent: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         leftWidth = (view.frame.width - 30 )/2
-        requestButtomAreaHeight = view.frame.height * 1/3 + 60
+        requestButtomAreaHeight = 260
+        maskView.backgroundColor = UIColor.init(hexString: "#662B2B2B")
+        maskView.frame = view.frame
+        maskView.frame.origin.y = -navigationHeight
         viewElementAction()
         setupLocation()
     }
@@ -78,9 +84,39 @@ class RequestPresent: BaseViewController {
         requestLabel.isUserInteractionEnabled = true
         requestLocationView.addGestureRecognizer(tap)
         requestLabel.addGestureRecognizer(tap)
+        let tapAnimation = UITapGestureRecognizer(target: self, action: #selector(self.showBigButtomArea))
+        dropdownBigIco.isUserInteractionEnabled = true
+        dropdownBigIco.addGestureRecognizer(tapAnimation)
     }
     func showChooseLocationPage(){
         //navigationController?.pushViewController(ChooseLocationViewController(), animated: true)
+    }
+    
+    func showBigButtomArea(){
+        UIView.animate(withDuration: 1.0, animations: {
+            if(self.isExpand){
+                self.dropdownBigIco.image = #imageLiteral(resourceName: "up_big_ico")
+                self.requestButtomArea.frame.origin.y = self.view.frame.height - self.requestButtomAreaCloseHeight
+                self.requestButtomArea.frame.size.height = self.requestButtomAreaCloseHeight
+                self.maskView.removeFromSuperview()
+                self.scrollViewHolder.layoutIfNeeded()
+                self.scrollView.layoutIfNeeded()
+                self.isExpand = false
+            }else{
+                self.dropdownBigIco.image = #imageLiteral(resourceName: "dropdown_big_ico")
+                self.scrollViewHolder.addSubview(self.maskView)
+                self.scrollViewHolder.bringSubview(toFront: self.requestButtomArea)
+                self.scrollViewHolder.bringSubview(toFront: self.requestButton)
+                self.scrollViewHolder.bringSubview(toFront: self.dropdownBigIco)
+                self.scrollViewHolder.backgroundColor = UIColor.init(hexString: "#2B2B2B")
+                self.requestButtomArea.frame.size.height = self.requestButtomAreaHeight
+                self.requestButtomArea.frame.origin.y = self.view.frame.height  - self.requestButtomAreaHeight
+                self.scrollViewHolder.layoutIfNeeded()
+                self.scrollView.layoutIfNeeded()
+                self.isExpand = true
+            }
+           
+        })
     }
     
     func setupLocation(){

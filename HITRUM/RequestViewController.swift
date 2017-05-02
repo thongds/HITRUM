@@ -20,6 +20,7 @@ class RequestViewController: RequestPresent {
     func initView(){
         
         scrollView.frame = view.bounds
+        scrollView.frame.size.height = view.bounds.size.height - navigationHeight
         scrollView.showsVerticalScrollIndicator = false
         scrollViewHolder.frame = scrollView.frame
         scrollView.contentSize.height = view.frame.height - navigationHeight
@@ -31,7 +32,7 @@ class RequestViewController: RequestPresent {
         requestLocationDotImage.translatesAutoresizingMaskIntoConstraints = false
         requestLabel.text = "150 Minh Phụng, Phường 5, Quận 11"
         
-        requestButtomArea.frame = CGRect(x: 0, y: view.frame.height - navigationHeight - requestButtomAreaHeight, width: view.frame.width, height: requestButtomAreaHeight)
+        requestButtomArea.frame = CGRect(x: 0, y: view.frame.height - navigationHeight - requestButtomAreaCloseHeight, width: view.frame.width, height: requestButtomAreaCloseHeight)
         requestButtomArea.backgroundColor = UIColor.white
         view.addSubview(scrollView)
         scrollView.addSubview(scrollViewHolder)
@@ -40,6 +41,14 @@ class RequestViewController: RequestPresent {
         scrollViewHolder.addSubview(requestLocationView)
         scrollViewHolder.addSubview(requestButtomArea)
         scrollViewHolder.addSubview(dropdownBigIco)
+        
+        requestButton.translatesAutoresizingMaskIntoConstraints = false
+        scrollViewHolder.addSubview(requestButton)
+        requestButton.setTitle(NSLocalizedString("request_button_label", comment: ""), for: .normal)
+        
+        let scrollViewHolderViews = ["requestButton" : requestButton]
+        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "V:[requestButton(60)]-|", options: [], metrics: nil, views: scrollViewHolderViews))
+        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[requestButton]-|", options: [], metrics: nil, views: scrollViewHolderViews))
         
         requestLocationView.addSubview(requestLocationDotImage)
         requestLocationView.addSubview(requestLabel)
@@ -58,6 +67,7 @@ class RequestViewController: RequestPresent {
         requestLabel.centerYAnchor.constraint(equalTo: requestLocationView.centerYAnchor).isActive = true
         requestLabel.leadingAnchor.constraint(equalTo: requestLocationDotImage.trailingAnchor, constant: 10).isActive = true
         requestLabel.trailingAnchor.constraint(equalTo: requestLocationView.trailingAnchor, constant: -10).isActive = true
+        
     }
     
     func initButtomView(){
@@ -152,9 +162,9 @@ class RequestViewController: RequestPresent {
         
         //request button
         
-        requestButton.translatesAutoresizingMaskIntoConstraints = false
-        requestButton.setTitle(NSLocalizedString("request_button_label", comment: ""), for: .normal)
-        requestButtomArea.addSubview(requestButton)
+//        requestButton.translatesAutoresizingMaskIntoConstraints = false
+//        requestButton.setTitle(NSLocalizedString("request_button_label", comment: ""), for: .normal)
+//        requestButtomArea.addSubview(requestButton)
         
         let views = ["priceLabel" :priceLabel,"castIco" : castIco,"infoIco":infoIco,"headerBackground" :headerBackground,"multiPeopleIco" :multiPeopleIco,"peopleSelectedLabel" :peopleSelectedLabel,"peopleDropDowSmallIco" :peopleDropDowSmallIco,"peopelUnderline" :peopelUnderline,"clockIco" :clockIco,"clockSelectedLabel" :clockSelectedLabel,"clockDropDownSmallIco" :clockDropDownSmallIco,"clockUnderLine" :clockUnderLine,"generateUnderline" :generateUnderline ,"generateLabel" :generateLabel,"generateIco" :generateIco,"generateDropDownIco":generateDropDownIco,"giftUnderline" :giftUnderline,"giftIco":giftIco,"giftTextField" :giftTextField,"noteIco":noteIco,"noteUnderline":noteUnderline,"noteTextField":noteTextField,"requestButton":requestButton]
         
@@ -218,8 +228,8 @@ class RequestViewController: RequestPresent {
         
         constraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "H:[noteIco(noteIcoWidth)]-[noteTextField]-|", options: [.alignAllLastBaseline], metrics: metrics, views: views))
         //request button
-        constraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[requestButton(40)]-|", options: [], metrics: nil, views: views))
-        constraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "H:|-[requestButton]-|", options: [], metrics: nil, views: views))
+//        constraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[requestButton(40)]-|", options: [], metrics: nil, views: views))
+//        constraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "H:|-[requestButton]-|", options: [], metrics: nil, views: views))
     
         
         
