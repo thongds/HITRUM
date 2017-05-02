@@ -18,7 +18,7 @@ class UserHomePresent: BaseViewController {
     let requestLocationView = UIView()
     let requestLabel = UILabel()
     let requestLocationDotImage = UIImageView(image: #imageLiteral(resourceName: "request_location_dot"))
-    
+    var swipeArray = [UIScreenEdgePanGestureRecognizer]()
     override func viewDidLoad() {
         super.viewDidLoad()
         viewElementAction()
@@ -64,10 +64,9 @@ class UserHomePresent: BaseViewController {
         SideMenuManager.menuLeftNavigationController = menuLeftNavigationController
         
         // SideMenuManager.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
-        SideMenuManager.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view, forMenu : .left)
+        swipeArray = SideMenuManager.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view, forMenu : .left)
         SideMenuManager.menuPresentMode = .menuSlideIn
         SideMenuManager.menuFadeStatusBar = false
-
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -77,8 +76,8 @@ class UserHomePresent: BaseViewController {
     func addTapped(){
         present(SideMenuManager.menuLeftNavigationController!, animated: true, completion: nil)
     }
-
-
+    
+   
 }
 extension UserHomePresent: CLLocationManagerDelegate {
     

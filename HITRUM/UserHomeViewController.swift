@@ -9,11 +9,13 @@
 import UIKit
 
 import MapKit
+import SideMenu
 
 class UserHomeViewController: UserHomePresent {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "menu"), style: .plain, target: self, action: #selector(addTapped))
         view.backgroundColor = UIColor.white
         initView()
@@ -49,9 +51,20 @@ class UserHomeViewController: UserHomePresent {
         // Dispose of any resources that can be recreated.
     }
     
-   
-
+    override func viewWillDisappear(_ animated: Bool) {
+        print("viewWillDisappear")
+        if(swipeArray.count > 0){
+            self.navigationController!.view.removeGestureRecognizer(swipeArray[0])
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
+        print("viewWillAppear")
+        if(swipeArray.count > 0){
+            self.navigationController!.view.addGestureRecognizer(swipeArray[0])
+            
+        }
+        //SideMenuManager.menuEnableSwipeGestures = false
         navigationController?.navigationBar.isHidden = false
         self.title = "HITRUM"
     }
