@@ -94,8 +94,15 @@ class RequestPresent: BaseViewController {
         let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
         swipeDown.direction = .down
         self.view.addGestureRecognizer(swipeDown)
+        
+        requestButton.addTarget(self, action: #selector(self.showNextPage), for: .touchUpInside)
 
     }
+    
+    func showNextPage(){
+        navigationController?.pushViewController(RequestResultViewController(), animated: true)
+    }
+    
     func showChooseLocationPage(){
         //navigationController?.pushViewController(ChooseLocationViewController(), animated: true)
     }
