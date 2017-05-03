@@ -46,4 +46,10 @@ extension UIColor {
     class func disableButtonColor() -> UIColor{
         return UIColor.init(hexString: "#B7E989")
     }
+    class func darkOpacityColor() -> UIColor{
+        return UIColor.init(hexString: "#662B2B2B")
+    }
+    class func workingBackgroundColor() -> UIColor{
+        return UIColor.init(hexString: "#6ED313")
+    }
 }

@@ -31,8 +31,6 @@ class ResultLayout: UICollectionViewFlowLayout {
     }
     
     override var collectionViewContentSize: CGSize{
-        //print("collectionViewContentSize \(CGSize(width: width, height: contentMaxHeight))")
-        print("contentHeight \(contentMaxHeight)")
         return CGSize(width: width, height: max((collectionView?.frame.height)!,contentMaxHeight))
     }
     
@@ -55,15 +53,10 @@ class ResultLayout: UICollectionViewFlowLayout {
                 let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
                 attributes.frame = frame
                 cache.append(attributes)
-                //print("yOffset \(yOffset)")
-                print("frame.height \(frame.height)")
-                //contentMaxHeight = max(contentMaxHeight, frame.maxY)
                 yOffset = yOffset - itemHeight - space
                 cached = true
             }
             collectionView?.contentOffset = CGPoint(x: 0, y: max((collectionView?.frame.height)!,contentMaxHeight))
-            
-//            collectionView?.contentInset = UIEdgeInsets(top: contentMaxHeight - collectionView!.frame.height, left: 0, bottom: 0, right: 0)
             
         }
     }
@@ -78,9 +71,6 @@ class ResultLayout: UICollectionViewFlowLayout {
         print("cache size\(cache.count)")
         return layoutAttributes
     }
-//    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
-//        return true
-//    }
     func deleteCache(){
         cache.removeAll(keepingCapacity: false)
         cached = false

@@ -32,6 +32,8 @@
 		5C4957E11EB993030038744E /* ResultLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4957E01EB993030038744E /* ResultLayout.swift */; };
 		5C4957E31EB9931A0038744E /* ResultCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4957E21EB9931A0038744E /* ResultCellCollectionViewCell.swift */; };
 		5C4957E51EB993920038744E /* ResultCollectionPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4957E41EB993920038744E /* ResultCollectionPresent.swift */; };
+		5C4957E71EB9DCE50038744E /* RequestResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4957E61EB9DCE50038744E /* RequestResultModel.swift */; };
+		5C4957EA1EB9F0AF0038744E /* RequestResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4957E91EB9F0AF0038744E /* RequestResultType.swift */; };
 		5C4C8C581EB18A4100106215 /* CellMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C8C571EB18A4100106215 /* CellMenu.swift */; };
 		5C4C8C5A1EB19A2900106215 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C8C591EB19A2900106215 /* MenuModel.swift */; };
 		5C4C8C5F1EB1A0DC00106215 /* SettingPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C8C5E1EB1A0DC00106215 /* SettingPresent.swift */; };
@@ -125,6 +127,8 @@
 		5C4957E01EB993030038744E /* ResultLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultLayout.swift; sourceTree = "<group>"; };
 		5C4957E21EB9931A0038744E /* ResultCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		5C4957E41EB993920038744E /* ResultCollectionPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultCollectionPresent.swift; sourceTree = "<group>"; };
+		5C4957E61EB9DCE50038744E /* RequestResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestResultModel.swift; sourceTree = "<group>"; };
+		5C4957E91EB9F0AF0038744E /* RequestResultType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestResultType.swift; sourceTree = "<group>"; };
 		5C4C8C571EB18A4100106215 /* CellMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellMenu.swift; sourceTree = "<group>"; };
 		5C4C8C591EB19A2900106215 /* MenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		5C4C8C5E1EB1A0DC00106215 /* SettingPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingPresent.swift; sourceTree = "<group>"; };
@@ -443,6 +447,7 @@
 		5C4957D51EB96B530038744E /* model */ = {
 			isa = PBXGroup;
 			children = (
+				5C4957E61EB9DCE50038744E /* RequestResultModel.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -479,6 +484,14 @@
 				5C4957E21EB9931A0038744E /* ResultCellCollectionViewCell.swift */,
 			);
 			name = cell;
+			sourceTree = "<group>";
+		};
+		5C4957E81EB9F0960038744E /* enum */ = {
+			isa = PBXGroup;
+			children = (
+				5C4957E91EB9F0AF0038744E /* RequestResultType.swift */,
+			);
+			name = enum;
 			sourceTree = "<group>";
 		};
 		5C4C8C5C1EB1A01B00106215 /* menuPages */ = {
@@ -732,6 +745,7 @@
 				5C7328DF1EAF6FCA00EABDB9 /* appDelegate */,
 				5C7328E01EAF6FE500EABDB9 /* modules */,
 				5C7328DD1EAF6F8700EABDB9 /* viewExtendsion */,
+				5C4957E81EB9F0960038744E /* enum */,
 				5CF15B381EACEF4100D1195E /* assist */,
 			);
 			path = HITRUM;
@@ -1081,6 +1095,7 @@
 				5C23660E1EB09ADC00C44C9C /* UIImageView.swift in Sources */,
 				5C06CE2A1EB3003B00A27574 /* HistoryDetailPresent.swift in Sources */,
 				5C782BD11EB5816C0015B0FB /* NewPasswordPresent.swift in Sources */,
+				5C4957E71EB9DCE50038744E /* RequestResultModel.swift in Sources */,
 				5C4C8C5A1EB19A2900106215 /* MenuModel.swift in Sources */,
 				5C7328D31EAF1D4500EABDB9 /* UITextFieldExtension.swift in Sources */,
 				5C23660C1EB085D700C44C9C /* MenuViewController.swift in Sources */,
@@ -1102,6 +1117,7 @@
 				5C7328D61EAF4CD300EABDB9 /* LoginPresent.swift in Sources */,
 				5C782BE81EB5C5660015B0FB /* SearchResultCell.swift in Sources */,
 				5C23660A1EB0854300C44C9C /* UserHomeViewController.swift in Sources */,
+				5C4957EA1EB9F0AF0038744E /* RequestResultType.swift in Sources */,
 				5C06CE271EB3000400A27574 /* HistoryDetailViewController.swift in Sources */,
 				5C4C8C5F1EB1A0DC00106215 /* SettingPresent.swift in Sources */,
 				5C2366041EB049F800C44C9C /* OTPVerifyView.swift in Sources */,

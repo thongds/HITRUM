@@ -12,9 +12,17 @@ private let reuseIdentifier = "ResultCollectionViewController_Cell"
 
 class ResultCollectionViewController: ResultCollectionPresent {
 
+    var requestResult = [RequestResultModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        for _ in 0...5 {
+            requestResult.append(RequestResultModel(type: 0,usertAavart : "", name: "Do van quy", sex: "name", age: "22" , rating: 5, timeComingRemain : "5 phut",timeStart: "01:40:30"))
+        }
+        for _ in 0...5 {
+            requestResult.append(RequestResultModel(type: 1,usertAavart : "", name: "Do van quy", sex: "name", age: "22" , rating: 5, timeComingRemain : "5 phut",timeStart: "01:40:30"))
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -25,7 +33,8 @@ class ResultCollectionViewController: ResultCollectionPresent {
         
         // Register cell classes
         self.collectionView!.register(ResultCellCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        self.collectionView?.backgroundColor = UIColor.gray
+        self.collectionView?.backgroundColor = UIColor.darkOpacityColor()
+        self.collectionView?.showsVerticalScrollIndicator = false
         // Do any additional setup after loading the view.
     }
 
@@ -54,47 +63,73 @@ class ResultCollectionViewController: ResultCollectionPresent {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 30
+        return requestResult.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ResultCellCollectionViewCell
-        cell.text = "\(indexPath.item)"
-        cell.backgroundColor = UIColor.white
+        cell.requestResultData = requestResult[indexPath.item]
+        cell.backgroundColor = UIColor.clear
         // Configure the cell
+        let swipe = MyGestureReconize(target: self, action: #selector(self.showDelete))
+        swipe.viewHolder = cell.viewContent
+        swipe.direction = UISwipeGestureRecognizerDirection.left
+        cell.addGestureRecognizer(swipe)
         
+        let swipe2 = MyGestureReconize(target: self, action: #selector(self.showDelete))
+        swipe2.viewHolder = cell.viewContent
+        swipe2.direction = UISwipeGestureRecognizerDirection.right
+        cell.addGestureRecognizer(swipe2)
         return cell
     }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
     
+    func showDelete(sender: MyGestureReconize){
+        switch sender.direction {
+            case UISwipeGestureRecognizerDirection.left:
+                if (sender.viewHolder.frame.origin.x >= 0){
+                    UIView.animate(withDuration: 1.0, animations: {
+                        sender.viewHolder.frame.origin.x = -90
+                    })
+                }
+            break
+            
+            case UISwipeGestureRecognizerDirection.right:
+                if (sender.viewHolder.frame.origin.x < 0){
+                    UIView.animate(withDuration: 1.0, animations: {
+                        sender.viewHolder.frame.origin.x = 10
+                    })
+                }
+            break
+        default:
+            break
+        }
     }
-    */
-
 }
+    
+class MyGestureReconize : UISwipeGestureRecognizer{
+
+    var viewHolder = UIView()
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
