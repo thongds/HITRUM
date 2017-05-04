@@ -83,8 +83,6 @@ class ResultCollectionViewController: ResultCollectionPresent {
         swipe2.direction = UISwipeGestureRecognizerDirection.right
         cell.addGestureRecognizer(swipe2)
         
-        //
-        cell.indexPath = indexPath
         cell.cellDelegate = self
         return cell
     }
@@ -113,13 +111,12 @@ class ResultCollectionViewController: ResultCollectionPresent {
 }
 extension ResultCollectionViewController : CellDelegate {
     
-    func deleteCellAtIndexPath(indexPath : IndexPath,viewContent : UIView,cell : ResultCellCollectionViewCell){
-        print("index remove \(indexPath.item)")
-        let indexPath2 = collectionView?.indexPath(for: cell)
+    func deleteCellAtIndexPath(viewContent : UIView,cell : ResultCellCollectionViewCell){
+        let indexPath = collectionView?.indexPath(for: cell)
         layout?.deleteCache()
         viewContent.frame.origin.x = 10
-        removeItemAtIndexPath(indexPath: indexPath2!)
-        collectionView?.deleteItems(at: [indexPath2!])
+        removeItemAtIndexPath(indexPath: indexPath!)
+        collectionView?.deleteItems(at: [indexPath!])
         collectionView?.reloadData()
     }
 }

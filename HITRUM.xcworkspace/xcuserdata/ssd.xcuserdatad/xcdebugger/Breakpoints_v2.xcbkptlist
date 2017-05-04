@@ -458,11 +458,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HITRUM/ResultCollectionViewController.swift"
-            timestampString = "515577894.805591"
+            timestampString = "515599350.116783"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "showDelete(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -474,11 +474,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HITRUM/ResultCollectionViewController.swift"
-            timestampString = "515577894.805591"
+            timestampString = "515599350.116783"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "showDelete(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -522,11 +522,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HITRUM/ResultCollectionViewController.swift"
-            timestampString = "515589927.131411"
+            timestampString = "515599350.116783"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "showDelete(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -550,7 +550,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HITRUM/ResultLayout.swift"
@@ -566,16 +566,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HITRUM/ResultCollectionViewController.swift"
-            timestampString = "515596516.012003"
+            timestampString = "515599350.116783"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
-            landmarkName = "deleteCellAtIndexPath(indexPath:viewContent:cell:)"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "deleteCellAtIndexPath(viewContent:cell:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

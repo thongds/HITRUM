@@ -9,13 +9,12 @@
 import UIKit
 
 protocol CellDelegate {
-    func deleteCellAtIndexPath(indexPath : IndexPath,viewContent : UIView,cell : ResultCellCollectionViewCell)
+    func deleteCellAtIndexPath(viewContent : UIView,cell : ResultCellCollectionViewCell)
 }
 
 class ResultCellCollectionViewCell: BaseCollectionViewCell {
     
     var cellDelegate : CellDelegate?
-    var indexPath : IndexPath?
     var requestResultData : RequestResultModel?{
         didSet{
            userNameLabel.text = requestResultData?.name
@@ -170,9 +169,7 @@ class ResultCellCollectionViewCell: BaseCollectionViewCell {
     
     func delete(sender: UITapGestureRecognizer){
         if let cellDelegate = cellDelegate{
-            if let indexPath = self.indexPath{
-                cellDelegate.deleteCellAtIndexPath(indexPath: indexPath,viewContent :self.contentView,cell : self)
-            }
+                cellDelegate.deleteCellAtIndexPath(viewContent :self.contentView,cell : self)
         }
     }
     
