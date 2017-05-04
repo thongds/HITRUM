@@ -8,8 +8,13 @@
 
 import UIKit
 
+protocol CellDelegate {
+    func deleteCellAtIndexPath(indexPath : IndexPath,viewContent : UIView,cell : ResultCellCollectionViewCell)
+}
+
 class ResultCellCollectionViewCell: BaseCollectionViewCell {
     
+    var cellDelegate : CellDelegate?
     var indexPath : IndexPath?
     var requestResultData : RequestResultModel?{
         didSet{
@@ -62,6 +67,24 @@ class ResultCellCollectionViewCell: BaseCollectionViewCell {
     let removeArea = UIView()
     
     override func setupViews() {
+        
+        //remove Area
+        self.contentView.addSubview(removeArea)
+        removeArea.frame = CGRect(x: self.contentView.frame.width - (100 + 10), y: 0, width: 100, height: self.contentView.frame.height)
+        removeArea.addSubview(removeIco)
+        removeArea.backgroundColor = UIColor.red
+        
+        removeIco.translatesAutoresizingMaskIntoConstraints = false
+        removeIco.centerYAnchor.constraint(equalTo: removeArea.centerYAnchor).isActive = true
+        removeIco.centerXAnchor.constraint(equalTo: removeArea.centerXAnchor).isActive = true
+        
+        //self.contentView.bringSubview(toFront: viewContent)
+        
+        removeArea.isUserInteractionEnabled = true
+        removeIco.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.delete(sender:)))
+        removeIco.addGestureRecognizer(tap)
+        removeArea.addGestureRecognizer(tap)
         
         
         viewContent.frame = CGRect(x: 10, y: 0, width: self.contentView.frame.width - 20, height: self.contentView.frame.height)
@@ -130,22 +153,27 @@ class ResultCellCollectionViewCell: BaseCollectionViewCell {
         
         NSLayoutConstraint.activate(constraints)
         
-        //remove Area
-        self.contentView.addSubview(removeArea)
-        removeArea.frame = CGRect(x: self.contentView.frame.width - (100 + 10), y: 0, width: 100, height: self.contentView.frame.height)
-        removeArea.addSubview(removeIco)
-        removeArea.backgroundColor = UIColor.red
-        
-        removeIco.translatesAutoresizingMaskIntoConstraints = false
-        removeIco.centerYAnchor.constraint(equalTo: removeArea.centerYAnchor).isActive = true
-        removeIco.centerXAnchor.constraint(equalTo: removeArea.centerXAnchor).isActive = true
-       
-        self.contentView.bringSubview(toFront: viewContent)
         
     }
     
-    func showDelete(){
+    override func prepareForReuse() {
+        viewContent.frame = CGRect(x: 10, y: 0, width: self.contentView.frame.width - 20, height: self.contentView.frame.height)
+    }
     
+    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        return layoutAttributes
+    }
+    
+    override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
+        super.apply(layoutAttributes)
+    }
+    
+    func delete(sender: UITapGestureRecognizer){
+        if let cellDelegate = cellDelegate{
+            if let indexPath = self.indexPath{
+                cellDelegate.deleteCellAtIndexPath(indexPath: indexPath,viewContent :self.contentView,cell : self)
+            }
+        }
     }
     
 }
