@@ -48,6 +48,8 @@ class ResultCellCollectionViewCell: BaseCollectionViewCell {
 
     let viewContent = UIView()
     
+    var infoAreaWidth : CGFloat = 0
+    
     let userNameLabel = UILabel()
     let sexLabel = UILabel()
     let dotSeprate1 = UILabel()
@@ -72,6 +74,7 @@ class ResultCellCollectionViewCell: BaseCollectionViewCell {
         removeArea.frame = CGRect(x: self.contentView.frame.width - (100 + 10), y: 0, width: 100, height: self.contentView.frame.height)
         removeArea.addSubview(removeIco)
         removeArea.backgroundColor = UIColor.red
+        //removeArea.layer.cornerRadius = 3
         
         removeIco.translatesAutoresizingMaskIntoConstraints = false
         removeIco.centerYAnchor.constraint(equalTo: removeArea.centerYAnchor).isActive = true
@@ -87,6 +90,8 @@ class ResultCellCollectionViewCell: BaseCollectionViewCell {
         
         
         viewContent.frame = CGRect(x: 10, y: 0, width: self.contentView.frame.width - 20, height: self.contentView.frame.height)
+        //viewContent.layer.cornerRadius = 3
+        infoAreaWidth = viewContent.frame.width - ( 10 + 60 + 10 + 100 )
         
         avatart.translatesAutoresizingMaskIntoConstraints = false
         userNameLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -103,14 +108,23 @@ class ResultCellCollectionViewCell: BaseCollectionViewCell {
         ageLabel.translatesAutoresizingMaskIntoConstraints = false
         ageContent.translatesAutoresizingMaskIntoConstraints = false
         
-       
+        
         
         //init view data
+        
+        sexLabel.font = UIFont(name: sexLabel.font.fontName, size: 12)
+        ageLabel.font = UIFont(name: ageLabel.font.fontName, size: 12)
+        ageContent.font = UIFont(name: ageContent.font.fontName, size: 12)
+        ratingLabel.font = UIFont(name: ratingLabel.font.fontName, size: 12)
+        timeLabel.font = UIFont(name: timeLabel.font.fontName, size: 12)
+        timeContent.font = UIFont(name: timeContent.font.fontName, size: 10)
+        
         ageLabel.text = NSLocalizedString("age", comment: "")
         timeLabel.text = NSLocalizedString("comming_remain", comment: "")
         dotSeprate1.text = "."
         dotSeprate2.text = "."
         seprateLine.backgroundColor = UIColor.tintColor()
+        
         
         self.contentView.backgroundColor = UIColor.clear
         self.contentView.addSubview(viewContent)
@@ -130,6 +144,8 @@ class ResultCellCollectionViewCell: BaseCollectionViewCell {
         
         
         let views = ["avatart" : avatart,"userNameLabel" :userNameLabel,"sexLabel" :sexLabel,"dotSeprate1" :dotSeprate1,"dotSeprate2":dotSeprate2,"ratingLabel":ratingLabel,"timeLabel" :timeLabel,"timeContent" :timeContent,"seprateLine" :seprateLine, "phoneIco" :phoneIco,"ageLabel" :ageLabel,"ageContent" :ageContent,"ratingFiveStartImage" :ratingFiveStartImage]
+        let metrics = ["infoAreaWidth" :infoAreaWidth]
+        
         var constraints = [NSLayoutConstraint]()
         
         avatart.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor).isActive = true

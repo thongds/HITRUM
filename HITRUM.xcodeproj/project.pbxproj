@@ -26,6 +26,12 @@
 		5C3830371EB4AA34006C2F02 /* ForgotPasswordPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3830361EB4AA34006C2F02 /* ForgotPasswordPresent.swift */; };
 		5C3830391EB4AA4A006C2F02 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3830381EB4AA4A006C2F02 /* ForgotPasswordViewController.swift */; };
 		5C3FD4C31EB3368F00E44EEC /* HistoryDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FD4C21EB3368F00E44EEC /* HistoryDetailModel.swift */; };
+		5C4871051EBC2CAE00897087 /* ServicePresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4871041EBC2CAE00897087 /* ServicePresent.swift */; };
+		5C4871071EBC2CBE00897087 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4871061EBC2CBE00897087 /* ServiceViewController.swift */; };
+		5C48710D1EBC2D7C00897087 /* SliderCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C48710C1EBC2D7C00897087 /* SliderCollectionViewController.swift */; };
+		5C48710F1EBC2D9C00897087 /* SliderCollectionViewPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C48710E1EBC2D9C00897087 /* SliderCollectionViewPresent.swift */; };
+		5C4871111EBC2F9300897087 /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4871101EBC2F9300897087 /* SliderCell.swift */; };
+		5C4871141EBC348300897087 /* ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4871131EBC348300897087 /* ViewHelper.swift */; };
 		5C4957D71EB9895D0038744E /* RequestResultPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4957D61EB9895D0038744E /* RequestResultPresent.swift */; };
 		5C4957D91EB989770038744E /* RequestResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4957D81EB989770038744E /* RequestResultViewController.swift */; };
 		5C4957DB1EB992740038744E /* ResultCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4957DA1EB992740038744E /* ResultCollectionViewController.swift */; };
@@ -74,6 +80,8 @@
 		5CBC512A1EB249030069E49C /* HistoryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC51291EB249030069E49C /* HistoryCollectionView.swift */; };
 		5CBC512C1EB249250069E49C /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC512B1EB249250069E49C /* HistoryModel.swift */; };
 		5CBC512E1EB24BB30069E49C /* HistoryCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC512D1EB24BB30069E49C /* HistoryCellCollectionViewCell.swift */; };
+		5CBED8CB1EBC8C8E0026C8C0 /* TransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBED8CA1EBC8C8E0026C8C0 /* TransitionDelegate.swift */; };
+		5CBED8CD1EBC8CB10026C8C0 /* AnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBED8CC1EBC8CB10026C8C0 /* AnimatedTransitioning.swift */; };
 		5CCDC6831EAC875600D996DE /* HomeUnuserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCDC6821EAC875600D996DE /* HomeUnuserViewController.swift */; };
 		5CF7685B1EACBB84003CE4F5 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7685A1EACBB83003CE4F5 /* ColorExtension.swift */; };
 		5CF7685D1EACBD2B003CE4F5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7685C1EACBD2B003CE4F5 /* LoginViewController.swift */; };
@@ -121,6 +129,12 @@
 		5C3830361EB4AA34006C2F02 /* ForgotPasswordPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresent.swift; sourceTree = "<group>"; };
 		5C3830381EB4AA4A006C2F02 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		5C3FD4C21EB3368F00E44EEC /* HistoryDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDetailModel.swift; sourceTree = "<group>"; };
+		5C4871041EBC2CAE00897087 /* ServicePresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicePresent.swift; sourceTree = "<group>"; };
+		5C4871061EBC2CBE00897087 /* ServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
+		5C48710C1EBC2D7C00897087 /* SliderCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderCollectionViewController.swift; sourceTree = "<group>"; };
+		5C48710E1EBC2D9C00897087 /* SliderCollectionViewPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderCollectionViewPresent.swift; sourceTree = "<group>"; };
+		5C4871101EBC2F9300897087 /* SliderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
+		5C4871131EBC348300897087 /* ViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHelper.swift; sourceTree = "<group>"; };
 		5C4957D61EB9895D0038744E /* RequestResultPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestResultPresent.swift; sourceTree = "<group>"; };
 		5C4957D81EB989770038744E /* RequestResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestResultViewController.swift; sourceTree = "<group>"; };
 		5C4957DA1EB992740038744E /* ResultCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultCollectionViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +189,8 @@
 		5CBC51291EB249030069E49C /* HistoryCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCollectionView.swift; sourceTree = "<group>"; };
 		5CBC512B1EB249250069E49C /* HistoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
 		5CBC512D1EB24BB30069E49C /* HistoryCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		5CBED8CA1EBC8C8E0026C8C0 /* TransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionDelegate.swift; sourceTree = "<group>"; };
+		5CBED8CC1EBC8CB10026C8C0 /* AnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedTransitioning.swift; sourceTree = "<group>"; };
 		5CCDC6821EAC875600D996DE /* HomeUnuserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeUnuserViewController.swift; sourceTree = "<group>"; };
 		5CF7685A1EACBB83003CE4F5 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		5CF7685C1EACBD2B003CE4F5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -414,6 +430,83 @@
 				5C3830381EB4AA4A006C2F02 /* ForgotPasswordViewController.swift */,
 			);
 			name = view;
+			sourceTree = "<group>";
+		};
+		5C4871001EBC2BF800897087 /* serviceSlide */ = {
+			isa = PBXGroup;
+			children = (
+				5C4871011EBC2C3400897087 /* present */,
+				5C4871021EBC2C3F00897087 /* view */,
+				5C4871031EBC2C4700897087 /* model */,
+			);
+			name = serviceSlide;
+			sourceTree = "<group>";
+		};
+		5C4871011EBC2C3400897087 /* present */ = {
+			isa = PBXGroup;
+			children = (
+				5C4871041EBC2CAE00897087 /* ServicePresent.swift */,
+				5C48710E1EBC2D9C00897087 /* SliderCollectionViewPresent.swift */,
+			);
+			name = present;
+			sourceTree = "<group>";
+		};
+		5C4871021EBC2C3F00897087 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				5C4871081EBC2CE600897087 /* collectionView */,
+				5C4871061EBC2CBE00897087 /* ServiceViewController.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		5C4871031EBC2C4700897087 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		5C4871081EBC2CE600897087 /* collectionView */ = {
+			isa = PBXGroup;
+			children = (
+				5C4871091EBC2CF300897087 /* view */,
+				5C48710A1EBC2CFD00897087 /* layout */,
+				5C48710B1EBC2D0300897087 /* cell */,
+			);
+			name = collectionView;
+			sourceTree = "<group>";
+		};
+		5C4871091EBC2CF300897087 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				5C48710C1EBC2D7C00897087 /* SliderCollectionViewController.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		5C48710A1EBC2CFD00897087 /* layout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = layout;
+			sourceTree = "<group>";
+		};
+		5C48710B1EBC2D0300897087 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				5C4871101EBC2F9300897087 /* SliderCell.swift */,
+			);
+			name = cell;
+			sourceTree = "<group>";
+		};
+		5C4871121EBC346500897087 /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				5CBED8C91EBC8C2F0026C8C0 /* transitionDelegate */,
+				5C4871131EBC348300897087 /* ViewHelper.swift */,
+			);
+			name = helper;
 			sourceTree = "<group>";
 		};
 		5C4957D21EB96AF90038744E /* requestResult */ = {
@@ -667,6 +760,7 @@
 				5C782BD91EB5BFCE0015B0FB /* chooseLocation */,
 				5C34731A1EB6C40300803459 /* requestPage */,
 				5C4957D21EB96AF90038744E /* requestResult */,
+				5C4871001EBC2BF800897087 /* serviceSlide */,
 			);
 			name = userAction;
 			sourceTree = "<group>";
@@ -744,6 +838,7 @@
 			children = (
 				5C7328DF1EAF6FCA00EABDB9 /* appDelegate */,
 				5C7328E01EAF6FE500EABDB9 /* modules */,
+				5C4871121EBC346500897087 /* helper */,
 				5C7328DD1EAF6F8700EABDB9 /* viewExtendsion */,
 				5C4957E81EB9F0960038744E /* enum */,
 				5CF15B381EACEF4100D1195E /* assist */,
@@ -841,6 +936,15 @@
 				5C3FD4C21EB3368F00E44EEC /* HistoryDetailModel.swift */,
 			);
 			name = model;
+			sourceTree = "<group>";
+		};
+		5CBED8C91EBC8C2F0026C8C0 /* transitionDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				5CBED8CA1EBC8C8E0026C8C0 /* TransitionDelegate.swift */,
+				5CBED8CC1EBC8CB10026C8C0 /* AnimatedTransitioning.swift */,
+			);
+			name = transitionDelegate;
 			sourceTree = "<group>";
 		};
 		5CF15B381EACEF4100D1195E /* assist */ = {
@@ -1059,10 +1163,12 @@
 			files = (
 				5CBC51081EB1EF820069E49C /* EditViewController.swift in Sources */,
 				5C06CE2F1EB3033200A27574 /* HistoryDetailCollectionPresent.swift in Sources */,
+				5CBED8CD1EBC8CB10026C8C0 /* AnimatedTransitioning.swift in Sources */,
 				5C4957E11EB993030038744E /* ResultLayout.swift in Sources */,
 				5C2365F21EB02D9F00C44C9C /* ButtonExtension.swift in Sources */,
 				5C3FD4C31EB3368F00E44EEC /* HistoryDetailModel.swift in Sources */,
 				5C4C8C581EB18A4100106215 /* CellMenu.swift in Sources */,
+				5C4871051EBC2CAE00897087 /* ServicePresent.swift in Sources */,
 				5CBC511F1EB232480069E49C /* NewsDetailPresent.swift in Sources */,
 				5CBC512A1EB249030069E49C /* HistoryCollectionView.swift in Sources */,
 				5C4957E51EB993920038744E /* ResultCollectionPresent.swift in Sources */,
@@ -1076,6 +1182,7 @@
 				5C782BE61EB5C5380015B0FB /* SearchResultPresent.swift in Sources */,
 				5C2365F41EB030DD00C44C9C /* BaseViewController.swift in Sources */,
 				5C4C8C671EB1C4F200106215 /* UIBarExtension.swift in Sources */,
+				5C4871141EBC348300897087 /* ViewHelper.swift in Sources */,
 				5C34731E1EB6C44E00803459 /* RequestPresent.swift in Sources */,
 				5C2366061EB06FC900C44C9C /* SuccessFullPageViewController.swift in Sources */,
 				5C9CCC8D1EAC7DFD00B70366 /* SplashController.swift in Sources */,
@@ -1102,10 +1209,14 @@
 				5CBC512E1EB24BB30069E49C /* HistoryCellCollectionViewCell.swift in Sources */,
 				5C2366021EB049DD00C44C9C /* OTPVerifyPresent.swift in Sources */,
 				5C7328DC1EAF6A4F00EABDB9 /* FacebookLoginView.swift in Sources */,
+				5C4871111EBC2F9300897087 /* SliderCell.swift in Sources */,
+				5CBED8CB1EBC8C8E0026C8C0 /* TransitionDelegate.swift in Sources */,
 				5C782BE11EB5C09C0015B0FB /* ChooseLocationViewController.swift in Sources */,
+				5C48710D1EBC2D7C00897087 /* SliderCollectionViewController.swift in Sources */,
 				5C4957E31EB9931A0038744E /* ResultCellCollectionViewCell.swift in Sources */,
 				5CBC51191EB21C710069E49C /* NewsCollectionView.swift in Sources */,
 				5C4957D91EB989770038744E /* RequestResultViewController.swift in Sources */,
+				5C4871071EBC2CBE00897087 /* ServiceViewController.swift in Sources */,
 				5C4957D71EB9895D0038744E /* RequestResultPresent.swift in Sources */,
 				5C782BD31EB581800015B0FB /* NewPasswordViewController.swift in Sources */,
 				5C782BE41EB5C5140015B0FB /* SearchResultCollectionViewController.swift in Sources */,
@@ -1115,6 +1226,7 @@
 				5CBC51151EB207680069E49C /* NewsModel.swift in Sources */,
 				5CBC511B1EB21C950069E49C /* NewsCollectionCell.swift in Sources */,
 				5C7328D61EAF4CD300EABDB9 /* LoginPresent.swift in Sources */,
+				5C48710F1EBC2D9C00897087 /* SliderCollectionViewPresent.swift in Sources */,
 				5C782BE81EB5C5660015B0FB /* SearchResultCell.swift in Sources */,
 				5C23660A1EB0854300C44C9C /* UserHomeViewController.swift in Sources */,
 				5C4957EA1EB9F0AF0038744E /* RequestResultType.swift in Sources */,

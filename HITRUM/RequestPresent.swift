@@ -96,6 +96,10 @@ class RequestPresent: BaseViewController {
         self.view.addGestureRecognizer(swipeDown)
         
         requestButton.addTarget(self, action: #selector(self.showNextPage), for: .touchUpInside)
+        
+        infoIco.isUserInteractionEnabled = true
+        let infoTap = UITapGestureRecognizer(target: self, action: #selector(self.showServiceSlide))
+        infoIco.addGestureRecognizer(infoTap)
 
     }
     
@@ -105,6 +109,15 @@ class RequestPresent: BaseViewController {
     
     func showChooseLocationPage(){
         //navigationController?.pushViewController(ChooseLocationViewController(), animated: true)
+    }
+    
+    func showServiceSlide(){
+        let transitionDelegate = TransitionDelegate()
+        let vc = ServiceViewController()
+        vc.transitioningDelegate = transitionDelegate
+        vc.modalPresentationStyle = .custom
+        self.present(vc, animated: true, completion: nil)
+        //navigationController?.pushViewController(ServiceViewController(), animated: true)
     }
     
     func showBigButtomArea(){

@@ -21,9 +21,9 @@ class ResultCollectionViewController: ResultCollectionPresent {
         for index in 0...10 {
             requestResult.append(RequestResultModel(type: 0,usertAavart : "", name: "Do van quy", sex: "name", age: "22" , rating: index, timeComingRemain : "5 phut",timeStart: "01:40:30"))
         }
-//        for _ in 0...5 {
-//            requestResult.append(RequestResultModel(type: 1,usertAavart : "", name: "Do van quy", sex: "name", age: "22" , rating: 5, timeComingRemain : "5 phut",timeStart: "01:40:30"))
-//        }
+        for index in 0...5 {
+            requestResult.append(RequestResultModel(type: 1,usertAavart : "", name: "Do van quy", sex: "name", age: "22" , rating: index, timeComingRemain : "5 phut",timeStart: "01:40:30"))
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -86,7 +86,7 @@ class ResultCollectionViewController: ResultCollectionPresent {
         cell.cellDelegate = self
         return cell
     }
-    
+   
     func showDelete(sender: MyGestureReconize){
         switch sender.direction {
             case UISwipeGestureRecognizerDirection.left:
@@ -117,7 +117,7 @@ extension ResultCollectionViewController : CellDelegate {
         viewContent.frame.origin.x = 10
         removeItemAtIndexPath(indexPath: indexPath!)
         collectionView?.deleteItems(at: [indexPath!])
-        collectionView?.reloadData()
+       // collectionView?.reloadData()
     }
 }
 
