@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C05E4601EBD6F2E002DF419 /* CirclerDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C05E45F1EBD6F2E002DF419 /* CirclerDot.swift */; };
+		5C05E4621EBD813C002DF419 /* DotviewHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C05E4611EBD813C002DF419 /* DotviewHolder.swift */; };
 		5C06CE1C1EB2CE8E00A27574 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C06CE1E1EB2CE8E00A27574 /* Localizable.strings */; };
 		5C06CE271EB3000400A27574 /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C06CE261EB3000400A27574 /* HistoryDetailViewController.swift */; };
 		5C06CE2A1EB3003B00A27574 /* HistoryDetailPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C06CE291EB3003B00A27574 /* HistoryDetailPresent.swift */; };
@@ -106,6 +108,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C05E45F1EBD6F2E002DF419 /* CirclerDot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirclerDot.swift; sourceTree = "<group>"; };
+		5C05E4611EBD813C002DF419 /* DotviewHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotviewHolder.swift; sourceTree = "<group>"; };
 		5C06CE1B1EB2CD8D00A27574 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		5C06CE1D1EB2CE8E00A27574 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5C06CE1F1EB2CE9800A27574 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -233,6 +237,15 @@
 				6FFF0F9201142A9DEEAC80E1 /* Pods_HITRUM.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C05E45E1EBD6EF0002DF419 /* viewCustom */ = {
+			isa = PBXGroup;
+			children = (
+				5C05E45F1EBD6F2E002DF419 /* CirclerDot.swift */,
+				5C05E4611EBD813C002DF419 /* DotviewHolder.swift */,
+			);
+			name = viewCustom;
 			sourceTree = "<group>";
 		};
 		5C06CE221EB2FF8000A27574 /* history */ = {
@@ -840,6 +853,7 @@
 				5C7328E01EAF6FE500EABDB9 /* modules */,
 				5C4871121EBC346500897087 /* helper */,
 				5C7328DD1EAF6F8700EABDB9 /* viewExtendsion */,
+				5C05E45E1EBD6EF0002DF419 /* viewCustom */,
 				5C4957E81EB9F0960038744E /* enum */,
 				5CF15B381EACEF4100D1195E /* assist */,
 			);
@@ -1211,9 +1225,11 @@
 				5C7328DC1EAF6A4F00EABDB9 /* FacebookLoginView.swift in Sources */,
 				5C4871111EBC2F9300897087 /* SliderCell.swift in Sources */,
 				5CBED8CB1EBC8C8E0026C8C0 /* TransitionDelegate.swift in Sources */,
+				5C05E4621EBD813C002DF419 /* DotviewHolder.swift in Sources */,
 				5C782BE11EB5C09C0015B0FB /* ChooseLocationViewController.swift in Sources */,
 				5C48710D1EBC2D7C00897087 /* SliderCollectionViewController.swift in Sources */,
 				5C4957E31EB9931A0038744E /* ResultCellCollectionViewCell.swift in Sources */,
+				5C05E4601EBD6F2E002DF419 /* CirclerDot.swift in Sources */,
 				5CBC51191EB21C710069E49C /* NewsCollectionView.swift in Sources */,
 				5C4957D91EB989770038744E /* RequestResultViewController.swift in Sources */,
 				5C4871071EBC2CBE00897087 /* ServiceViewController.swift in Sources */,

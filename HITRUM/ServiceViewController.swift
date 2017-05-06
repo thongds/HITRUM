@@ -10,11 +10,13 @@ import UIKit
 
 class ServiceViewController: ServicePresent {
 
-    
-        override func viewDidLoad() {
+    var dotArea = DotviewHolder()
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         let sliderHeigh = view.frame.height * 2/3
+        let dotAreaHeigh : CGFloat = 10
+        let sliderAndDotSpace : CGFloat = 20
         buttomHeight = (view.frame.height - sliderHeigh)/2
         spaceCloseTop = (buttomHeight - closeImage.frame.height)/2
         view.backgroundColor = UIColor.clear
@@ -27,28 +29,35 @@ class ServiceViewController: ServicePresent {
         ViewHelper.addCollectionViewController(viewController: self, toView: self.view, collectionView: slider)
         slider.collectionView?.delegate = self
         
+        dotArea = DotviewHolder(frame: CGRect(x: 0, y: (view.frame.height-sliderHeigh)/2 -  (dotAreaHeigh + sliderAndDotSpace), width: view.frame.width, height: dotAreaHeigh))
+        dotArea.backgroundColor = UIColor.clear
+
         slider.view.translatesAutoresizingMaskIntoConstraints = false
         closeImage.translatesAutoresizingMaskIntoConstraints = false
         closeImage.isUserInteractionEnabled = true
         selectImage.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(dotArea)
         view.addSubview(selectImage)
         view.addSubview(closeImage)
-        let views : [String : Any]  = ["slider" : slider.view,"closeImage" :closeImage,"selectImage":selectImage]
+            let views : [String : Any]  = ["slider" : slider.view,"closeImage" :closeImage,"selectImage":selectImage]
         let metrics = ["sliderHeigh" : (view.frame.height-sliderHeigh)/2,"spaceCloseTop" : spaceCloseTop]
 
         slider.view.heightAnchor.constraint(equalToConstant: sliderHeigh).isActive = true
         slider.view.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+            
+            
         NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|[slider]|", options: [], metrics: metrics, views: views))
         
         closeImage.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -spaceCenter).isActive = true
         NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "V:[slider]-spaceCloseTop-[closeImage]", options: [], metrics: metrics, views: views))
+            
         
+            
         selectImage.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: spaceCenter).isActive = true
         NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "V:[slider]-spaceCloseTop-[selectImage]", options: [], metrics: metrics, views: views))
-            
+        
     }
-    
-    
 }
 extension ServiceViewController : UIScrollViewDelegate, UICollectionViewDelegate {
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
@@ -71,6 +80,10 @@ extension ServiceViewController : UIScrollViewDelegate, UICollectionViewDelegate
         
         targetContentOffset.pointee.x = CGFloat(currentOffset)
         let point = CGPoint(x: CGFloat(newTargetOffset), y: 0)
+        print("x :\(newTargetOffset)")
+        let currentPage = ceilf(newTargetOffset/pageWidth)
+        dotArea.redrawDot(atPosition: Int(currentPage))
+        print("newTargetOffset \( currentPage)")
         scrollView.setContentOffset(point, animated: true)
     
    }
