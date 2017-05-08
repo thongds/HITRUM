@@ -12,3 +12,9 @@ enum RequestResultType : Int {
     case COMMING = 0
     case WORKING = 1
 }
+
+enum BillWorkerStatus : Int {
+    case FINISH = 0
+    case COMMING = 1
+    case WORKING = 2
+}

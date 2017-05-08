@@ -25,6 +25,10 @@
 		5C23660E1EB09ADC00C44C9C /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C23660D1EB09ADC00C44C9C /* UIImageView.swift */; };
 		5C34731E1EB6C44E00803459 /* RequestPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C34731D1EB6C44E00803459 /* RequestPresent.swift */; };
 		5C3473201EB6C45D00803459 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C34731F1EB6C45D00803459 /* RequestViewController.swift */; };
+		5C3778C01EBF151C009F925F /* BillForMultipStaffPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3778BF1EBF151C009F925F /* BillForMultipStaffPresent.swift */; };
+		5C3778C61EBF1E28009F925F /* BillForMultipStaffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3778C51EBF1E28009F925F /* BillForMultipStaffViewController.swift */; };
+		5C3778CA1EBF1E90009F925F /* BillForMultipStaffCollectionViewPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3778C91EBF1E90009F925F /* BillForMultipStaffCollectionViewPresent.swift */; };
+		5C3778CC1EBF1EAD009F925F /* BillForMultipStaffCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3778CB1EBF1EAD009F925F /* BillForMultipStaffCollectionViewController.swift */; };
 		5C3830371EB4AA34006C2F02 /* ForgotPasswordPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3830361EB4AA34006C2F02 /* ForgotPasswordPresent.swift */; };
 		5C3830391EB4AA4A006C2F02 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3830381EB4AA4A006C2F02 /* ForgotPasswordViewController.swift */; };
 		5C3FD4C31EB3368F00E44EEC /* HistoryDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FD4C21EB3368F00E44EEC /* HistoryDetailModel.swift */; };
@@ -48,6 +52,10 @@
 		5C4C8C611EB1A0F800106215 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C8C601EB1A0F800106215 /* SettingViewController.swift */; };
 		5C4C8C651EB1B0D800106215 /* CustomImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C8C641EB1B0D800106215 /* CustomImage.swift */; };
 		5C4C8C671EB1C4F200106215 /* UIBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C8C661EB1C4F200106215 /* UIBarExtension.swift */; };
+		5C5063FA1EBF58B80083A0F3 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5063F91EBF58B80083A0F3 /* HeaderView.swift */; };
+		5C5063FC1EBF5A180083A0F3 /* BillForMultipStaffCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5063FB1EBF5A180083A0F3 /* BillForMultipStaffCell.swift */; };
+		5C5063FF1EBF77B30083A0F3 /* BillForMultipStaffModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5063FE1EBF77B30083A0F3 /* BillForMultipStaffModel.swift */; };
+		5C551BEC1EBFF94400DF1D2F /* BillCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C551BEB1EBFF94400DF1D2F /* BillCollectionViewLayout.swift */; };
 		5C5F2EA51EB41AE900D7239E /* UserHomePresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5F2EA41EB41AE900D7239E /* UserHomePresent.swift */; };
 		5C5F2EA71EB41E3000D7239E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5F2EA61EB41E3000D7239E /* MapKit.framework */; };
 		5C7328D31EAF1D4500EABDB9 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7328D21EAF1D4500EABDB9 /* UITextFieldExtension.swift */; };
@@ -130,6 +138,10 @@
 		5C23660D1EB09ADC00C44C9C /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		5C34731D1EB6C44E00803459 /* RequestPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestPresent.swift; sourceTree = "<group>"; };
 		5C34731F1EB6C45D00803459 /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
+		5C3778BF1EBF151C009F925F /* BillForMultipStaffPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillForMultipStaffPresent.swift; sourceTree = "<group>"; };
+		5C3778C51EBF1E28009F925F /* BillForMultipStaffViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillForMultipStaffViewController.swift; sourceTree = "<group>"; };
+		5C3778C91EBF1E90009F925F /* BillForMultipStaffCollectionViewPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillForMultipStaffCollectionViewPresent.swift; sourceTree = "<group>"; };
+		5C3778CB1EBF1EAD009F925F /* BillForMultipStaffCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillForMultipStaffCollectionViewController.swift; sourceTree = "<group>"; };
 		5C3830361EB4AA34006C2F02 /* ForgotPasswordPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresent.swift; sourceTree = "<group>"; };
 		5C3830381EB4AA4A006C2F02 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		5C3FD4C21EB3368F00E44EEC /* HistoryDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDetailModel.swift; sourceTree = "<group>"; };
@@ -153,6 +165,10 @@
 		5C4C8C601EB1A0F800106215 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		5C4C8C641EB1B0D800106215 /* CustomImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImage.swift; sourceTree = "<group>"; };
 		5C4C8C661EB1C4F200106215 /* UIBarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarExtension.swift; sourceTree = "<group>"; };
+		5C5063F91EBF58B80083A0F3 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		5C5063FB1EBF5A180083A0F3 /* BillForMultipStaffCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillForMultipStaffCell.swift; sourceTree = "<group>"; };
+		5C5063FE1EBF77B30083A0F3 /* BillForMultipStaffModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillForMultipStaffModel.swift; sourceTree = "<group>"; };
+		5C551BEB1EBFF94400DF1D2F /* BillCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillCollectionViewLayout.swift; sourceTree = "<group>"; };
 		5C5F2EA41EB41AE900D7239E /* UserHomePresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHomePresent.swift; sourceTree = "<group>"; };
 		5C5F2EA61EB41E3000D7239E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5C7328D21EAF1D4500EABDB9 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
@@ -420,6 +436,69 @@
 			name = view;
 			sourceTree = "<group>";
 		};
+		5C3778BE1EBEFE19009F925F /* billForMultipStaff */ = {
+			isa = PBXGroup;
+			children = (
+				5C3778C11EBF1524009F925F /* present */,
+				5C3778C21EBF152F009F925F /* view */,
+				5C3778C31EBF153B009F925F /* model */,
+			);
+			name = billForMultipStaff;
+			sourceTree = "<group>";
+		};
+		5C3778C11EBF1524009F925F /* present */ = {
+			isa = PBXGroup;
+			children = (
+				5C3778BF1EBF151C009F925F /* BillForMultipStaffPresent.swift */,
+				5C3778C91EBF1E90009F925F /* BillForMultipStaffCollectionViewPresent.swift */,
+			);
+			name = present;
+			sourceTree = "<group>";
+		};
+		5C3778C21EBF152F009F925F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				5C3778C41EBF1E0C009F925F /* collection */,
+				5C3778C51EBF1E28009F925F /* BillForMultipStaffViewController.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		5C3778C31EBF153B009F925F /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		5C3778C41EBF1E0C009F925F /* collection */ = {
+			isa = PBXGroup;
+			children = (
+				5C3778C71EBF1E44009F925F /* view */,
+				5C5064001EBF7E940083A0F3 /* layout */,
+				5C3778C81EBF1E4B009F925F /* cell */,
+				5C5063FD1EBF77220083A0F3 /* model */,
+			);
+			name = collection;
+			sourceTree = "<group>";
+		};
+		5C3778C71EBF1E44009F925F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				5C3778CB1EBF1EAD009F925F /* BillForMultipStaffCollectionViewController.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		5C3778C81EBF1E4B009F925F /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				5C5063F91EBF58B80083A0F3 /* HeaderView.swift */,
+				5C5063FB1EBF5A180083A0F3 /* BillForMultipStaffCell.swift */,
+			);
+			name = cell;
+			sourceTree = "<group>";
+		};
 		5C3830351EB4AA03006C2F02 /* forgotPassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -637,6 +716,22 @@
 			name = view;
 			sourceTree = "<group>";
 		};
+		5C5063FD1EBF77220083A0F3 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				5C5063FE1EBF77B30083A0F3 /* BillForMultipStaffModel.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		5C5064001EBF7E940083A0F3 /* layout */ = {
+			isa = PBXGroup;
+			children = (
+				5C551BEB1EBFF94400DF1D2F /* BillCollectionViewLayout.swift */,
+			);
+			name = layout;
+			sourceTree = "<group>";
+		};
 		5C5F2EA11EB41A8600D7239E /* present */ = {
 			isa = PBXGroup;
 			children = (
@@ -774,6 +869,7 @@
 				5C34731A1EB6C40300803459 /* requestPage */,
 				5C4957D21EB96AF90038744E /* requestResult */,
 				5C4871001EBC2BF800897087 /* serviceSlide */,
+				5C3778BE1EBEFE19009F925F /* billForMultipStaff */,
 			);
 			name = userAction;
 			sourceTree = "<group>";
@@ -1216,26 +1312,34 @@
 				5C23660E1EB09ADC00C44C9C /* UIImageView.swift in Sources */,
 				5C06CE2A1EB3003B00A27574 /* HistoryDetailPresent.swift in Sources */,
 				5C782BD11EB5816C0015B0FB /* NewPasswordPresent.swift in Sources */,
+				5C5063FF1EBF77B30083A0F3 /* BillForMultipStaffModel.swift in Sources */,
+				5C3778CC1EBF1EAD009F925F /* BillForMultipStaffCollectionViewController.swift in Sources */,
 				5C4957E71EB9DCE50038744E /* RequestResultModel.swift in Sources */,
 				5C4C8C5A1EB19A2900106215 /* MenuModel.swift in Sources */,
 				5C7328D31EAF1D4500EABDB9 /* UITextFieldExtension.swift in Sources */,
 				5C23660C1EB085D700C44C9C /* MenuViewController.swift in Sources */,
+				5C3778C61EBF1E28009F925F /* BillForMultipStaffViewController.swift in Sources */,
 				5CBC512E1EB24BB30069E49C /* HistoryCellCollectionViewCell.swift in Sources */,
+				5C5063FC1EBF5A180083A0F3 /* BillForMultipStaffCell.swift in Sources */,
 				5C2366021EB049DD00C44C9C /* OTPVerifyPresent.swift in Sources */,
 				5C7328DC1EAF6A4F00EABDB9 /* FacebookLoginView.swift in Sources */,
 				5C4871111EBC2F9300897087 /* SliderCell.swift in Sources */,
+				5C5063FA1EBF58B80083A0F3 /* HeaderView.swift in Sources */,
+				5C3778CA1EBF1E90009F925F /* BillForMultipStaffCollectionViewPresent.swift in Sources */,
 				5CBED8CB1EBC8C8E0026C8C0 /* TransitionDelegate.swift in Sources */,
 				5C05E4621EBD813C002DF419 /* DotviewHolder.swift in Sources */,
 				5C782BE11EB5C09C0015B0FB /* ChooseLocationViewController.swift in Sources */,
 				5C48710D1EBC2D7C00897087 /* SliderCollectionViewController.swift in Sources */,
 				5C4957E31EB9931A0038744E /* ResultCellCollectionViewCell.swift in Sources */,
 				5C05E4601EBD6F2E002DF419 /* CirclerDot.swift in Sources */,
+				5C551BEC1EBFF94400DF1D2F /* BillCollectionViewLayout.swift in Sources */,
 				5CBC51191EB21C710069E49C /* NewsCollectionView.swift in Sources */,
 				5C4957D91EB989770038744E /* RequestResultViewController.swift in Sources */,
 				5C4871071EBC2CBE00897087 /* ServiceViewController.swift in Sources */,
 				5C4957D71EB9895D0038744E /* RequestResultPresent.swift in Sources */,
 				5C782BD31EB581800015B0FB /* NewPasswordViewController.swift in Sources */,
 				5C782BE41EB5C5140015B0FB /* SearchResultCollectionViewController.swift in Sources */,
+				5C3778C01EBF151C009F925F /* BillForMultipStaffPresent.swift in Sources */,
 				5C782BEA1EB5D43E0015B0FB /* ChooseLocationResult.swift in Sources */,
 				5C4C8C611EB1A0F800106215 /* SettingViewController.swift in Sources */,
 				5C3830371EB4AA34006C2F02 /* ForgotPasswordPresent.swift in Sources */,

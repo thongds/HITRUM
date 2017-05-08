@@ -18,7 +18,6 @@ class RequestResultModel {
     let age : String?
     let rating : Int?
     let timeComingRemain : String?
-    
     // working type
     
     let timeStart : String?

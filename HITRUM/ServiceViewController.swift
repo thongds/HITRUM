@@ -22,7 +22,7 @@ class ServiceViewController: ServicePresent {
         view.backgroundColor = UIColor.clear
         view.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         let viewFrame = UIView()
-        viewFrame.frame = CGRect(x: 0, y: -100, width: view.frame.width, height: view.frame.height + 100)
+        viewFrame.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height )
         viewFrame.backgroundColor = UIColor.init(hexString: "#D92B2B2B")
         view.addSubview(viewFrame)
         navigationController?.navigationBar.layer.zPosition = -1
@@ -42,7 +42,8 @@ class ServiceViewController: ServicePresent {
         view.addSubview(closeImage)
             let views : [String : Any]  = ["slider" : slider.view,"closeImage" :closeImage,"selectImage":selectImage]
         let metrics = ["sliderHeigh" : (view.frame.height-sliderHeigh)/2,"spaceCloseTop" : spaceCloseTop]
-
+        
+        slider.view.backgroundColor = UIColor.clear
         slider.view.heightAnchor.constraint(equalToConstant: sliderHeigh).isActive = true
         slider.view.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
             

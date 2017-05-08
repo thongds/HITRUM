@@ -49,7 +49,11 @@
 "age" = "tuổi";
 "comming_remain" = "đang đến còn ";
 
+//bill for multip staff
 
-
-
+"money_total" = "Tổng tiền:";
+"staff_total" = "Số người";
+"bill_for_multip_staff_header" = "Để chúng tôi phục vụ bạn tốt hơn, bạn vui lòng gửi đánh giá về nhân viên của chúng tôi";
+"remark_label"  =  "Đánh giá";
+"love_label" = "Yêu thích";
 

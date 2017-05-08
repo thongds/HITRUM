@@ -29,7 +29,7 @@ class SliderCollectionViewController: SliderCollectionViewPresent {
         layout.scrollDirection = .horizontal
         print((collectionView?.frame.width)!)
         itemWidth = (collectionView?.frame.width)! - (marginSpace*2)
-        layout.itemSize = CGSize(width: itemWidth , height: (collectionView?.frame.height)!)
+        layout.itemSize = CGSize(width: itemWidth , height: view.frame.height * 2/3)
         layout.minimumLineSpacing = lineSpace
         layout.minimumInteritemSpacing = 0
         layout.sectionInset = UIEdgeInsets(top: 0, left: marginSpace, bottom: 0, right: marginSpace)

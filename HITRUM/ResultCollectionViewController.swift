@@ -87,6 +87,10 @@ class ResultCollectionViewController: ResultCollectionPresent {
         return cell
     }
    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        navigationController?.pushViewController(BillForMultipStaffViewController(), animated: true)
+    }
+    
     func showDelete(sender: MyGestureReconize){
         switch sender.direction {
             case UISwipeGestureRecognizerDirection.left:
