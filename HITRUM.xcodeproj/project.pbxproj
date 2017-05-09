@@ -93,6 +93,9 @@
 		5CBED8CB1EBC8C8E0026C8C0 /* TransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBED8CA1EBC8C8E0026C8C0 /* TransitionDelegate.swift */; };
 		5CBED8CD1EBC8CB10026C8C0 /* AnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBED8CC1EBC8CB10026C8C0 /* AnimatedTransitioning.swift */; };
 		5CCDC6831EAC875600D996DE /* HomeUnuserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCDC6821EAC875600D996DE /* HomeUnuserViewController.swift */; };
+		5CF48FD01EC0A81300C5796D /* RemarkPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF48FCF1EC0A81300C5796D /* RemarkPresent.swift */; };
+		5CF48FD21EC0A82D00C5796D /* RemarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF48FD11EC0A82D00C5796D /* RemarkViewController.swift */; };
+		5CF48FD41EC0AD5B00C5796D /* StarRemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF48FD31EC0AD5B00C5796D /* StarRemark.swift */; };
 		5CF7685B1EACBB84003CE4F5 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7685A1EACBB83003CE4F5 /* ColorExtension.swift */; };
 		5CF7685D1EACBD2B003CE4F5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7685C1EACBD2B003CE4F5 /* LoginViewController.swift */; };
 		B872A1B78B7770B2D7CCBA53 /* Pods_HITRUM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FFF0F9201142A9DEEAC80E1 /* Pods_HITRUM.framework */; };
@@ -212,6 +215,9 @@
 		5CBED8CA1EBC8C8E0026C8C0 /* TransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionDelegate.swift; sourceTree = "<group>"; };
 		5CBED8CC1EBC8CB10026C8C0 /* AnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedTransitioning.swift; sourceTree = "<group>"; };
 		5CCDC6821EAC875600D996DE /* HomeUnuserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeUnuserViewController.swift; sourceTree = "<group>"; };
+		5CF48FCF1EC0A81300C5796D /* RemarkPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemarkPresent.swift; sourceTree = "<group>"; };
+		5CF48FD11EC0A82D00C5796D /* RemarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemarkViewController.swift; sourceTree = "<group>"; };
+		5CF48FD31EC0AD5B00C5796D /* StarRemark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarRemark.swift; sourceTree = "<group>"; };
 		5CF7685A1EACBB83003CE4F5 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		5CF7685C1EACBD2B003CE4F5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6FFF0F9201142A9DEEAC80E1 /* Pods_HITRUM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HITRUM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -260,6 +266,7 @@
 			children = (
 				5C05E45F1EBD6F2E002DF419 /* CirclerDot.swift */,
 				5C05E4611EBD813C002DF419 /* DotviewHolder.swift */,
+				5CF48FD31EC0AD5B00C5796D /* StarRemark.swift */,
 			);
 			name = viewCustom;
 			sourceTree = "<group>";
@@ -870,6 +877,7 @@
 				5C4957D21EB96AF90038744E /* requestResult */,
 				5C4871001EBC2BF800897087 /* serviceSlide */,
 				5C3778BE1EBEFE19009F925F /* billForMultipStaff */,
+				5CF48FC71EC0A77400C5796D /* remark */,
 			);
 			name = userAction;
 			sourceTree = "<group>";
@@ -1066,6 +1074,39 @@
 				5C06CE1E1EB2CE8E00A27574 /* Localizable.strings */,
 			);
 			name = assist;
+			sourceTree = "<group>";
+		};
+		5CF48FC71EC0A77400C5796D /* remark */ = {
+			isa = PBXGroup;
+			children = (
+				5CF48FCA1EC0A79700C5796D /* present */,
+				5CF48FC91EC0A79200C5796D /* view */,
+				5CF48FC81EC0A78500C5796D /* model */,
+			);
+			name = remark;
+			sourceTree = "<group>";
+		};
+		5CF48FC81EC0A78500C5796D /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		5CF48FC91EC0A79200C5796D /* view */ = {
+			isa = PBXGroup;
+			children = (
+				5CF48FD11EC0A82D00C5796D /* RemarkViewController.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		5CF48FCA1EC0A79700C5796D /* present */ = {
+			isa = PBXGroup;
+			children = (
+				5CF48FCF1EC0A81300C5796D /* RemarkPresent.swift */,
+			);
+			name = present;
 			sourceTree = "<group>";
 		};
 		A131F20BB803D99300F97A9A /* Pods */ = {
@@ -1295,6 +1336,7 @@
 				5C4871141EBC348300897087 /* ViewHelper.swift in Sources */,
 				5C34731E1EB6C44E00803459 /* RequestPresent.swift in Sources */,
 				5C2366061EB06FC900C44C9C /* SuccessFullPageViewController.swift in Sources */,
+				5CF48FD01EC0A81300C5796D /* RemarkPresent.swift in Sources */,
 				5C9CCC8D1EAC7DFD00B70366 /* SplashController.swift in Sources */,
 				5CBC51061EB1EF740069E49C /* EditPresent.swift in Sources */,
 				5C4957DB1EB992740038744E /* ResultCollectionViewController.swift in Sources */,
@@ -1312,11 +1354,13 @@
 				5C23660E1EB09ADC00C44C9C /* UIImageView.swift in Sources */,
 				5C06CE2A1EB3003B00A27574 /* HistoryDetailPresent.swift in Sources */,
 				5C782BD11EB5816C0015B0FB /* NewPasswordPresent.swift in Sources */,
+				5CF48FD21EC0A82D00C5796D /* RemarkViewController.swift in Sources */,
 				5C5063FF1EBF77B30083A0F3 /* BillForMultipStaffModel.swift in Sources */,
 				5C3778CC1EBF1EAD009F925F /* BillForMultipStaffCollectionViewController.swift in Sources */,
 				5C4957E71EB9DCE50038744E /* RequestResultModel.swift in Sources */,
 				5C4C8C5A1EB19A2900106215 /* MenuModel.swift in Sources */,
 				5C7328D31EAF1D4500EABDB9 /* UITextFieldExtension.swift in Sources */,
+				5CF48FD41EC0AD5B00C5796D /* StarRemark.swift in Sources */,
 				5C23660C1EB085D700C44C9C /* MenuViewController.swift in Sources */,
 				5C3778C61EBF1E28009F925F /* BillForMultipStaffViewController.swift in Sources */,
 				5CBC512E1EB24BB30069E49C /* HistoryCellCollectionViewCell.swift in Sources */,

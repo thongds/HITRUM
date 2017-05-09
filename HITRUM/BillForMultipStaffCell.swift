@@ -8,8 +8,14 @@
 
 import Foundation
 import UIKit
+
+protocol BillForMultipStaffCellDelegate {
+    func collectionView(_ collectionViewCell : UICollectionViewCell)
+
+}
 class BillForMultipStaffCell : BaseCollectionViewCell {
 
+    var delegate : BillForMultipStaffCellDelegate? = nil
     let viewHolder = UIView()
     let avatarHeight = 60
     
@@ -17,6 +23,7 @@ class BillForMultipStaffCell : BaseCollectionViewCell {
     let timeStartLabel = UILabel()
     let priceLabel = UILabel()
     let timeEndLabel = UILabel()
+    let remarkLabel = UILabel()
     //woring layout element
     let infoLabel = UILabel()
     let startIco = UIImageView(image: #imageLiteral(resourceName: "start_ico"))
@@ -65,6 +72,15 @@ class BillForMultipStaffCell : BaseCollectionViewCell {
     }
     override func setupViews() {
        contentView.layer.cornerRadius = 3
+       remarkLabel.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.show))
+       remarkLabel.addGestureRecognizer(tap)
+    }
+    
+    func show(){
+        if let delegate = delegate {
+            delegate.collectionView(self)
+        }
     }
     
     func initFinishLayout(){
@@ -151,7 +167,7 @@ class BillForMultipStaffCell : BaseCollectionViewCell {
         let loveIco = UIImageView(image: #imageLiteral(resourceName: "love_ico"))
         loveIco.translatesAutoresizingMaskIntoConstraints = false
         
-        let remarkLabel = UILabel()
+       
         remarkLabel.textColor = UIColor.white
         remarkLabel.translatesAutoresizingMaskIntoConstraints = false
         remarkLabel.text = NSLocalizedString("remark_label", comment: "")

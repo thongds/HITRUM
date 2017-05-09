@@ -51,7 +51,9 @@ class BillForMultipStaffCollectionViewController: BillForMultipStaffCollectionVi
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! BillForMultipStaffCell
         cell.billForMultipStaffModel = billModel[indexPath.item]
+        cell.delegate = self
         cell.backgroundColor = UIColor.clear
+        cell.remarkLabel.addGestureRecognizer(self.remarkTG)
         
         return cell
     }
@@ -63,6 +65,34 @@ class BillForMultipStaffCollectionViewController: BillForMultipStaffCollectionVi
         }
         return 100
     }
-
-   
 }
+extension BillForMultipStaffCollectionViewPresent : BillForMultipStaffCellDelegate {
+
+    func collectionView(_ collectionViewCell : UICollectionViewCell){
+        let indexPath = collectionView?.indexPath(for: collectionViewCell)
+        let vc = RemarkViewController()
+        let nav = UINavigationController.init(rootViewController: vc)
+        present(nav, animated: true, completion: nil)
+     //   navigationController?.pushViewController(BillForMultipStaffViewController(), animated: true)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

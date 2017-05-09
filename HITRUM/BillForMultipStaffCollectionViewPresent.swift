@@ -11,7 +11,8 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class BillForMultipStaffCollectionViewPresent: UICollectionViewController {
-
+    
+    var remarkTG = UITapGestureRecognizer()
     var billModel =  [BillForMultipStaffModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,15 @@ class BillForMultipStaffCollectionViewPresent: UICollectionViewController {
             let bill = BillForMultipStaffModel(type: 2, avatart: "", name: "Do Ngoc Nam", price: "59,000d", timeStart: "13:30:50", timeEnd: "14:30:50", sex: "Nam", age: "22", timeRemain: "con 5 phut", rating: 5)
             billModel.append(bill)
         }
+        
+        remarkTG = UITapGestureRecognizer(target: self, action: #selector(self.showRemark))
+        
     }
+    
+    func showRemark(){
+        navigationController?.pushViewController(BillForMultipStaffViewController(), animated: true)
+    }
+    
+    
 
 }
