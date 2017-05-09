@@ -14,7 +14,6 @@ class ResultCollectionViewController: ResultCollectionPresent {
 
     
     var layout : ResultLayout?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -72,14 +71,25 @@ class ResultCollectionViewController: ResultCollectionPresent {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ResultCellCollectionViewCell
         cell.requestResultData = requestResult[indexPath.item]
         cell.backgroundColor = UIColor.clear
+        
+        //show swipe 
+        
+        for (_,value) in swipedArray.enumerated(){
+            if(value.compare(indexPath) == .orderedSame){
+                cell.viewContent.frame.origin.x = -90
+            }
+        }
+        
         // Configure the cell
         let swipe = MyGestureReconize(target: self, action: #selector(self.showDelete))
         swipe.viewHolder = cell.viewContent
+        swipe.indexPath = indexPath
         swipe.direction = UISwipeGestureRecognizerDirection.left
         cell.addGestureRecognizer(swipe)
         
         let swipe2 = MyGestureReconize(target: self, action: #selector(self.showDelete))
         swipe2.viewHolder = cell.viewContent
+        swipe2.indexPath = indexPath
         swipe2.direction = UISwipeGestureRecognizerDirection.right
         cell.addGestureRecognizer(swipe2)
         
@@ -98,6 +108,7 @@ class ResultCollectionViewController: ResultCollectionPresent {
                     UIView.animate(withDuration: 0.5, animations: {
                         sender.viewHolder.frame.origin.x = -90
                     })
+                    swipedArray.append(sender.indexPath)
                 }
             break
             
@@ -106,6 +117,7 @@ class ResultCollectionViewController: ResultCollectionPresent {
                     UIView.animate(withDuration: 0.5, animations: {
                         sender.viewHolder.frame.origin.x = 10
                     })
+                    removeIndexInSwipeArray(indexPath: sender.indexPath)
                 }
             break
         default:
@@ -117,11 +129,11 @@ extension ResultCollectionViewController : CellDelegate {
     
     func deleteCellAtIndexPath(viewContent : UIView,cell : ResultCellCollectionViewCell){
         let indexPath = collectionView?.indexPath(for: cell)
+        print(indexPath?.item)
         layout?.deleteCache()
         viewContent.frame.origin.x = 10
         removeItemAtIndexPath(indexPath: indexPath!)
         collectionView?.deleteItems(at: [indexPath!])
-       // collectionView?.reloadData()
     }
 }
 
@@ -129,7 +141,7 @@ extension ResultCollectionViewController : CellDelegate {
 class MyGestureReconize : UISwipeGestureRecognizer{
 
     var viewHolder = UIView()
-    
+    var indexPath = IndexPath()
 }
 
 
