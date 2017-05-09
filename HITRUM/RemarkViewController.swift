@@ -55,7 +55,7 @@ class RemarkViewController: RemarkPresent {
         
         let remarkWidth = 40 + starIco.frame.width*5
         starRemak.frame = CGRect(x: (scrollViewHolder.frame.width - remarkWidth)/2, y: 100, width: remarkWidth, height: 50 )
-        
+        starRemak.remarkDelegate = self
         
         commentTitle.translatesAutoresizingMaskIntoConstraints = false
         commentTitle.text = "2. " + NSLocalizedString("remark_comment_title", comment: "")
@@ -94,3 +94,13 @@ extension RemarkViewController : KeyboardNotifaction {
         
     }
 }
+
+extension RemarkViewController : RemarkDelegate{
+    func remakCheckedIndex(index: Int) {
+        print(index)
+    }
+}
+
+
+
+

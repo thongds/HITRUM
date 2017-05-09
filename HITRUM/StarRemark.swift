@@ -8,12 +8,17 @@
 
 import UIKit
 
+protocol RemarkDelegate {
+    func remakCheckedIndex(index : Int)
+}
+
 class StarRemark: UIView {
 
     
     var enableStarArray = [UIImageView]()
     let disableStarArray = [UIImageView]()
     let space : CGFloat = 10
+    var remarkDelegate : RemarkDelegate?
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -65,6 +70,9 @@ class StarRemark: UIView {
     
     func starTaped(gestureReconizer : StarTapGR){
         drawEnableStar(numberOfEnableStar: gestureReconizer.index!)
+        if let deletage = remarkDelegate {
+            deletage.remakCheckedIndex(index: gestureReconizer.index!)
+        }
     }
     
 }
