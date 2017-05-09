@@ -116,7 +116,7 @@ class ResultCellCollectionViewCell: BaseCollectionViewCell {
         ageLabel.font = UIFont(name: ageLabel.font.fontName, size: 12)
         ageContent.font = UIFont(name: ageContent.font.fontName, size: 12)
         ratingLabel.font = UIFont(name: ratingLabel.font.fontName, size: 12)
-        timeLabel.font = UIFont(name: timeLabel.font.fontName, size: 12)
+        timeLabel.font = UIFont(name: timeLabel.font.fontName, size: 11)
         timeContent.font = UIFont(name: timeContent.font.fontName, size: 10)
         
         ageLabel.text = NSLocalizedString("age", comment: "")
