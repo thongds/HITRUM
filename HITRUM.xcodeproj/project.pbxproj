@@ -32,6 +32,9 @@
 		5C3830371EB4AA34006C2F02 /* ForgotPasswordPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3830361EB4AA34006C2F02 /* ForgotPasswordPresent.swift */; };
 		5C3830391EB4AA4A006C2F02 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3830381EB4AA4A006C2F02 /* ForgotPasswordViewController.swift */; };
 		5C3FD4C31EB3368F00E44EEC /* HistoryDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FD4C21EB3368F00E44EEC /* HistoryDetailModel.swift */; };
+		5C43EE191EC17610005DEC04 /* SelectActionPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C43EE181EC17610005DEC04 /* SelectActionPresent.swift */; };
+		5C43EE1B1EC17BFA005DEC04 /* SelectActionCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C43EE1A1EC17BFA005DEC04 /* SelectActionCollectionView.swift */; };
+		5C43EE1D1EC17C48005DEC04 /* SelectActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C43EE1C1EC17C48005DEC04 /* SelectActionCell.swift */; };
 		5C4871051EBC2CAE00897087 /* ServicePresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4871041EBC2CAE00897087 /* ServicePresent.swift */; };
 		5C4871071EBC2CBE00897087 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4871061EBC2CBE00897087 /* ServiceViewController.swift */; };
 		5C48710D1EBC2D7C00897087 /* SliderCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C48710C1EBC2D7C00897087 /* SliderCollectionViewController.swift */; };
@@ -148,6 +151,9 @@
 		5C3830361EB4AA34006C2F02 /* ForgotPasswordPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresent.swift; sourceTree = "<group>"; };
 		5C3830381EB4AA4A006C2F02 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		5C3FD4C21EB3368F00E44EEC /* HistoryDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDetailModel.swift; sourceTree = "<group>"; };
+		5C43EE181EC17610005DEC04 /* SelectActionPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectActionPresent.swift; sourceTree = "<group>"; };
+		5C43EE1A1EC17BFA005DEC04 /* SelectActionCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectActionCollectionView.swift; sourceTree = "<group>"; };
+		5C43EE1C1EC17C48005DEC04 /* SelectActionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectActionCell.swift; sourceTree = "<group>"; };
 		5C4871041EBC2CAE00897087 /* ServicePresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicePresent.swift; sourceTree = "<group>"; };
 		5C4871061EBC2CBE00897087 /* ServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
 		5C48710C1EBC2D7C00897087 /* SliderCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderCollectionViewController.swift; sourceTree = "<group>"; };
@@ -531,6 +537,40 @@
 			name = view;
 			sourceTree = "<group>";
 		};
+		5C43EE141EC1759D005DEC04 /* selectAction */ = {
+			isa = PBXGroup;
+			children = (
+				5C43EE151EC175CD005DEC04 /* present */,
+				5C43EE161EC175D9005DEC04 /* view */,
+				5C43EE171EC175E8005DEC04 /* cell */,
+			);
+			name = selectAction;
+			sourceTree = "<group>";
+		};
+		5C43EE151EC175CD005DEC04 /* present */ = {
+			isa = PBXGroup;
+			children = (
+				5C43EE181EC17610005DEC04 /* SelectActionPresent.swift */,
+			);
+			name = present;
+			sourceTree = "<group>";
+		};
+		5C43EE161EC175D9005DEC04 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				5C43EE1A1EC17BFA005DEC04 /* SelectActionCollectionView.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		5C43EE171EC175E8005DEC04 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				5C43EE1C1EC17C48005DEC04 /* SelectActionCell.swift */,
+			);
+			name = cell;
+			sourceTree = "<group>";
+		};
 		5C4871001EBC2BF800897087 /* serviceSlide */ = {
 			isa = PBXGroup;
 			children = (
@@ -878,6 +918,7 @@
 				5C4871001EBC2BF800897087 /* serviceSlide */,
 				5C3778BE1EBEFE19009F925F /* billForMultipStaff */,
 				5CF48FC71EC0A77400C5796D /* remark */,
+				5C43EE141EC1759D005DEC04 /* selectAction */,
 			);
 			name = userAction;
 			sourceTree = "<group>";
@@ -1332,6 +1373,7 @@
 				5CBC511D1EB21DDA0069E49C /* BaseCollectionViewCell.swift in Sources */,
 				5C782BE61EB5C5380015B0FB /* SearchResultPresent.swift in Sources */,
 				5C2365F41EB030DD00C44C9C /* BaseViewController.swift in Sources */,
+				5C43EE1B1EC17BFA005DEC04 /* SelectActionCollectionView.swift in Sources */,
 				5C4C8C671EB1C4F200106215 /* UIBarExtension.swift in Sources */,
 				5C4871141EBC348300897087 /* ViewHelper.swift in Sources */,
 				5C34731E1EB6C44E00803459 /* RequestPresent.swift in Sources */,
@@ -1342,6 +1384,7 @@
 				5C4957DB1EB992740038744E /* ResultCollectionViewController.swift in Sources */,
 				5C06CE2D1EB300AF00A27574 /* HistoryDetailCollectionView.swift in Sources */,
 				5CBC51281EB245FF0069E49C /* HistoryPresent.swift in Sources */,
+				5C43EE1D1EC17C48005DEC04 /* SelectActionCell.swift in Sources */,
 				5C5F2EA51EB41AE900D7239E /* UserHomePresent.swift in Sources */,
 				5C4C8C651EB1B0D800106215 /* CustomImage.swift in Sources */,
 				5CCDC6831EAC875600D996DE /* HomeUnuserViewController.swift in Sources */,
@@ -1383,6 +1426,7 @@
 				5C4957D71EB9895D0038744E /* RequestResultPresent.swift in Sources */,
 				5C782BD31EB581800015B0FB /* NewPasswordViewController.swift in Sources */,
 				5C782BE41EB5C5140015B0FB /* SearchResultCollectionViewController.swift in Sources */,
+				5C43EE191EC17610005DEC04 /* SelectActionPresent.swift in Sources */,
 				5C3778C01EBF151C009F925F /* BillForMultipStaffPresent.swift in Sources */,
 				5C782BEA1EB5D43E0015B0FB /* ChooseLocationResult.swift in Sources */,
 				5C4C8C611EB1A0F800106215 /* SettingViewController.swift in Sources */,

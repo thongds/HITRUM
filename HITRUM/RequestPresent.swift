@@ -100,7 +100,21 @@ class RequestPresent: BaseViewController {
         infoIco.isUserInteractionEnabled = true
         let infoTap = UITapGestureRecognizer(target: self, action: #selector(self.showServiceSlide))
         infoIco.addGestureRecognizer(infoTap)
+        
+        let showSelectTap = UITapGestureRecognizer(target: self, action: #selector(self.showSelect))
+        peopleSelectedLabel.isUserInteractionEnabled = true
+        peopleDropDowSmallIco.isUserInteractionEnabled = true
+        multiPeopleIco.isUserInteractionEnabled = true
+        peopleSelectedLabel.addGestureRecognizer(showSelectTap)
+        peopleDropDowSmallIco.addGestureRecognizer(showSelectTap)
+        multiPeopleIco.addGestureRecognizer(showSelectTap)
 
+    }
+    
+    func showSelect(){
+        let selectCV = SelectActionCollectionView(collectionViewLayout: UICollectionViewFlowLayout())
+        let nv = UINavigationController(rootViewController: selectCV)
+        self.present(nv, animated: true, completion: nil)
     }
     
     func showNextPage(){
